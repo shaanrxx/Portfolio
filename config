@@ -1,0 +1,12 @@
+#Account1
+Host github.com
+	Hostname github.com
+	IdentityFile~/.shh/id_rsa_ShaanRehsi
+
+
+
+#Account2
+
+Host git@git.arts.ac.uk
+	Hostname: git@git.arts.ac.uk
+	IdentityFile  ~/.shh/id_rsa

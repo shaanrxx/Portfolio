@@ -1,0 +1,219 @@
+
+
+:root {
+    /* Define your color variables */
+    --background-web-color: black; 
+    /* --background-web-color: #21005b; */
+    --heading-colour: #ffffff;
+    --shadow-colour1:#e7d8ff;
+    --shadow-colour2:#b375ff;
+    --shadow-colour3:#6e00e3;
+    --shadow-colour4:#500bb1; 
+    --text-color: #ffffff;
+    --dropdown-colour:#ffffff;
+    --hover-colour:#ffffff;
+    /* --shadow-color: rgba(0, 0, 0, 0.5); Semi-transparent shadow; */
+  }
+
+  #header{
+    height: 10vh;
+    z-index: 100;
+}
+
+
+     .header-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: 20vh;
+      
+    
+    }
+
+    .header-title{
+        font-size: 1.5rem;
+        color: var(--shadow-colour2);
+        
+    }
+
+
+
+    p{
+        font-size: 1rem;
+        color: var(--shadow-colour1);
+    }
+
+
+    
+
+
+
+/******************** Post Content ************/
+.post-header{
+    width: 100%;
+    height: 100vh;
+    /* background: var(--container-color); */
+}
+
+.post-container{
+    max-width: 900px;
+    margin: auto;
+    width: 100%;
+}
+
+.header-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem !important;
+}
+
+.back-home{
+    color: var(--shadow-colour1);
+    font-size: 0.9rem; 
+}
+
+.header-title{
+    width: 90%;
+    font-size: 2.6rem;
+    color: var(--shadow-colour1);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.header-img{
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.video{
+    width: 80%;
+    height: 540px;
+    object-fit: cover;
+    object-position: center;
+    
+}
+
+.post-header p {
+    margin-bottom: 2rem; /* Adjust this value to increase or decrease the space between paragraphs */
+    color: var(--shadow-colour1);
+    font-size: 1rem;
+    line-height: 2rem;
+    margin: auto;
+    /* row-gap: 4rem; */
+    text-align: justify;
+}
+
+
+
+
+.post-content{
+    margin-top: 10rem !important;
+}
+
+/* .post-content video{
+    width: 80%;
+    height: 640px;
+    object-fit: cover;
+    object-position: center;
+    align-items: center;
+} */
+
+.video-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 90vh; /* Or any desired height */
+    overflow: hidden; /* Optional, depending on desired effect */
+  }
+  
+  video {
+    max-width: 90%; /* Maximum width of the video */
+    max-height: 80vh; /* Maximum height of the video */
+    object-fit: cover; /* Or 'contain' to see the whole video without cropping */
+  }
+  
+
+
+  
+
+.subheading{
+    font-size: 1.2rem;
+    color: var(--shadow-colour1);
+}
+
+.post-text{
+    font-size: 1rem;
+    line-height: 2rem;
+    margin: auto;
+    
+    /* row-gap: 4rem; */
+    text-align: justify;
+}
+
+.post-text p {
+    margin-bottom: 2rem; /* Adjust this value to increase or decrease the space between paragraphs */
+}
+
+
+
+/*******************************responsive****************************/
+/****************** Post Content ******************/
+/* Base styles are already provided, so we'll focus on the responsive adjustments */
+
+/* Adjustments for tablets (768px) */
+@media (max-width: 768px) {
+    #header, .post-header {
+        height: auto; /* Make height more flexible for varying content */
+    }
+    .header-img{
+        width:100%;
+        height:400px;
+    }
+
+    .header-text, .header-content, .post-content {
+        padding: 0 20px; /* Add padding to ensure content doesn't touch the screen edges */
+    }
+
+    .header-title, .header-content .header-title {
+        font-size: 2rem; /* Adjust title font size for readability */
+    }
+
+    .video, .video-container video {
+        width: 100%; /* Maximize video width within its container */
+        height: auto; /* Adjust height automatically to maintain aspect ratio */
+    }
+
+    .post-container, .video-container {
+        max-width: 100%; /* Allow containers to fill their parent width */
+        margin-top: 2rem; /* Adjust top margin for spacing */
+    }
+
+    .post-text, .post-text p, .back-home, .subheading {
+        font-size: 0.9rem; /* Slightly reduce font size for text elements */
+    }
+}
+
+/* Adjustments for smartphones (480px) */
+@media (max-width: 480px) {
+    .header-title, .header-content .header-title {
+        font-size: 1.5rem; /* Further reduce for small screens */
+    }
+
+    .header-img{
+        width:100%;
+        height:120px;
+    }
+
+
+    .video, .video-container video {
+        max-height: 50vh; /* Limit video height on small screens */
+    }
+
+    .post-text, .post-text p, .back-home, .subheading {
+        font-size: 0.8rem; /* Reduce font size further for improved readability */
+    }
+}

@@ -1,0 +1,1190 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Orbitron', 'sans-serif';
+    box-sizing: border-box;
+
+}
+
+:root {
+    /* Define your color variables */
+    --background-web-color: black; 
+    /* --background-web-color: #21005b; */
+    --heading-colour: #ffffff;
+    --shadow-colour1:#e7d8ff;
+    --shadow-colour2:#b375ff;
+    --shadow-colour3:#6e00e3;
+    --shadow-colour4:#500bb1; 
+    --text-color: #ffffff;
+    --dropdown-colour:#6e00e3;
+    --hover-colour:#ffffff;
+    /* --shadow-color: rgba(0, 0, 0, 0.5); Semi-transparent shadow; */
+  }
+
+html{
+    scroll-behavior: smooth;
+}
+
+ body{
+    /* background: #F29C94;  */
+    background-color: var(--background-web-color);
+ }
+
+
+ #header {
+    width: 100%;
+    height: 100vh;
+    z-index: 2; 
+ 
+    background-size: cover;
+    background-position: center;
+    position: relative; /* To allow absolute positioning of other elements within */
+}
+
+#header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire space */
+}
+
+
+
+
+
+/* Dropdown styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+/* Style the dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--shadow-colour1);
+    min-width: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 2; /* Set a higher z-index for the dropdown to appear above the border */
+    top: calc(100% + 5px); /* Position the dropdown below the navigation bar */
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    font-size: 10px;
+    border-radius: 5px;
+}
+
+/* Add a fun animation when the dropdown is displayed */
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    border-radius: 5px;
+}
+
+/* Style the dropdown links */
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: var(--shadow-colour3);
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* Add a hover effect for the links */
+.dropdown-content a:hover {
+    background-color: var(--background-web-color);
+    color: var(--shadow-colour2);
+    text-shadow: 0 4px 14px hsla(257, 92%, 67%, 0.9);
+}
+
+/* Add a playful bounce effect on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+    animation: bounceDown 2.0s;
+}
+
+/* Keyframes for bounceDown animation */
+@keyframes bounceDown {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+.container{
+    padding: 15px 15%;
+    
+}
+
+nav {
+    position: absolute;
+    top: 15px;
+    left: 30%;
+    transform: translateX(-50%);
+    display: inline-block;
+    animation: slide-in 1s ease-out;
+    position: fixed;
+    
+}
+
+
+nav.scrolled ul li {
+    
+    border: 2px solid  var(--shadow-colour4); /* Bright yellow for the border */
+    background-color: rgb(0, 0, 0); 
+    box-shadow:  0 4px 14px hsla(277, 100%, 80%, 0.3);
+  
+}
+
+nav.scrolled a {
+    color: var(--text-color); /* Color when scrolled */
+    text-shadow:  0 4px 14px hsla(277, 100%, 80%, 0.3);
+  }
+
+.social.scrolled a {
+    color: var(--shadow-colour3); /* Color when scrolled */
+    text-shadow:  0 4px 14px hsla(277, 100%, 80%, 0.3);
+    
+  }
+
+
+
+
+.social {
+    text-shadow: 0 0 30px #4d2828;
+    position: absolute;
+    top: 5px;
+    right: -90%;
+}
+
+.social a{
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 15px;
+    color: white;
+    display: inline-block;
+}
+
+.social a:hover{
+    color:#ffffff;
+    text-shadow: 0 0 5px #ffffff;
+    transform: translateY(-5px);
+}
+
+ul {
+    position: relative;
+    display: flex;
+    flex: 1 1 auto;
+    margin: 0;
+    padding: 0 30px;
+    list-style-type: none;
+}
+
+ul li:not(:last-child) {
+    margin-right: 10px;
+}
+
+ul li {
+    border: 2px solid transparent;
+    border-radius: 5px;
+    padding: 10px;
+    /* font-size: 0px; */
+    transition: background 0.2s;
+}
+
+ul li a {            /* navbarrr */
+    text-shadow: 0 0 30px #e0d8d8;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  
+}
+
+ul li ul {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    display: block;
+    /* margin: 12px -12px; */
+    padding: 0;
+    background: #63acff;
+    border: 2px solid #2e81ff;
+    border-right: 2px solid #0e31d1;
+    border-bottom: 2px solid #0b0a71;
+    border-radius: 5px;
+    transition: opacity 0.2s, visibility 0.2s;  
+}
+
+ul li ul li {
+    margin: -2px 0 0 -2px;
+    width: calc(100% - 20px);
+    line-height: 1.7;
+}
+
+nav ul li:hover {
+    /* background-color: #EC4138;
+    border: 2px solid #F05749;
+    border-right: 2px solid #E02A21;
+    border-bottom: 2px solid #E02A21; */
+    background-color: var(--shadow-colour1); /* Yellow color */
+    border: 2px solid  var(--shadow-colour2); /* Bright yellow for the border */
+    border-right: 2px solid  var(--shadow-colour3); /* Slightly darker yellow for the right border */
+    border-bottom: 2px solid  var(--shadow-colour4) /* Slightly darker yellow for the bottom border */
+}
+
+ul li:hover a {
+    text-shadow: 0 0 10px #ffffff;
+    color: var(--background-web-colour);
+}
+
+ul li:hover ul {
+    visibility: visible;
+    opacity: 1;
+    box-shadow: 0px 3px 5px 2px #EBECF1;
+}
+
+ul li:hover ul li a {
+    color: #ffffff;
+}
+
+@keyframes slide-in {
+    0% {
+        top: -50px;
+    }
+    40% {
+        top: 20px;
+    }
+    70% {
+        top: 10px;
+    }
+    100% {
+        top: 15px;
+    }
+}
+
+.logo{
+    position: fixed;
+    cursor: pointer;
+    width: 200px;  
+    display: inline-block;
+    margin: 10px 20px;
+    z-index: 1;
+ 
+}
+
+.header-text{
+    /* margin-top: 20%;  */
+    /* padding: 20px ;   */
+    font-size: 30px;
+}
+
+.header-text h1{
+    color:  var(--shadow-colour1); /* white text */
+    /* white text */
+    
+    text-shadow: 
+    -2px -2px 0 var(--shadow-colour2), 
+     2px -2px 0 var(--background-web-color), 
+    -2px 2px 0 var(--background-web-color), 
+     2px 2px 0 var(--background-web-color);
+    font-size: 24px; /* Adjust as needed */
+    font-weight: bold; /* Bold text */
+    font-size: 60px;
+    margin-top:80px;
+}
+
+.header-text p{
+    color: var(--shadow-colour1); /* white text */
+       
+    text-shadow: 
+    -2px -2px 0 var(--shadow-colour2), 
+     2px -2px 0 var(--background-web-color), 
+    -2px 2px 0 var(--background-web-color), 
+     2px 2px 0 var(--background-web-color);
+    font-size: 40px; /* Adjust as needed */
+    font-weight: bold; /* Bold text */
+    margin-top:20px;
+    
+}
+
+.header-text h1 span{
+    color: rgb(255, 239, 239);
+}
+
+
+/* ---------------- about -------------------*/
+#about{
+    padding: 80px 0;
+    color: var(--text-color);
+    font-weight: 100;
+    height: 100vh;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+
+.about-col-1 img{
+    width: 100%;
+    border-radius: 5px;
+    box-shadow:  0 4px 14px hsla(277, 65%, 62%, 0.5);
+}
+
+.about-col-2{
+    flex-basis: 60%;
+}
+
+.sub-title{
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--shadow-colour2);
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content:'';
+    width: 0;
+    height: 3px;
+    background: var(--shadow-colour2);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 50%; 
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span{
+    color: var(--shadow-colour2);
+    font-size: 14px;
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
+
+/* -------------------- Highlights ----------------*/
+
+#favourites{
+    padding: 50px 0;
+}
+
+.work-list{
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); */
+    grid-template-columns: repeat(2, 1fr); /* Updated to create a two-column layout */
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img{
+    width: 100%;
+    height:100%;
+    border-radius: 10px;
+    display:block;
+    transition: transform 0.5s;
+}
+
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(var(--shadow-colour1), var(--shadow-colour4));
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+    
+}
+
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.layer a{
+    margin-top: 20px;
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 50%; 
+    text-align: center;
+}
+
+/* .work:hover img{
+    transform: scale(1.1);
+} */
+
+.work:hover .layer{
+    height: 100%;    
+}
+
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    border:none;
+    transition: background 0.5s;
+    box-shadow: 0 4px 14px hsla(277, 65%, 62%, 0.9); /* Keep shadow for depth */
+}
+
+.btn:hover{
+    background: var(--shadow-colour1);
+    color: var(--shadow-colour4)
+}
+
+
+/*---------------------------CONTACT------------------------*/
+.contact-container{
+    padding: 50px 15%;
+    background-color: var(--background-web-color);
+    /* height: 80vh; */
+
+}
+
+.contact-left{
+    flex-basis: 35%;
+    color: #ababab;
+}
+
+.contact-right{
+    flex-basis: 60%;
+}
+
+.contact-left p{
+    margin-top: 30px;
+}
+
+.contact-left p i{
+    color: var(--shadow-colour2);
+    font-size: 25px;
+}
+
+.social-icons{
+    margin-top: 30px;
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+}
+
+.social-icons a:hover{
+    color:white;
+    transform: translateY(-5px);
+}
+
+.btn.btn2{
+    display: inline-block;
+    background: var(--shadow-colour2);
+    color:black;
+    transition: background 1s;
+}
+.btn.btn2:hover{
+    background: white;
+    color: black;
+}
+
+.contact-right form{
+    width: 100%;
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #ababab;
+    padding: 10px;
+    margin: 10px 0;
+    color: white;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: black;
+    color: grey;
+    font-weight: 300;
+    /* margin-top: 20px; */
+}
+
+
+
+
+
+
+
+/*----------------------------------css for small scream-----------------------------*/
+
+nav .fa-solid.fa-x{
+    display: none;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    /* Adjust layout for tablets */
+   
+    #sidemenu{
+        border-bottom: none;
+        display:block;
+       
+        padding-top: 100px;
+    }
+
+    nav {
+        display: block;
+        position: fixed; /* Keep nav fixed on top */
+        top: 0;
+        left: 0;
+        right: 0;
+        transform: none; /* Remove transformation */
+        width: 100%; /* Full width */
+        justify-content: space-between; /* Space out nav items */
+        align-items: center; /* Center items vertically */
+        padding: 0 20px; /* Padding on the sides */
+        background-color: var(--shadow-colour2); 
+        animation: none; /* Disable any slide-in animation */
+    }
+
+    .social {
+       font-size: 40px;
+        left: 0;
+        right: 0;
+        transform: translateX(0%);
+       
+    }
+
+
+    nav .fa-solid.fa-bars{
+        display: block;
+        font-size: 35px;
+        cursor: pointer;
+        position: fixed;
+        color: white;
+        top: 3%;
+        right: 3%;
+        z-index: 1;
+    }
+
+    nav ul{
+        background-color: var(--shadow-colour2);
+        position:fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        z-index: 100;
+        padding-top: 50px;
+        transition: right 0.5s
+    }
+
+    nav ul li{
+        display: block;
+        width: 100%; 
+        border-radius: 0;
+        background-color: var(--shadow-colour2); /* Yellow color */
+    border: 2px solid  var(--shadow-colour2); /* Bright yellow for the border */
+    border-right: 2px solid  var(--shadow-colour2); /* Slightly darker yellow for the right border */
+    border-bottom: 2px solid  var(--shadow-colour2); /* Slightly darker yellow for the bottom border */
+        box-sizing: border-box; /* Include padding in the width calculation */
+        height: 50px;
+        margin: 20px 0; /* Vertically space out the list items */
+      
+    }
+
+    nav ul li:hover{
+       
+      
+        background-color: var(--shadow-colour2);
+    }
+
+   nav li a {
+        color: var(--text-color); /* Ensure text color is visible against background */
+        display: block; /* Makes the anchor tags fill the li for easier clicking */
+        padding: 10px; /* Add some padding for aesthetic */
+    }
+
+    nav .fa-solid.fa-x{
+        display:block;
+        position: absolute;
+        color: white;
+        font-size: 30px;
+        top: 30px;
+        right: 150px;
+        cursor: pointer;
+        z-index: 10000;
+        transition: left 0.5s
+       
+    }
+
+    
+     .dropbtn {
+        border-bottom: none;
+        display:block;
+       
+    }
+    
+    /* Style the container (dropdown-content) to hide the dropdown content by default */
+    .dropdown .dropdown-content {
+        display: none;
+        position: static; /* Remove absolute positioning so it doesn't float over other items */
+        background-color: var(--shadow-colour2);
+        min-width: 100%; /* Set minimum width to match the parent width */
+        box-shadow: none; /* Optional: remove shadow if it doesn't match your design */
+    }
+    
+    /* Style to make the dropdown content appear on click - assuming you have JavaScript to toggle a class */
+    .dropdown .show {
+        display: block;
+    }
+    
+    /* Style for the dropdown items */
+    .dropdown-content a {
+        /* color: black; */
+        font-size: 14px;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+
+    .container, .contact-container {
+        padding: 15px 5%;
+    }
+
+    .header-text h1, .sub-title {
+        font-size: 36px;
+    }
+
+    .header-text p, .tab-links, .work img, form input, form textarea {
+        font-size: 14px;
+    }
+
+    .row, .work-list {
+        flex-direction: column;
+    }
+    #about {
+        padding: 60px 30px; /* Optimize padding for medium screens */
+        height: auto; /* Flexible height to accommodate varying content lengths */
+    }
+
+    .row {
+        display: flex; /* Keep the flex layout */
+        flex-direction: row; /* Return to row layout for more horizontal space */
+        flex-wrap: wrap; /* Allow wrapping if needed */
+        justify-content: space-evenly; /* Evenly space the columns */
+    }
+
+    .about-col-1, .about-col-2 {
+        flex-basis: 45%; /* Adjust column width for a side-by-side layout with padding */
+        margin-bottom: 20px; /* Add some space between the columns if they wrap */
+    }
+
+    .about-col-1 img {
+        max-width: 100%; /* Ensure images fit well within their containers */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .sub-title {
+        font-size: 36px; /* Adjust the font size for better visibility */
+    }
+
+    .tab-titles {
+        display: flex; /* Maintain a flex layout for tab titles */
+        flex-direction: row; /* Keep the row layout for tab titles */
+        justify-content: center; /* Center the tab titles */
+        margin: 20px 0 40px; /* Adjust margins for optimal spacing */
+    }
+
+    .tab-links {
+        margin-right: 20px; /* Restore right margin for horizontal spacing */
+        margin-bottom: 0; /* Remove bottom margin */
+        font-size: 18px; /* Slightly increase font size for readability */
+    }
+
+    .tab-contents ul li {
+        font-size: 16px; /* Slightly increase font size for list items */
+    }
+
+    .social-icons a, .social a {
+        font-size: 24px;
+    }
+
+
+    /* Adjustments for tablets */
+    .contact-container {
+        padding: 50px 10%; /* Slightly reduce padding */
+    }
+
+    .contact-left, .contact-right {
+        flex-basis: 100%; /* Stack the columns vertically */
+        margin-top: 20px;
+    }
+
+    .social-icons a {
+        font-size: 24px; /* Slightly smaller icons */
+        margin-right: 10px;
+    }
+
+    form input, form textarea, .btn.btn2 {
+        font-size: 16px; /* Adjust font size for better readability */
+        padding: 8px; /* Adjust padding for inputs and buttons */
+    }
+
+
+}
+
+
+@media only screen and (max-width: 600px){
+
+    
+    #sidemenu {
+        border-bottom: none;
+        display: block;
+        padding-top: 100px;
+    }
+
+    nav {
+        display: block;
+        position: fixed; /* Keep nav fixed on top */
+        top: 0;
+        left: 0;
+        right: 0;
+        transform: none; /* Remove transformation */
+        width: 100%; /* Full width */
+        justify-content: space-between; /* Space out nav items */
+        align-items: center; /* Center items vertically */
+        padding: 0 20px; /* Padding on the sides */
+        background-color: var(--shadow-colour2); 
+        animation: none; /* Disable any slide-in animation */
+    }
+
+    .social {
+        font-size: 40px;
+        left: 0;
+        right: 0;
+        transform: translateX(0%);
+    }
+
+    nav .fa-solid.fa-bars {
+        display: block;
+        font-size: 35px;
+        cursor: pointer;
+        position: fixed;
+        color: white;
+        top: 3%;
+        right: 3%;
+        z-index: 1;
+    }
+
+    nav ul {
+        background-color: var(--shadow-colour2);
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        z-index: 100;
+        padding-top: 50px;
+        transition: right 0.5s;
+    }
+
+    nav ul li {
+        display: block;
+        width: 100%; 
+        border-radius: 0;
+        background-color: var(--shadow-colour2);
+        border: 2px solid var(--shadow-colour2);
+        box-sizing: border-box; /* Include padding in the width calculation */
+        height: 50px;
+        margin: 20px 0; /* Vertically space out the list items */
+    }
+
+    nav ul li:hover {
+        background-color: var(--shadow-colour2);
+    }
+
+    nav li a {
+        color: var(--text-color); /* Ensure text color is visible against background */
+        display: block; /* Makes the anchor tags fill the li for easier clicking */
+        padding: 10px; /* Add some padding for aesthetic */
+    }
+
+    nav .fa-solid.fa-x {
+        display: block;
+        position: absolute;
+        color: white;
+        font-size: 30px;
+        top: 30px;
+        right: 150px;
+        cursor: pointer;
+        z-index: 10000;
+        transition: left 0.5s;
+    }
+    
+    .header-text{
+        /* margin-top: 100%; */
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+        margin-bottom: 90%;
+    }
+
+    .zoom p{
+        font-size: 30px;
+    
+     
+
+    }
+
+
+    
+.work-list{
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); */
+    grid-template-columns: repeat(1, 1fr); /* Updated to create a two-column layout */
+}
+    .sub-title{
+        font-size: 40px;
+    }
+    #about {
+        padding: 60px 20px; /* Reduced padding for smaller screens */
+        height: auto; /* Adjust height to be auto to accommodate content */
+    }
+
+    .row {
+        flex-direction: column; /* Stack the columns vertically on smaller screens */
+    }
+
+    .about-col-1, .about-col-2 {
+        flex-basis: 100%; /* Allow each column to take full width */
+        margin-bottom: 20px; /* Add some space between the stacked columns */
+    }
+
+    .about-col-1 img {
+        max-width: 100%; /* Ensure images are not larger than the container */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .sub-title {
+        font-size: 32px; /* Slightly reduce the font size for smaller screens */
+    }
+
+    .tab-titles {
+        flex-direction: column; /* Stack the tab titles vertically */
+        align-items: center; /* Center-align the items for a cleaner look */
+    }
+
+    .tab-links {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 10px; /* Add bottom margin for spacing between stacked links */
+        font-size: 16px; /* Adjust font size for better readability */
+    }
+
+    .tab-contents ul li {
+        font-size: 14px; /* Adjust list item font size for readability */
+    }
+
+    .contact-left, .contact-right {
+        flex-basis: 100%; /* Stack these sections vertically */
+        text-align: center; /* Center-align the text for a cleaner look */
+        margin-top: 20px;
+    }
+
+    .contact-left p, .contact-left p i {
+        font-size: 18px; /* Slightly larger than for very small screens, but smaller than base */
+    }
+
+    .social-icons a {
+        font-size: 22px; /* Optimal size for clickable areas */
+        margin-right: 10px; /* Adequate spacing between icons */
+    }
+
+    form input, form textarea {
+        padding: 8px; /* Comfortable padding for interaction */
+        margin: 8px 0; /* Optimize space between form elements */
+        font-size: 16px; /* Readable font size without taking too much space */
+    }
+
+    .btn.btn2 {
+        font-size: 16px; /* Slightly larger button text for readability */
+        padding: 12px 48px; /* Adequate padding for easier interaction */
+    }
+}
+    
+    .responsive-iframe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+    .frame{
+        width: 100%;
+        height: 100%;
+    }
+        
+
+
+#msg{
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
+}
+
+@media (max-width: 480px) {
+    /* Adjust layout for smartphones */
+    #sidemenu {
+        border-bottom: none;
+        display: block;
+        padding-top: 100px;
+    }
+
+    nav {
+        display: block;
+        position: fixed; /* Keep nav fixed on top */
+        top: 0;
+        left: 0;
+        right: 0;
+        transform: none; /* Remove transformation */
+        width: 100%; /* Full width */
+        justify-content: space-between; /* Space out nav items */
+        align-items: center; /* Center items vertically */
+        padding: 0 20px; /* Padding on the sides */
+        background-color: var(--shadow-colour2); 
+        animation: none; /* Disable any slide-in animation */
+    }
+
+    .social {
+        font-size: 40px;
+        left: 0;
+        right: 0;
+        transform: translateX(0%);
+    }
+
+    nav .fa-solid.fa-bars {
+        display: block;
+        font-size: 35px;
+        cursor: pointer;
+        position: fixed;
+        color: white;
+        top: 3%;
+        right: 3%;
+        z-index: 1;
+    }
+
+    nav ul {
+        background-color: var(--shadow-colour2);
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        z-index: 100;
+        padding-top: 50px;
+        transition: right 0.5s;
+    }
+
+    nav ul li {
+        display: block;
+        width: 100%; 
+        border-radius: 0;
+        background-color: var(--shadow-colour2);
+        border: 2px solid var(--shadow-colour2);
+        box-sizing: border-box; /* Include padding in the width calculation */
+        height: 50px;
+        margin: 20px 0; /* Vertically space out the list items */
+    }
+
+    nav ul li:hover {
+        background-color: var(--shadow-colour2);
+    }
+
+    nav li a {
+        color: var(--text-color); /* Ensure text color is visible against background */
+        display: block; /* Makes the anchor tags fill the li for easier clicking */
+        padding: 10px; /* Add some padding for aesthetic */
+    }
+
+    nav .fa-solid.fa-x {
+        display: block;
+        position: absolute;
+        color: white;
+        font-size: 30px;
+        top: 30px;
+        right: 150px;
+        cursor: pointer;
+        z-index: 10000;
+        transition: left 0.5s;
+    }
+  
+
+    
+    .header-text{
+        /* margin-top: 100%; */
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+        margin-bottom: 90%;
+    }
+
+    .zoom p{
+        font-size: 20px;
+    
+     
+
+    }
+
+
+    .dropdown-content {
+        min-width: 200px; /* Adjust dropdown width for smaller screens */
+    }
+
+    .dropdown-content a {
+        font-size: 16px;
+    }
+
+    #about {
+        padding: 40px 20px; /* Reduced padding for smaller screens */
+        height: auto; /* Flexible height to accommodate content */
+    }
+
+    .row {
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    .about-col-1, .about-col-2 {
+        flex-basis: 100%; /* Full width for each column */
+        margin-bottom: 20px; /* Space between stacked elements */
+    }
+
+    .about-col-1 img {
+        border-radius: 5px; /* Maintain rounded corners */
+        box-shadow: 0 4px 14px hsla(277, 65%, 62%, 0.5); /* Keep shadow for depth */
+    }
+
+    .sub-title {
+        font-size: 30px; /* Slightly reduce font size for title */
+        text-align: center; /* Center-align titles for better aesthetics */
+    }
+
+    .tab-titles {
+        flex-direction: column; /* Stack tab titles vertically */
+        align-items: center; /* Center-align for consistency */
+        margin: 20px 0; /* Adjusted margin for vertical stacking */
+    }
+
+    .tab-links {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 10px; /* Add bottom margin for spacing */
+        font-size: 16px; /* Adjust font size for readability on small screens */
+    }
+
+    .tab-contents ul li {
+        font-size: 14px; /* Slightly reduce font size for list items */
+    }
+
+    .tab-contents ul li span {
+        font-size: 14px; /* Consistent font size for list item spans */
+    }
+
+    /* Adjustments for mobile phones */
+    .contact-container {
+        padding: 30px 5%; /* Further reduce padding for small screens */
+    }
+
+    .contact-left p, .contact-left p i {
+        font-size: 20px; /* Adjust font size for readability on small screens */
+    }
+
+    .social-icons a {
+        font-size: 20px; /* Further reduce icon size */
+        margin-right: 8px;
+    }
+
+    form input, form textarea {
+        padding: 8px; /* Adjust padding for smaller screens */
+        margin: 8px 0; /* Reduce margin */
+    }
+
+    .btn.btn2 {
+        font-size: 14px; /* Smaller button text */
+        padding: 12px 40px; /* Adjust button padding */
+    }
+
+}
+

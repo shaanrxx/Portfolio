@@ -1,0 +1,260 @@
+
+
+:root {
+    /* Define your color variables */
+    --background-web-color: black; 
+    /* --background-web-color: #21005b; */
+    --heading-colour: #ffffff;
+    --shadow-colour1:#e7d8ff;
+    --shadow-colour2:#b375ff;
+    --shadow-colour3:#6e00e3;
+    --shadow-colour4:#500bb1; 
+    --text-color: #ffffff;
+    --dropdown-colour:#ffffff;
+    --hover-colour:#ffffff;
+    /* --shadow-color: rgba(0, 0, 0, 0.5); Semi-transparent shadow; */
+  }
+
+
+
+/**************post-filter************/
+/* .post-filter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1.5rem;
+    color: var(--shadow-colour2);
+    margin-top: 2rem !important;
+   
+    
+}
+
+.filter-item{
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+  
+} */
+
+/*Define the 'hidden' class in your CSS*/
+.hidden {
+    display: none !important; /* Use !important to override any inline display styles */
+}
+
+
+
+.post-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allow the items to wrap */
+    column-gap: 1.5rem; /* Space between items horizontally */
+    row-gap: 1rem; /* Space between items when they wrap */
+    color: var(--shadow-colour2);
+    margin-top: 2rem !important;
+}
+
+/* Adjust the font size for filter items on small screens if needed */
+.filter-item {
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.filter-item:hover{
+    color: var(--shadow-colour4);
+    text-shadow: 0 4px 14px hsla(286, 100%, 53%, 0.9);
+}
+
+.active-filter{
+    background: var(  --shadow-colour1);
+    color: var(--shadow-colour4);
+    padding: 4px 10px;
+    border-radius: 4px;
+    box-shadow: 0 4px 14px hsla(271, 100%, 70%, 0.6);
+}
+
+.post{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    justify-content: center;
+    gap: 2rem;
+
+   
+}
+
+.post-box{
+    background: var(--background-web-color);
+    box-shadow: 0 4px 14px hsla(271, 100%, 70%, 0.6);
+    padding: 15px;
+    border-radius: 0.5rem;
+}
+
+.post-box-link {
+   
+    color: inherit; /* To ensure text inherits the parent's color, not the default link color */
+}
+
+
+.post-box:hover {
+    /* background-color: var(--shadow-colour4); */
+    box-shadow: 0 4px 14px hsla(0, 0%, 100%, 1.5);
+}
+
+
+.post-img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.5rem;
+}
+
+
+
+.category{
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--shadow-colour1);
+}
+
+.post-title{
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--shadow-colour2);
+    /********* To Remain Title***************/
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.post-title:hover {
+  color: var(--text-color);
+}
+
+.post-date{
+    color:var(--dropdown-colour);
+    display:flex;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-top: 4px;
+}
+
+.post-description{
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    margin: 5px 0 10px;
+    /********* To Remain Title***************/
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: var(--shadow-colour1);
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid var(--second-color);
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.footer p{
+   font-size: 0.938rem; 
+}
+
+.social{
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.social .bx{
+    font-size: 1.4rem;
+    color: var(--shadow-colour1);
+}
+
+.social .bx:hover{
+    color: var(--second-color);
+    transition: 0.3s all linear;
+}
+
+
+
+
+/************** Responsive Adjustments ************/
+@media (max-width: 768px) {
+    .post-filter {
+        
+            display: grid;
+            grid-template-columns: repeat(4, 2fr); /* Switch to a two-column grid on smaller screens */
+            gap: 0.5rem; /* Adjust the gap between grid items */
+        
+    }
+
+    .filter-item {
+        justify-self: start; /* Align to the start of the grid cell */
+        font-size: 0.9rem; /* Slightly smaller font size for filter items */
+    }
+
+    .post {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust grid for smaller screens */
+    }
+
+    .post-box-link{
+        margin-bottom: 1rem; /* Adjust space between clickable boxes */
+    }
+
+    .post-box, .profile, .footer {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .category, .post-date, .post-description, .footer p {
+        font-size: 0.8rem; /* Adjust font size for readability */
+    }
+
+    .post-title {
+        font-size: 1.1rem; /* Smaller title font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .header-text, .post-title, .post-date, .category, .post-description {
+        font-size: 0.75rem; /* Even smaller font sizes for very small screens */
+    }
+
+    .post {
+        grid-template-columns: 1fr; /* Single column layout for very small screens */
+    }
+
+    .profile-img {
+        width: 30px; /* Smaller profile images */
+        height: 30px;
+    }
+
+    .social .bx {
+        font-size: 1.2rem; /* Smaller social icons */
+    }
+}
+
+
+    

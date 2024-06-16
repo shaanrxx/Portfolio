@@ -1,0 +1,9 @@
+# Allow access to all
+Order allow,deny
+Allow from all
+
+# Prevent directory listing
+Options -Indexes
+
+# Set default index file
+DirectoryIndex index.html index.php

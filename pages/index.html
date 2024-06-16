@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shaan Rehsi: Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@100;300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/093248551b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../styles/aos.css">
+    <link rel="stylesheet" href="../styles/owl.carousel.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+    <script src="sketch.js"></script>
+    <script src="test.js"></script>
+
+</head>
+
+
+    <style>
+
+        .header-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            animation: zoomOut 3.0s ease;
+            margin-top: 20%; 
+            padding: 20px ; 
+
+        }
+        
+        .zoom {
+            transition: transform .2s; /* Animation */
+            margin: 0 auto;
+        }
+
+        /* .zoom:hover {
+            transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+        /* } */ 
+
+        .horizontal-line {
+            display: flex;
+            justify-content: center;
+        }
+
+        .horizontal-line .zoom {
+            margin: 0 10px; /* Adjust the spacing between elements */
+        }
+
+        #myPatternContainer{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        } 
+
+        #mySpinningPatternWebGLContainer{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+        } 
+
+
+
+
+
+    </style>
+    <body>
+<!------------------------ nav bar ----------------------->
+<div id="header">
+    <div class="container-header">
+    <div class="container">
+        
+     
+
+        <nav id="navbar">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>   
+                <li><a href="portfolio.html">Portfolio</a></li> 
+                <!-- <li class="dropdown">
+                    <a href="#" class="dropbtn">Websites</a>
+                    <div class="dropdown-content">
+                        <a href="https://cci.arts.ac.uk/~shrehsi/aarhus_website/index.html" target="_blank">Summer School - C++</a>
+                        <a href="https://cci.arts.ac.uk/~shrehsi/website/index2.html" target="_blank">Data Visualisation - Year 2</a>
+                        <a href="https://cci.arts.ac.uk/~shrehsi/portfolio/index2.html" target="_blank">Web Dev - Year 2</a>
+                        <a href="https://cci.arts.ac.uk/~shrehsi/index.html" target="_blank">AI Chatbot Ethics - Year 3</a>
+                        
+                    </div></li>   -->
+                <li><a href="#about">About</a></li>  
+                <li><a href="#contact">Contact</a></li> 
+                <li><a href="../files/shaancv2024.pdf" target="blank">rEsumé/CV</a></li> 
+                <i class="fa-solid fa-x" onclick="closemenu()"></i> 
+                
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            
+        
+            <div id="social" class="social text-gray">
+                <a href="https://www.linkedin.com/in/shaan-rehsi-4b40561b3/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:shaanr@hotmail.co.uk"><i class="fa fa-envelope" aria-hidden="true" target="_blank"></i></a>
+                        <a href="https://www.instagram.com/shapesandjapes_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://git.arts.ac.uk/20011316" target="_blank"><i class="fa-brands fa-square-git"></i></a>
+                       
+                       
+            </div>
+            
+        </div>
+        
+    </div>
+ 
+        </nav>
+     
+        <div class="header-text">
+            <div class="zoom" id="zoomElement">
+                <h1>SHAAN REHSI</h1>
+            </div>
+    
+            <div class="horizontal-line">
+                <div class="zoom" id="coder">
+                    <p>CODER</p>
+                </div>
+    
+                <p> • </p>
+    
+                <div class="zoom" id="artist">
+                    <p>ARTIST</p>
+                </div>
+    
+                <p> • </p>
+    
+                <div class="zoom" id="designer">
+                    <p>DESIGNER</p>
+                </div>
+            </div>
+        </div>
+    
+        <script>
+            function addZoomClassWithInterval() {
+                const elements = document.querySelectorAll('.horizontal-line .zoom');
+                elements.forEach((element, index) => {
+                    setTimeout(() => {
+                        element.classList.add('zoom');
+                    }, index * 1000); // Add a delay based on the index
+                });
+            }
+    
+            // Call the function after the page loads
+            document.addEventListener("DOMContentLoaded", addZoomClassWithInterval);
+        </script>
+</div>
+
+
+
+
+<!--------------------------- favourites --------------------------->
+<!-- <div id="favourites">
+    <div class="container">
+        <h1 class="sub-title">Projects </h1>
+        <div class="work-list">
+            <div class="work">
+                <a href ="#">
+                <img src="/images/maze.png" alt="maze game python">
+                    <div class="layer">
+                    <h3>Python</h3></a>
+                </div>
+            </div>
+
+            <div class="work">
+                <a href ="#">
+                <img src="/images/game controller final.png" alt="VR Art Therapy">
+                <div class="layer">
+                    <h3>VR Art Therapy</h3></a>
+                </div>
+            </div>
+
+            <div class="work">
+                <a href ="#">
+                <img src="/images/1.png" alt="P5.js">
+                    <div class="layer">
+                    <h3>p5.js</h3></a>
+                </div>
+            </div>
+
+        
+        </div>
+        <a href ="portfolio.html" class="btn">More Projects</a>
+    </div>
+</div> -->
+
+
+
+
+<!-------------------- about --------------------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="../images/aboutmepic.png" >   
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>My name is Shaan Rehsi, and I am a Creative Technologist/Designer currently in my final year studying Creative Computing at the University of the Arts London. With a passion for merging the boundaries between technology and art, I've dedicated my academic and personal projects to exploring innovative ways to apply computing in creative contexts. 
+                </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <!-- <p class="tab-links" onclick="opentab('experience')">Experience</p> -->
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                    <p class="tab-links" onclick="opentab('languages')">Coding Languages</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Skills Gained During Unvierity</span><br>- Experience in web development, iOS app
+                            development, and game development.
+                            Utilised APIs and web scraped for data
+                            manipulation and visualisation
+                            <br>- 3D modeling and animation with Blender<br>- Virtual Reality prototype design and Human-Computer Interaction knowledge
+                            <br>- 
+                            Skilled in extracting insights from large
+                            datasets from big data sources through data
+                            mining and analysis techniques</li>
+                    </ul>
+                </div>
+
+                <!-- <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>-</span><br></li>
+                    </ul>
+                </div> -->
+
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>University of the Arts London</span><br>BSc Creative Computing</li>
+                        <li><span>Aarhus University - Summer School</span><br>Learn Software Design withC++</li>
+                        <li><span>Hitchin Girls' School</span><br>A Levels<br>Spanish, Computing Science, Art & Design</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="languages">
+                    <ul>
+                        <li><span>Languages</span><br>Python<br>JavaScript<br>Java<br>C++<br>HTML/CSS<br>Swift</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!------------------------ SERVICES ------------------------------- -->
+
+
+<!------------------------- CONTACT ---------------------->
+
+<div id="contact">
+    <div class="contact-container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> contact@example.com</p>
+                <p><i class="fa-solid fa-phone"></i> 0123456789</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/shaan-rehsi-4b40561b3/"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/shapesandjapes_/"><i class="fa-brands fa-instagram"></i></a>
+                    <!-- <a href="https://www.tiktok.com/@shapesandjapes"><i class="fab fa-tiktok"></i></a> -->
+                    <a href="mailto:shaanr@hotmail.co.uk"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+                <a href="../files/cv-2024.pdf" target="blank" class="btn btn2">View CV</a>
+            </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="FirstName" placeholder="First Name: " required>
+                        <input type="text" name="LastName" placeholder="Surname: " required>
+                        <input type="email" name="email" placeholder="Email: " required>
+                        <textarea name="Message" rows="6" placeholder="Your Message: "></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>
+            © 2023 Copyright: Created by: Shaan K Rehsi</p>
+    </div>
+</div>
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<!-- <script>
+document.addEventListener("DOMContentLoaded", function() {
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu() {
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu() {
+        sidemenu.style.right = "-200px";
+    }
+
+    // Event listeners for menu open and close
+    document.querySelector(".fa-bars").addEventListener("click", openmenu);
+    document.querySelector(".fa-xmark").addEventListener("click", closemenu);
+});
+
+
+</script> -->
+
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyEkKIxeYOq0Hvfh18jRE87tUsZYsg2MRdtH7oV6Nti3C_XxQkR213ThMBEXgrLtAe_8g/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            }, 5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+
+
+<script>
+    function addZoomClassWithInterval() {
+        const elements = document.querySelectorAll('.horizontal-line .zoom');
+        let index = 0;
+
+        const intervalId = setInterval(() => {
+            if (index < elements.length) {
+                elements[index].classList.add('zoom');
+                index++;
+            } else {
+                clearInterval(intervalId);
+            }
+        }, 1000); // 1000 milliseconds interval
+    }
+
+    // Call the function after the page loads
+    window.onload = addZoomClassWithInterval;
+</script>
+
+
+    <!-- Container where the p5 sketch will attach -->
+    <div id="myPatternContainer"></div>
+    <div id="mySpinningPatternWebGLContainer"></div>
+
+
+    <!-- Other HTML elements -->
+
+    <!-- p5.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+    
+    <!-- Your p5.js sketches -->
+    <script src="sketch.js"></script>
+
+       <!-- Jquery Library file -->
+       <script src="./js/Jquery3.4.1.min.js"></script>
+
+       <!-- --------- Owl-Carousel js ------------------->
+       <script src="./js/owl.carousel.min.js"></script>
+   
+       <!-- ------------ AOS js Library  ------------------------- -->
+       <script src="../js/aos.js"></script>
+   
+       <!-- Custom Javascript file -->
+       <script src="./js/main.js"></script>
+   
+       <!-- ------------ navbar changincolor ------------------------- -->
+       <script src="../js/nav.js"></script>
+
+
+       <!------------------------- sidemenu for mobile----------------------->
+       <script>
+        var sidemeu = document.getElementById("sidemenu");
+                function openmenu(){
+                    sidemeu.style.right = "0";
+                }
+                function closemenu(){
+                    sidemeu.style.right = "-200px";
+                }
+
+            // Add event listener for the dropdown button
+        document.querySelector('.dropbtn').addEventListener('click', function(event) {
+            // Prevents the link from navigating to "#"
+            event.preventDefault();
+            // This will toggle the dropdown content to show/hide
+            var dropdownContent = this.nextElementSibling;
+            dropdownContent.classList.toggle('show');
+        });
+        </script>
+        
+    
+
+    <!-- Your custom scripts -
+</body>
+</html>

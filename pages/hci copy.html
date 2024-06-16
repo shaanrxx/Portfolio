@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shaan Rehsi: Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@100;300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/093248551b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../styles/style.css">
+
+</head>
+
+    <style>
+        #header {
+            width: 100%;
+            height: 100vh;
+            z-index: 2;
+            margin-top: -10px;
+        }
+
+        .header-text{
+            margin-top: 12%;
+        }
+
+        .header-text p{
+            margin: 0 auto;
+            color: #e7d8ff;
+            text-shadow: none;
+        }     
+
+        /* .btn{
+            background-color: brown;
+        }
+
+
+        .btn:hover{
+            background-color: white;
+            color: brown;
+        } */
+
+        @media (max-width: 480px) {
+  
+    #header {
+        height: 5vh; /* A bit more space in the header can help on smaller devices */
+    }
+
+    .header-text {
+        padding: 0 10px; /* Tailor padding to ensure content does not touch the screen sides */
+        font-size: 15px; /* Slightly larger font sizes can improve readability on these screens */
+        height: 5vh;
+    }
+
+    img {
+        max-width: 100%; /* Responsive images are crucial for small screens */
+        height: auto; /* Keep aspect ratio intact */
+    }
+   .container-header{
+    height: 5vh;
+   }
+}
+
+
+@media (max-width: 600px) {
+  
+  #header {
+      height: 5vh; /* A bit more space in the header can help on smaller devices */
+  }
+
+  .header-text {
+      padding: 0 10px; /* Tailor padding to ensure content does not touch the screen sides */
+      font-size: 15px; /* Slightly larger font sizes can improve readability on these screens */
+      height: 5vh;
+  }
+
+  img {
+      max-width: 100%; /* Responsive images are crucial for small screens */
+      height: auto; /* Keep aspect ratio intact */
+  }
+}
+    </style>
+
+</head>
+
+<body>
+
+    <!------------------------ nav bar ----------------------->
+    <div id="header">
+        <div class="container-header">
+        <div class="container">
+            <!-- <img src="/images/Shaan Rehsi.png" class="logo"> -->
+            <nav>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>   
+                    <li><a href="portfolio.html">Portfolio</a></li> 
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Websites</a>
+                        <div class="dropdown-content">
+                            <a href="https://cci.arts.ac.uk/~shrehsi/aarhus_website/index.html">Summer School - C++</a>
+                            <a href="https://cci.arts.ac.uk/~shrehsi/website/index2.html">Data Visualisation - Year 2</a>
+                            <a href="https://cci.arts.ac.uk/~shrehsi/portfolio/index2.html">Web Dev - Year 2</a>
+                        </div></li>  
+                    <li><a href="#about">About</a></li>  
+                    <li><a href="#contact">Contact</a></li>  
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+    
+                <div class="social text-gray">
+                    <a href="https://www.linkedin.com/in/shaan-rehsi-4b40561b3/"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/shapesandjapes_/"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@shapesandjapes"><i class="fab fa-tiktok"></i></a>
+                            <a href="mailto:shaanr@hotmail.co.uk"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+     
+            <div class="header-text">
+                <h1 class="sub-title"> HCI: VR Art Therapy </h1>
+            </div>
+        </div>
+    </div>
+
+<!-------------------------------- PORTFOLIO --------------------------------->
+
+<div class="container-header">
+    <div  style="height: 100vh" class="container">
+        <div class="header-text">
+            <h1>About</h1>
+            <p>In my second year of university, I took a module in Human Computer Interaction. I was required to research 
+                and design a product that would benefit a community of people.
+                I created a prototype of a VR Paintbrush which provided an immersive environment for users to explore their
+                feelings via art therapy.   </p>
+        </div>
+        <a style= "align-items: center;" href="../files/XpressionBrush.pdf" download class="btn ">Download PDF</a>
+
+    </div>
+</div>
+</div>
+
+
+
+<!-------------------------------- PORTFOLIO --------------------------------->
+    <div id="display">
+        <div  class="container">
+            <div class="row">
+                <div class="display-col-1">
+                    <video width="480" height="500" controls>
+                        <source src="../videos/model.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="display-col-2">
+                    <h1  class="sub-title">Design</h1>
+                    <p style="margin-top: 3%; color:white"> Here is my final design for this prototype created in Blender.
+                         This product involved two side buttons and a touch pad for navigation and a trigger button for grabbing.
+                         Alongside this tool would be a navigation menu inside the 3D environment for users to have extra tools to work with.
+                         I drew inspiration from Goodgle Tilt Brush and Oculus Rift designs and tried ti make the design as accessible as possible.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="display-col-1">
+                <h1 class="sub-title">Demo</h1>
+                <p  style="margin-top: 3%;  color: white;" >Here is a demonstration of how to tool would be used in therapy environment also created in Blender.
+                    I enjoyed modelling this scene and learning how to use keyframes to create basic animations in thie software.
+                </p>
+            </div>
+            <div class="display-col-2">
+                <video width="680" height="360" controls>
+                    <source src="../videos/demo.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <a href ="#header" class="btn">Back to Top</a>
+
+
+    
+
+
+    <!-------------------- about --------------------------->
+    <!-- <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="/images/cat4.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>My name is Shaan Rehsi and I'm currently in my second year
+                        of university.
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Languages</span><br>Python</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>-</span><br></li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>UAL</span><br>BSc Creative Computing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!------------------------ SERVICES ------------------------------- -->
+
+
+    <!------------------------- CONTACT ---------------------->
+
+    <!-- <div id="contact">
+        <div class="contact-container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> contact@example.com</p>
+                    <p><i class="fa-solid fa-phone"></i> 0123456789</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/shaan-rehsi-4b40561b3/"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/shapesandjapes_/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@shapesandjapes"><i class="fab fa-tiktok"></i></a>
+                        <a href="mailto:shaanr@hotmail.co.uk"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                    <a href="../files/cv-2024.pdf" target="blank" class="btn btn2">View CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="FirstName" placeholder="First Name: " required>
+                        <input type="text" name="LastName" placeholder="Surname: " required>
+                        <input type="email" name="email" placeholder="Email: " required>
+                        <textarea name="Message" rows="6" placeholder="Your Message: "></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div> -->
+        <div class="copyright">
+            <p>
+                © 2023 Copyright: Created by: Shaan K Rehsi</p>
+        </div>
+    </div>
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0"
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px"
+        }
+    </script>
+
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbw5k_VanyFZIfU0IT9e7FIOOxLgJ7_Cpw1TycQjwR4BaKXuepf-lAtmw4A9uuy3S2IKUw/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shaan Rehsi: Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@100;300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/093248551b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/portfolio.css">
+    <link rel="stylesheet" href="../styles/aos.css">
+    <link rel="stylesheet" href="../styles/page.css">
+
+ 
+
+
+
+    <style>
+        /* body{
+          z-index: -100;
+        }
+
+    #header{
+        height: 10vh;
+        z-index: 100;
+    }
+
+
+         .header-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            height: 20vh;
+          
+        
+        }
+
+        .header-title{
+            font-size: 1.5rem;
+            color: var(--shadow-colour2);
+        }
+
+    
+
+        p{
+            font-size: 1rem;
+            color: var(--shadow-colour1);
+        }
+
+
+        
+
+         */
+
+         .header-title{
+            font-size: 1.5rem;
+            color: var(--shadow-colour2);
+        }
+
+       
+
+         
+     
+         
+
+
+
+    </style>
+</head>
+<body>
+
+<!------------------------ nav bar ----------------------->
+<div id="header">
+    <div class="container-header">
+    <div class="container">
+        <!-- <img src="/images/Shaan Rehsi.png" class="logo"> -->
+        <nav id="navbar">
+            <ul id="sidemenu">
+                <li><a href="index.html">Home</a></li>   
+                <li><a href="portfolio.html">Portfolio</a></li> 
+                <!-- <li class="dropdown">
+                    <a href="#" class="dropbtn">Websites</a>
+                    <div class="dropdown-content">
+                        <a href="https://cci.arts.ac.uk/~shrehsi/aarhus_website/index.html" target="_blank">Summer School - C++</a>
+                        <a href="https://cci.arts.ac.uk/~shrehsi/website/index2.html" target="_blank">Data Visualisation - Year 2</a>
+                        <a href="https://cci.arts.ac.uk/~shrehsi/portfolio/index2.html" target="_blank">Web Dev - Year 2</a>
+                    </div></li>   -->
+                <li><a href="index.html#about">About</a></li>  
+                <li><a href="index.html#contact">Contact</a></li> 
+                <li><a href="../files/shaancv2024.pdf" target="blank">rEsumé/CV</a></li> 
+                <i class="fa-solid fa-x" onclick="closemenu()"></i> 
+                
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+
+            <div id="social" class="social text-gray">
+                <a href="https://www.linkedin.com/in/shaan-rehsi-4b40561b3/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:shaanr@hotmail.co.uk" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                                <a href="https://www.instagram.com/shapesandjapes_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://git.arts.ac.uk/20011316" target="_blank"><i class="fa-brands fa-square-git"></i></a>
+            </div>
+        </div>
+    </div>
+ 
+        </nav>
+     
+    </div>
+</div>
+
+
+<div class="header-text">
+<!--     
+<a href="portfolio.html" class="back-portfolio">Back To Portfolio</a> -->
+    <h1>Web Development</h1>
+</div>
+<!-------------------------------- work --------------------------------->
+
+
+<section class="post-header">
+        <div class="header-content post-container">
+            <!-----------Back to Home---------->
+    
+        <!-----------Title---------->
+        <h1 class="header-title">About the Project</h1>
+        <!----------------Post Image----------------->
+        <img src="../images/webdesign.png" alt="" class="header-img">
+
+        <p>
+            This was my first website using HTML/CSS for a web development module I completed. The task was to create a portfolio website could hold our projects over the course. Additionally, it was required to complete a set of HTML/CSS related tasks throughout this module. This website was more experimental rather than functional and responsive for me as I wanted to learn different techniques to help me create stronger websites following this module. </p>
+        
+          
+             </p>
+       
+         
+    </div>
+   </section>
+
+   <a style= "align-items: center;" href="https://cci.arts.ac.uk/~shrehsi/portfolio/index.html" target="_blank"  class="btn ">Go to Website</a>
+            
+
+<!-------------------- about --------------------------->
+<!-- <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="../images/aboutmepic.png" >   
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>My name is Shaan Rehsi, and I am a Creative Technologist/Designer currently in my final year studying Creative Computing at the University of the Arts London. With a passion for merging the boundaries between technology and art, I've dedicated my academic and personal projects to exploring innovative ways to apply computing in creative contexts. 
+                </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                    <p class="tab-links" onclick="opentab('languages')">Coding Languages</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Skills Gained During Unvierity</span><br>- Experience in web development, iOS app
+                            development, and game development.
+                            Utilised APIs and web scraped for data
+                            manipulation and visualisation
+                            <br>- 3D modeling and animation with Blender<br>- Virtual Reality prototype design and Human-Computer Interaction knowledge
+                            <br>- 
+                            Skilled in extracting insights from large
+                            datasets from big data sources through data
+                            mining and analysis techniques</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>University of the Arts London</span><br>BSc Creative Computing</li>
+                        <li><span>Aarhus University - Summer School</span><br>Learn Software Design withC++</li>
+                        <li><span>Hitchin Girls' School</span><br>A Levels<br>Spanish, Computing Science, Art & Design</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="languages">
+                    <ul>
+                        <li><span>Languages</span><br>Python<br>JavaScript<br>Java<br>C++<br>HTML/CSS<br>Swift</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!------------------------ SERVICES ------------------------------- -->
+
+
+<!------------------------- CONTACT ---------------------->
+
+<!-- <div id="contact">
+    <div class="contact-container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> contact@example.com</p>
+                <p><i class="fa-solid fa-phone"></i> 0123456789</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/shaan-rehsi-4b40561b3/"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/shapesandjapes_/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@shapesandjapes"><i class="fab fa-tiktok"></i></a>
+                    <a href="mailto:shaanr@hotmail.co.uk"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+                <a href="../files/cv-2024.pdf" target="blank" class="btn btn2">View CV</a>
+            </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="FirstName" placeholder="First Name: " required>
+                        <input type="text" name="LastName" placeholder="Surname: " required>
+                        <input type="email" name="email" placeholder="Email: " required>
+                        <textarea name="Message" rows="6" placeholder="Your Message: "></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+            </div>
+        </div>
+    </div> -->
+    <div class="copyright">
+        <p>
+            © 2023 Copyright: Created by: Shaan K Rehsi</p>
+    </div>
+</div>
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+        
+    function openmenu(){
+        sidemenu.style.right = "0"
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px"
+    }
+</script>
+
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw5k_VanyFZIfU0IT9e7FIOOxLgJ7_Cpw1TycQjwR4BaKXuepf-lAtmw4A9uuy3S2IKUw/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            }, 5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+    <!------------ JQuery List------------->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <!-------------- Link to JS---------------->
+    <script src="../js/blog.js"></script>
+
+        <!-- ------------ AOS js Library  ------------------------- -->
+        <script src="../js/aos.js"></script>
+
+        <!-- ------------ navbar changincolor ------------------------- -->
+        <script src="../js/nav.js"></script>
+
+</body>
+
+
+
+
+</html>
+
