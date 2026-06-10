@@ -30,7 +30,51 @@
 
 
     <style>
+        .intro-text {
+  max-width: 600px;
+  margin-top: 15px;
+  font-size: 1px;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+.event-section {
+  margin-bottom: 60px;
+}
 
+.event-title {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.event-desc {
+  opacity: 0.7;
+  margin-bottom: 20px;
+  max-width: 700px;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.image-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.image-grid img:hover {
+  transform: scale(1.03);
+}
+
+.divider {
+  height: 1px;
+  background: rgba(255,255,255,0.15);
+  margin: 50px 0;
+}
 
       
 
@@ -42,65 +86,116 @@
 
 <!------------------------ nav bar ----------------------->
 <div id="header">
-    <div class="container-header">
+  <div class="container-header">
     <div class="container">
-        <!-- <img src="/images/Shaan Rehsi.png" class="logo"> -->
-        <nav id="navbar">
-            <ul id="sidemenu">
-                <li><a href="../index.html">Home</a></li>   
-                <li><a href="#header">Portfolio</a></li> 
-                <!-- <li class="dropdown">
-                    <a href="#" class="dropbtn">Websites</a>
-                    <div class="dropdown-content">
-                        <a href="https://cci.arts.ac.uk/~shrehsi/aarhus_website/index.html" target="_blank">Summer School - C++</a>
-                        <a href="https://cci.arts.ac.uk/~shrehsi/website/index2.html" target="_blank">Data Visualisation - Year 2</a>
-                        <a href="https://cci.arts.ac.uk/~shrehsi/portfolio/index2.html" target="_blank">Web Dev - Year 2</a>
-                    </div></li>   -->
-                <li><a href="../index.html#about">About</a></li>  
-                <li><a href="../index#contact">Contact</a></li> 
-                <li><a href="./files/Shaan Rehsi CV Creative Technologist.pdf" target="blank">rEsumé/CV</a></li> 
-                <i class="fa-solid fa-x" onclick="closemenu()"></i> 
-                
-            </ul>
-            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
 
-            <div id="social" class="social text-gray">
-                <a href="https://www.linkedin.com/in/shaan-rehsi-4b40561b3/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://www.instagram.com/shapesandjapes_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                        <!-- <a href="https://www.tiktok.com/@shapesandjapes"><i class="fab fa-tiktok"></i></a> -->
-                        <a href="mailto:shaanr@hotmail.co.uk" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-                        <a href="https://github.com/shaanrxx" target="_blank"><i class="fa-brands fa-square-git"></i></a>
-            </div>
+      <nav id="navbar">
+        <ul id="sidemenu">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="#header">Portfolio</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index#contact">Contact</a></li>
+          <li><a href="./files/Shaan Rehsi CV Creative Technologist.pdf" target="blank">rEsumé/CV</a></li>
+
+          <i class="fa-solid fa-x" onclick="closemenu()"></i>
+        </ul>
+
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+
+        <div id="social" class="social text-gray">
+          <a href="https://www.linkedin.com/in/shaan-rehsi-4b40561b3/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/shapesandjapes_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="mailto:shaanr@hotmail.co.uk" target="_blank"><i class="fa fa-envelope"></i></a>
+          <a href="https://github.com/shaanrxx" target="_blank"><i class="fa-brands fa-square-git"></i></a>
         </div>
+
+      </nav>
+
     </div>
- 
-        </nav>
-     
-    </div>
+  </div>
 </div>
 
+<div class="header-text">
+  <h1>Featured Events</h1>
 
-
-<div class="header-text"    >
-    <h1>Portfolio</h1>
-
+  <p class="intro-text">
+    Since 2025, I have performed under the name Shapes and Japes, creating experimental amapiano-influenced music and live-coded audiovisual sets using Strudel, exploring rhythm, systems, and performance through real-time generative code.
+  </p>
 
 </div>
 <!-------------------------------- PORTFOLIO --------------------------------->
-    <!--------------------Post Filter-------------->
-    <div class="post-filter container">
-        <span class="filter-item active-filter"  data-filter='all'>ALL</span>
-         <span class="filter-item" data-filter='livecoding'>ALGOTRANCE</span>
-        <span class="filter-item" data-filter='two'>PeckhamDigital2025</span>
-        <span class="filter-item" data-filter='aixsesign'>VandA</span>
-        <!-- <span class="filter-item" data-filter='hci'>H.C.I.</span> -->
-        <span class="filter-item" data-filter='coding'>Corsica</span>
-        
+<section class="post container">
 
-        
+  <!-- ALGOTRANCE -->
+  <div class="event-section">
+    <h2 class="event-title">ALGOTRANCE</h2>
+    <p class="event-desc">Live coding / audiovisual performance exploring generative systems.</p>
+
+    <div class="image-grid">
+      <img src="../images/algo1.jpg" alt="">
+      <img src="../images/algo2.jpg" alt="">
+      <img src="../images/algo3.jpg" alt="">
+      <img src="../images/algo4.jpg" alt="">
     </div>
+  </div>
 
-    <!------------------------- Posts ---------------------->
-    <section class="post container">
+  <div class="divider"></div>
 
-  
+  <!-- PECKHAM DIGITAL -->
+  <div class="event-section">
+    <h2 class="event-title">PECKHAM DIGITAL 2025</h2>
+    <p class="event-desc">Exhibition and talk on creative technology and AI art.</p>
+
+    <div class="image-grid">
+      <img src="../images/pd_1.jpg" alt="">
+      <img src="../images/pd_2.jpg" alt="">
+      <img src="../images/pd_3.jpg" alt="">
+      <img src="../images/pd_4.jpg" alt="">
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- V&A -->
+  <div class="event-section">
+    <h2 class="event-title">V&A MUSEUM</h2>
+    <p class="event-desc">Interactive installation and digital culture research.</p>
+
+    <div class="image-grid">
+      <img src="../images/va1.jpg" alt="">
+      <img src="../images/va2.jpg" alt="">
+      <img src="../images/va3.jpg" alt="">
+      <img src="../images/va4.jpg" alt="">
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- CORSICA -->
+  <div class="event-section">
+    <h2 class="event-title">CORSICA STUDIOS</h2>
+    <p class="event-desc">Live audiovisual coding performance.</p>
+
+    <div class="image-grid">
+      <img src="../images/corsica1.jpg" alt="">
+      <img src="../images/corsica2.jpg" alt="">
+      <img src="../images/corsica3.jpg" alt="">
+      <img src="../images/corsica4.jpg" alt="">
+    </div>
+  </div>
+
+
+    <!-- Restage Collective -->
+  <div class="event-section">
+    <h2 class="event-title">CORSICA STUDIOS</h2>
+    <p class="event-desc">Live audiovisual coding performance.</p>
+
+    <div class="image-grid">
+      <img src="../images/corsica1.jpg" alt="">
+      <img src="../images/corsica2.jpg" alt="">
+      <img src="../images/corsica3.jpg" alt="">
+      <img src="../images/corsica4.jpg" alt="">
+    </div>
+  </div>
+
+</section>
