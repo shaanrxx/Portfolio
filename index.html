@@ -79,9 +79,10 @@
           <ul id="sidemenu">
             <li><a href="#header">Home</a></li>
             <li><a href="./pages/portfolio.html">Portfolio</a></li>
+            <li><a href="./pages/livecoding.html">Live coding</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="./files/Shaan_RehsiCV2025.pdf" target="_blank">rEsumé/CV</a></li>
+            <li><a href="./files/cv2026.pdf" target="_blank">rEsumé/CV</a></li>
             <i class="fa-solid fa-x" onclick="closemenu()"></i>
           </ul>
           <i class="fa-solid fa-bars" onclick="openmenu()"></i>
@@ -112,91 +113,142 @@
 
   <!-------------------- ABOUT SECTION --------------------------->
   <div id="about">
-    <div class="container">
-      <div class="row">
-        <div class="about-col-1">
-          <img src="../images/aboutmepic.png" alt="Shaan Rehsi portrait">
+  <div class="container">
+    <div class="row">
+
+      <div class="about-col-1">
+        <img src="./images/image.png" alt="Shaan Rehsi portrait">
+      </div>
+
+      <div class="about-col-2">
+        <h1 class="sub-title">About Me</h1>
+
+        <p>
+          I am a Creative Technologist, Designer and Live Coder based in London.
+          My work explores the intersection of technology, design, music and
+          digital culture through creative coding, AI research, community-led
+          projects and interactive experiences.
+          <br><br>
+          Recently I have worked with Peckham Digital producing podcasts,
+          social campaigns and digital content while continuing my practice
+          in live coding, creative technology and experimental media.
+        </p>
+
+        <div class="tab-titles">
+          <p class="tab-links active-link" onclick="opentab('creative-tech')">
+            Creative Technology
+          </p>
+
+          <p class="tab-links" onclick="opentab('design')">
+            Design
+          </p>
+
+          <p class="tab-links" onclick="opentab('development')">
+            Development
+          </p>
+
+          <p class="tab-links" onclick="opentab('research')">
+            Research
+          </p>
         </div>
-        <div class="about-col-2">
-          <h1 class="sub-title">About Me</h1>
-          <p>I am a Creative Technologist, Designer and Live Coder
-based in London. My work explores the intersection of
-technology, design, music and digital culture through
-creative coding, AI research, community-led projects
-and interactive experiences.
 
-Recently I have worked with Peckham Digital producing
-podcasts, social campaigns and digital content while
-continuing my practice in live coding, creative
-technology and experimental media..</p>
-
-          <div class="tab-titles">
-            <p class="tab-links active-link" onclick="opentab('creative technology')">Creative Technology</p>
-            <p class="tab-links" onclick="opentab('design')">Design</p>
-            <p class="tab-links" onclick="opentab('development')">Development</p>
-            <p class="tab-links" onclick="opentab('Research')">Researcht</p>
-          </div>
-
-          <div class="tab-contents active-tab" id="creative technology">
-<ul>
-
-<li>
-<span>Creative Technology</span><br>
-Creative Coding<br>
-Live Coding<br>
-Generative AI<br>
-Data Visualisation
-</li>
-
-<li>
-<span>Design</span><br>
-UX/UI Design<br>
-Graphic Design<br>
-Branding<br>
-Video Editing
-</li>
-
-<li>
-<span>Development</span><br>
-HTML<br>
-CSS<br>
-JavaScript<br>
-React<br>
-React Native
-</li>
-
-<li>
-<span>Research</span><br>
-User Research<br>
-Workshop Facilitation<br>
-Digital Culture Research<br>
-Quantitative Analysis
-</li>
-
-</ul>
-</div>
-
-  <!------------------------- CONTACT (NO FORM) ---------------------->
-  <div id="contact">
-    <div class="contact-container">
-      <div class="row">
-        <div class="contact-left">
-          <h1 class="sub-title">Contact Me</h1>
-          <p><i class="fa-solid fa-paper-plane"></i> shaanr@hotmail.co.uk</p>
-          <div class="social-icons">
-            <a href="https://www.linkedin.com/in/shaan-rehsi-4b40561b3/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://www.instagram.com/shapesandjapes_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href="mailto:shaanr@hotmail.co.uk"><i class="fa-solid fa-envelope"></i></a>
-          </div>
-          <a href="./files/cv2026.pdf" target="_blank" class="btn btn2">View CV</a>
+        <!-- Creative Technology -->
+        <div class="tab-contents active-tab" id="creative-tech">
+          <ul>
+            <li>
+              <span>Creative Technology</span><br>
+              Creative Coding<br>
+              Live Coding<br>
+              Generative AI<br>
+              Data Visualisation
+            </li>
+          </ul>
         </div>
+
+        <!-- Design -->
+        <div class="tab-contents" id="design">
+          <ul>
+            <li>
+              <span>Design</span><br>
+              UX/UI Design<br>
+              Graphic Design<br>
+              Branding<br>
+              Video Editing
+            </li>
+          </ul>
+        </div>
+
+        <!-- Development -->
+        <div class="tab-contents" id="development">
+          <ul>
+            <li>
+              <span>Development</span><br>
+              HTML<br>
+              CSS<br>
+              JavaScript<br>
+              React<br>
+              React Native
+            </li>
+          </ul>
+        </div>
+
+        <!-- Research -->
+        <div class="tab-contents" id="research">
+          <ul>
+            <li>
+              <span>Research</span><br>
+              User Research<br>
+              Workshop Facilitation<br>
+              Digital Culture Research<br>
+              Quantitative Analysis
+            </li>
+          </ul>
+        </div>
+
       </div>
     </div>
+  </div>
+</div>
 
-    <div class="copyright">
-      <p>© 2026 Created by Shaan K Rehsi</p>
+<!-- CONTACT -->
+<div id="contact">
+  <div class="contact-container">
+    <div class="row">
+      <div class="contact-left">
+
+        <h1 class="sub-title">Contact Me</h1>
+
+        <p>
+          <i class="fa-solid fa-paper-plane"></i>
+          shaanr@hotmail.co.uk
+        </p>
+
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/shaan-rehsi-4b40561b3/" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+
+          <a href="https://www.instagram.com/shapesandjapes_/" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a href="mailto:shaanr@hotmail.co.uk">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+
+        <a href="./files/cv2026.pdf" target="_blank" class="btn btn2">
+          View CV
+        </a>
+
+      </div>
     </div>
   </div>
+
+  <div class="copyright">
+    <p>© 2026 Created by Shaan K Rehsi</p>
+  </div>
+</div>
 
   <!-------------------------- SCRIPTS ------------------------------>
   <script>
