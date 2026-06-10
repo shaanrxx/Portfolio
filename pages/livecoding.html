@@ -1,201 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YX8YXWZP9G"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YX8YXWZP9G');
-</script>
-
-    <title>Shaan Rehsi: Portfolio</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@100;300&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <title>Live Coding | Shaan Rehsi</title>
 
-<link rel="stylesheet" href="style.css">
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@100;300&family=Space+Grotesk:wght@300;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/093248551b.js" crossorigin="anonymous"></script>
+
+    <!-- Your existing styles -->
     <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" href="../styles/portfolio.css">
+   <link rel="stylesheet" href="../styles/livecoding.css">
 
-    <link rel="stylesheet" href="../styles/page.css">
+<style>
  
-
-
-
-    <style>
-        .intro-text {
-  max-width: 600px;
-  margin-top: 15px;
-  font-size: 1px;
-  line-height: 1.6;
-  opacity: 0.8;
-}
-.event-section {
-  margin-bottom: 60px;
-}
-
-.event-title {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-
-.event-desc {
-  opacity: 0.7;
-  margin-bottom: 20px;
-  max-width: 700px;
-}
-
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 15px;
-}
-
-.image-grid img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-}
-
-.image-grid img:hover {
-  transform: scale(1.03);
-}
-
-.divider {
-  height: 1px;
-  background: rgba(255,255,255,0.15);
-  margin: 50px 0;
-}
-
-      
-
-
-
-    </style>
+</style>
 </head>
+
 <body>
 
-<!------------------------ nav bar ----------------------->
-<div id="header">
-  <div class="container-header">
-    <div class="container">
-
-      <nav id="navbar">
-        <ul id="sidemenu">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="#header">Portfolio</a></li>
-          <li><a href="../index.html#about">About</a></li>
-          <li><a href="../index#contact">Contact</a></li>
-          <li><a href="./files/Shaan Rehsi CV Creative Technologist.pdf" target="blank">rEsumé/CV</a></li>
-
-          <i class="fa-solid fa-x" onclick="closemenu()"></i>
-        </ul>
-
-        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-
-        <div id="social" class="social text-gray">
-          <a href="https://www.linkedin.com/in/shaan-rehsi-4b40561b3/" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="https://www.instagram.com/shapesandjapes_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-          <a href="mailto:shaanr@hotmail.co.uk" target="_blank"><i class="fa fa-envelope"></i></a>
-          <a href="https://github.com/shaanrxx" target="_blank"><i class="fa-brands fa-square-git"></i></a>
+    <!-- Header / Nav -->
+    <div id="header">
+        <div class="container-header">
+            <div class="container">
+                <nav id="navbar">
+                    <ul id="sidemenu">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#projects">Projects</a></li>
+                        <li><a href="archive.html">Archive</a></li> 
+                        <li><a href="../index.html#about">About</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                        <li><a href="../files/cv2026.pdf" target="_blank">resumé/CV</a></li>
+                    </ul>
+                    <div id="social" class="social text-gray">
+                        <a href="https://www.linkedin.com/in/shaan-rehsi-4b40561b3/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:shaanr@hotmail.co.uk"><i class="fa fa-envelope"></i></a>
+                        <a href="https://www.instagram.com/shapesandjapes_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://github.com/shaanrxx" target="_blank"><i class="fa-brands fa-square-git"></i></a>
+                    </div>
+                </nav>
+            </div>
         </div>
-
-      </nav>
-
     </div>
-  </div>
-</div>
 
-<div class="header-text">
-  <h1>Featured Events</h1>
+    <!-- Scrollable Content -->
+    <main>
+        
+        <!-- Hero Section -->
+        <section class="snap-section">
+            <div class="container">
+                <h1>Live Coding</h1>
+                <p>Algorithmic music performance and creative coding using Strudel.</p>
+            </div>
+        </section>
 
-  <p class="intro-text">
-    Since 2025, I have performed under the name Shapes and Japes, creating experimental amapiano-influenced music and live-coded audiovisual sets using Strudel, exploring rhythm, systems, and performance through real-time generative code.
-  </p>
+        <!-- Gallery Section -->
+        <section class="snap-section">
+            <div class="container">
+                <h2 class="sub-title">Performance Gallery</h2>
+              <div class="image-grid">
+                    <img src="../images/pd_1.jpg" alt="Live Code 1">
+                    <img src="../images/pd_2.jpg" alt="Live Code 2">
+                    <img src="../images/pd_3.jpg" alt="Live Code 3">
+                    <img src="../images/pd_4.jpg" alt="Live Code 4">
+                    
+                    <img src="../images/your-new-image-5.jpg" alt="Live Code 5">
+                    <img src="../images/your-new-image-6.jpg" alt="Live Code 6">
+                </div>
+            </div>
+        </section>
 
-</div>
-<!-------------------------------- PORTFOLIO --------------------------------->
-<section class="post container">
+    </main>
 
-  <!-- ALGOTRANCE -->
-  <div class="event-section">
-    <h2 class="event-title">ALGOTRANCE</h2>
-    <p class="event-desc">Live coding / audiovisual performance exploring generative systems.</p>
-
-    <div class="image-grid">
-      <img src="../images/algo1.jpg" alt="">
-      <img src="../images/algo2.jpg" alt="">
-      <img src="../images/algo3.jpg" alt="">
-      <img src="../images/algo4.jpg" alt="">
-    </div>
-  </div>
-
-  <div class="divider"></div>
-
-  <!-- PECKHAM DIGITAL -->
-  <div class="event-section">
-    <h2 class="event-title">PECKHAM DIGITAL 2025</h2>
-    <p class="event-desc">Exhibition and talk on creative technology and AI art.</p>
-
-    <div class="image-grid">
-      <img src="../images/pd_1.jpg" alt="">
-      <img src="../images/pd_2.jpg" alt="">
-      <img src="../images/pd_3.jpg" alt="">
-      <img src="../images/pd_4.jpg" alt="">
-    </div>
-  </div>
-
-  <div class="divider"></div>
-
-  <!-- V&A -->
-  <div class="event-section">
-    <h2 class="event-title">V&A MUSEUM</h2>
-    <p class="event-desc">Interactive installation and digital culture research.</p>
-
-    <div class="image-grid">
-      <img src="../images/va1.jpg" alt="">
-      <img src="../images/va2.jpg" alt="">
-      <img src="../images/va3.jpg" alt="">
-      <img src="../images/va4.jpg" alt="">
-    </div>
-  </div>
-
-  <div class="divider"></div>
-
-  <!-- CORSICA -->
-  <div class="event-section">
-    <h2 class="event-title">CORSICA STUDIOS</h2>
-    <p class="event-desc">Live audiovisual coding performance.</p>
-
-    <div class="image-grid">
-      <img src="../images/corsica1.jpg" alt="">
-      <img src="../images/corsica2.jpg" alt="">
-      <img src="../images/corsica3.jpg" alt="">
-      <img src="../images/corsica4.jpg" alt="">
-    </div>
-  </div>
-
-
-    <!-- Restage Collective -->
-  <div class="event-section">
-    <h2 class="event-title">CORSICA STUDIOS</h2>
-    <p class="event-desc">Live audiovisual coding performance.</p>
-
-    <div class="image-grid">
-      <img src="../images/corsica1.jpg" alt="">
-      <img src="../images/corsica2.jpg" alt="">
-      <img src="../images/corsica3.jpg" alt="">
-      <img src="../images/corsica4.jpg" alt="">
-    </div>
-  </div>
-
-</section>
+    <script>
+        // Add your openmenu/closemenu functions here if needed
+        function openmenu() { document.getElementById("sidemenu").style.right = "0"; }
+        function closemenu() { document.getElementById("sidemenu").style.right = "-200px"; }
+    </script>
+</body>
+</html>

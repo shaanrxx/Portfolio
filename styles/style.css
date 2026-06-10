@@ -404,32 +404,34 @@ ul li:hover ul li a {
 
 /* -------------------- Highlights ----------------*/
 
-#favourites{
+#projects{
     padding: 50px 0;
 }
 
 .work-list{
     display: grid;
     /* grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); */
-    grid-template-columns: repeat(2, 1fr); /* Updated to create a two-column layout */
+    grid-template-columns: repeat(3, 1fr); /* Updated to create a two-column layout */
     grid-gap: 40px;
     margin-top: 50px;
 }
 
 .work{
-    border-radius: 10px;
     position: relative;
     overflow: hidden;
+    border-radius: 10px;
+    height: 450px; /* same height for every card */
 }
 
 .work img{
     width: 100%;
-    height:100%;
+    height: 100%;
+    object-fit: cover; /* prevents stretching */
+    object-position: center;
+    display: block;
     border-radius: 10px;
-    display:block;
     transition: transform 0.5s;
 }
-
 .layer{
     width: 100%;
     height: 0;

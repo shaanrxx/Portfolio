@@ -48,11 +48,14 @@
     .zoom {
       transition: transform .2s;
       margin: 0 auto;
+      font-size: 24px;
+
     }
 
     .horizontal-line {
       display: flex;
       justify-content: center;
+      
       gap: 10px;
     }
 
@@ -78,8 +81,10 @@
         <nav id="navbar">
           <ul id="sidemenu">
             <li><a href="#header">Home</a></li>
-            <li><a href="./pages/portfolio.html">Portfolio</a></li>
-            <li><a href="./pages/livecoding.html">Live coding</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <!-- <li><a href="#portfolio">Archive</a></li> -->
+             <!-- <li><a href="./pages/livecoding.html">Live coding</a></li> -->
+            <li><a href="./pages/archive.html">Archive</a></li> 
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="./files/cv2026.pdf" target="_blank">rEsumé/CV</a></li>
@@ -100,9 +105,11 @@
             <h1>SHAAN REHSI</h1>
           </div>
           <div class="horizontal-line">
+             <div class="zoom"><p>CREATIVE TECHNOLOGIST</p></div>
+              <p>•</p>
             <div class="zoom"><p>LIVE CODER</p></div>
-            <p>•</p>
-            <div class="zoom"><p>ARTIST</p></div>
+           
+           
             <p>•</p>
             <div class="zoom"><p>CONTENT CREATOR</p></div>
           </div>
@@ -110,6 +117,84 @@
       </div>
     </div>
   </div>
+
+   <!-------------------- projects --------------------------->
+   <section id="projects">
+
+    <div class="container">
+
+        <h1 class="sub-title">Featured Projects</h1>
+
+        <div class="work-list">
+
+            <!-- Peckham Digital -->
+            <div class="work">
+              <a href="./pages/peckhamdigital.html">
+                <img src="./images/wrapped1.png" alt="Peckham Digital">
+
+                <div class="layer">
+                    <h3>Peckham Digital</h3>
+
+                    <p>
+                        Graphic design, podcast production,
+                        video editing, social media campaigns
+                        and community engagement.
+                    </p>
+
+                    
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Live Coding -->
+            <div class="work">
+              <a href="./pages/livecoding.html">
+                <img src="./images/pd_3.jpg" alt="Live Coding">
+
+                <div class="layer">
+                    <h3>Live Coding</h3>
+
+                    <p>
+                        Algorithmic music performance,
+                        sound design and creative coding
+                        using TidalCycles.
+                    </p>
+
+                    
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- AI x Design -->
+            <div class="work">
+               <a href="./pages/aixdesign.html">
+                <img src="./images/aicat.png" alt="AI x Design">
+
+                <div class="layer">
+                    <h3>AI × Design</h3>
+
+                    <p>
+                        Edited Videos and thumbnails surrounding Slow AI,
+                     design and digital culture.
+                    </p>
+
+                   
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+          
+            
+        </div>
+
+        <a href="#archive" class="btn">View Archive</a>
+
+    </div>
+
+</section>
 
   <!-------------------- ABOUT SECTION --------------------------->
   <div id="about">

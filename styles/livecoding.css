@@ -1,0 +1,38 @@
+main .snap-section {
+    /* Increase this value until your content is fully visible */
+    padding-top: 150px !important; 
+    
+    height: 100vh !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    scroll-snap-align: start !important;
+}
+
+/* Force text visibility and override animation libraries */
+main .snap-section h1, 
+main .snap-section p {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+    margin: 10px 0 !important;
+}
+/* Ensure the grid item itself controls the image */
+main .image-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+    gap: 20px !important;
+    width: 90% !important;
+    max-width: 1000px !important;
+    margin: 20px auto !important;
+}
+
+/* This is the key: Force images to fit the grid cell */
+main .image-grid img {
+    width: 100% !important;      /* Forces image to fill the grid column */
+    height: 300px !important;    /* Keeps them at a consistent, smaller height */
+    object-fit: cover !important; /* Crops them nicely so they don't look stretched */
+    border-radius: 12px !important;
+    display: block !important;
+}
