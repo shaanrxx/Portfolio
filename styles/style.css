@@ -404,25 +404,29 @@ ul li:hover ul li a {
 
 /* -------------------- Highlights ----------------*/
 
-#projects{
+#projects {
     padding: 50px 0;
+    width: 100%; /* Ensure container takes full width */
 }
 
-.work-list{
+.work-list {
     display: grid;
-    /* grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); */
-    grid-template-columns: repeat(3, 1fr); /* Updated to create a two-column layout */
+    /* Forces exactly 3 columns, each taking 1/3 of the space */
+    grid-template-columns: repeat(3, 1fr); 
     grid-gap: 40px;
     margin-top: 50px;
+    width: 90%; /* Keeps the grid from touching the very edges of the screen */
+    margin-left: auto;
+    margin-right: auto; /* Centers the whole grid */
 }
 
-.work{
+.work {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    height: 450px; /* same height for every card */
+    height: 450px;
+    width: 100%; /* Ensures card fills the column it is in */
 }
-
 .work img{
     width: 100%;
     height: 100%;

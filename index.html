@@ -35,30 +35,42 @@
   <script src="./pages/sketch.js"></script>
 
   <style>
-    .header-text {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      animation: zoomOut 3s ease;
-      margin-top: 20%;
-      padding: 20px;
-    }
+  .header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 15vh; /* Responsive margin */
+    padding: 5px;
+}
 
-    .zoom {
-      transition: transform .2s;
-      margin: 0 auto;
-      font-size: 24px;
+.zoom {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    display: inline-block;
+}
 
-    }
+/* The Cool Hover Effect: Lift and Glow */
+.zoom:hover {
+    transform: scale(1.15) translateY(-5px);
+    color: #a855f7; /* Subtle purple glow */
+    text-shadow: 0 0 15px rgba(168, 85, 247, 0.6);
+}
 
-    .horizontal-line {
-      display: flex;
-      justify-content: center;
-      
-      gap: 10px;
-    }
+.header-text h1 {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 5px;
+    font-size: 4rem;
+}
 
+.horizontal-line p {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+    /* Adjust this value: smaller numbers make the font smaller */
+    font-size: 2rem !important; 
+    //text-transform: uppercase; /* Optional: makes it look cleaner at smaller sizes */
+}
     #myPatternContainer,
     #mySpinningPatternWebGLContainer {
       position: absolute;
@@ -101,19 +113,18 @@
         </nav>
 
         <div class="header-text">
-          <div class="zoom" id="zoomElement">
-            <h1>SHAAN REHSI</h1>
-          </div>
-          <div class="horizontal-line">
-             <div class="zoom"><p>CREATIVE TECHNOLOGIST</p></div>
-              <p>•</p>
-            <div class="zoom"><p>LIVE CODER</p></div>
-           
-           
-            <p>•</p>
-            <div class="zoom"><p>CONTENT CREATOR</p></div>
-          </div>
+        <div class="zoom" id="zoomElement">
+          <h1>SHAAN REHSI</h1>
         </div>
+        
+        <div class="horizontal-line">
+          <div class="zoom"><p>CREATIVE TECHNOLOGIST</p></div>
+          <p>•</p>
+          <div class="zoom"><p>LIVE CODER</p></div>
+          <p>•</p>
+          <div class="zoom"><p>CONTENT CREATOR</p></div>
+        </div>
+      </div>
       </div>
     </div>
   </div>
@@ -158,7 +169,7 @@
                     <p>
                         Algorithmic music performance,
                         sound design and creative coding
-                        using TidalCycles.
+                        using Strudel.
                     </p>
 
                     
@@ -190,7 +201,7 @@
             
         </div>
 
-        <a href="#archive" class="btn">View Archive</a>
+        <a href="./pages/archive.html" class="btn">View Archive</a>
 
     </div>
 
