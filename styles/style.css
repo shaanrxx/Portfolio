@@ -409,6 +409,46 @@ ul li:hover ul li a {
     width: 100%; /* Ensure container takes full width */
 }
 
+
+/* Force the image area to a fixed height */
+.work-image-container {
+  height: 350px; /* Adjust this value to your preferred height */
+  overflow: hidden;
+  border-radius: 12px;
+  position: relative;
+}
+
+/* Ensure the image fills that container perfectly */
+.work-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This prevents distortion and forces uniform aspect ratio */
+}
+
+/* Ensure the work cards are all the same width */
+.work {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Ensures they take up their grid slot */
+}
+
+.work-label {
+  padding: 15px 0;
+  text-align: center;
+}
+
+.work-label h3 {
+  font-size: 20px;
+  margin: 10px 0 5px 0;
+  color: #fff; /* Match your theme */
+}
+
+.work-label p {
+  font-size: 14px;
+  color: #ababab; /* Subtle secondary text */
+}
+
+
 .work-list {
     display: grid;
     /* Forces exactly 3 columns, each taking 1/3 of the space */
@@ -420,13 +460,7 @@ ul li:hover ul li a {
     margin-right: auto; /* Centers the whole grid */
 }
 
-.work {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    height: 450px;
-    width: 100%; /* Ensures card fills the column it is in */
-}
+
 .work img{
     width: 100%;
     height: 100%;

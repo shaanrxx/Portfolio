@@ -1,90 +1,41 @@
-/* 1. Reset everything */
-* { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* 2. Fix the Header Conflict */
-/* If your header is 80px high, this pushes the content down so it's not hidden */
-body {
-    padding-top: 80px; 
-    background: #000;
-    overflow: hidden;
-}
+  /* Basic Page Spacing */
+  main {
+    padding-top: 100px;
+  }
 
-#header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000; /* Keeps nav on top of images */
-}
-
-/* 3. Snap Logic */
-main {
-    height: calc(100vh - 80px); /* Subtract header height */
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-}
-
-.snap-section {
-    height: 100vh;
-    scroll-snap-align: start;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-}
-
-/* 4. Ensure Grid fits inside the view */
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+  .container {
     width: 90%;
-    max-width: 1000px;
-    margin-top: 20px;
-}
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
-.image-grid img {
+  /* Gallery Grid */
+  .image-grid {
+    display: grid;
+    /* This creates 3 equal columns */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+  }
+
+  .image-grid img {
     width: 100%;
-    height: 250px; /* Slightly shorter to avoid overflow */
+    /* This forces all images to be the same size regardless of original aspect */
+    aspect-ratio: 16 / 9; 
     object-fit: cover;
-    border-radius: 12px;
-}
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
 
-main .snap-section {
-    /* Increase this value until your content is fully visible */
-    padding-top: 150px !important; 
-    
-    height: 100vh !important;
-    width: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    scroll-snap-align: start !important;
-}
+  .image-grid img:hover {
+    transform: scale(1.03);
+  }
 
-/* Force text visibility and override animation libraries */
-main .snap-section h1, 
-main .snap-section p {
-    opacity: 1 !important;
-    transform: none !important;
-    visibility: visible !important;
-    margin: 10px 0 !important;
-}
-/* Ensure the grid item itself controls the image */
-main .image-grid {
-    display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
-    gap: 20px !important;
-    width: 90% !important;
-    max-width: 1000px !important;
-    margin: 20px auto !important;
-}
-
-/* This is the key: Force images to fit the grid cell */
-main .image-grid img {
-    width: 100% !important;      /* Forces image to fill the grid column */
-    height: 300px !important;    /* Keeps them at a consistent, smaller height */
-    object-fit: cover !important; /* Crops them nicely so they don't look stretched */
-    border-radius: 12px !important;
-    display: block !important;
-}
+  /* Responsive Fix for Mobile/Tablet */
+  @media (max-width: 900px) {
+    .image-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 600px) {
+    .image-grid { grid-template-columns: 1fr; }
+  }

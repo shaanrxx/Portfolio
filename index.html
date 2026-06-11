@@ -35,41 +35,53 @@
   <script src="./pages/sketch.js"></script>
 
   <style>
-  .header-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-top: 15vh; /* Responsive margin */
-    padding: 5px;
+ .header-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 15vh;
+  padding: 10px;
 }
 
-.zoom {
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    cursor: pointer;
-    display: inline-block;
-}
-
-/* The Cool Hover Effect: Lift and Glow */
-.zoom:hover {
-    transform: scale(1.15) translateY(-5px);
-    color: #a855f7; /* Subtle purple glow */
-    text-shadow: 0 0 15px rgba(168, 85, 247, 0.6);
-}
-
+/* Responsive title */
 .header-text h1 {
-    font-family: 'Orbitron', sans-serif;
-    letter-spacing: 5px;
-    font-size: 4rem;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 5px;
+  font-size: clamp(2rem, 6vw, 4rem);
+  line-height: 1.1;
 }
 
+/* FIX: make the line wrap properly */
+.horizontal-line {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* FIX paragraph scaling */
 .horizontal-line p {
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 300;
-    letter-spacing: 2px;
-    /* Adjust this value: smaller numbers make the font smaller */
-    font-size: 2rem !important; 
-    text-transform: uppercase; /* Optional: makes it look cleaner at smaller sizes */
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-size: clamp(2rem, 1.5vw, .5rem);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* prevent weird spacing on dots */
+.horizontal-line p:nth-child(even) {
+  opacity: 0.6;
+}
+
+/* your zoom effect stays fine but make sure it doesn’t break layout */
+.zoom {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  display: inline-block;
 }
     #myPatternContainer,
     #mySpinningPatternWebGLContainer {
@@ -96,7 +108,7 @@
             <li><a href="#projects">Projects</a></li>
             <!-- <li><a href="#portfolio">Archive</a></li> -->
              <!-- <li><a href="./pages/livecoding.html">Live coding</a></li> -->
-            <li><a href="./pages/archive.html">Archive</a></li> 
+            <li><a href="./archive.html">Archive</a></li> 
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="./files/cv2026.pdf" target="_blank">rEsumé/CV</a></li>
@@ -139,67 +151,52 @@
         <div class="work-list">
 
             <!-- Peckham Digital -->
-            <div class="work">
-              <a href="./pages/peckhamdigital.html">
-                <img src="./images/wrapped1.png" alt="Peckham Digital">
+           <div class="work">
+  <a href="./pages/peckhamdigital.html">
+    <div class="work-image-container" style="position: relative;">
+      <img src="./images/wrapped1.png" alt="Peckham Digital">
+      <div class="layer">
+        <i class="fas fa-arrow-right"></i>
+      </div>
+    </div>
 
-                <div class="layer">
-                    <h3>Peckham Digital</h3>
-
-                    <p>
-                        Graphic design, podcast production,
-                        video editing, social media campaigns
-                        and community engagement.
-                    </p>
-
-                    
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
+    <div class="work-label">
+      <h3>Peckham Digital</h3>
+      <p>Graphic design, podcast production, and community engagement.</p>
+    </div>
+  </a>
+</div>
 
             <!-- Live Coding -->
             <div class="work">
-              <a href="./pages/livecoding.html">
-                <img src="./images/pd_3.jpg" alt="Live Coding">
+  <a href="./pages/livecoding.html">
+    <div class="work-image-container" style="position: relative;">
+      <img src="./images/pd_3.jpg" alt="Live Coding">
+      <div class="layer">
+        <i class="fas fa-arrow-right"></i>
+      </div>
+    </div>
+    <div class="work-label">
+      <h3>Live Coding</h3>
+      <p>Algorithmic music performance, sound design, and creative coding using Strudel.</p>
+    </div>
+  </a>
+</div>
 
-                <div class="layer">
-                    <h3>Live Coding</h3>
-
-                    <p>
-                        Algorithmic music performance,
-                        sound design and creative coding
-                        using Strudel.
-                    </p>
-
-                    
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- AI x Design -->
-            <div class="work">
-               <a href="./pages/aixdesign.html">
-                <img src="./images/aicat.png" alt="AI x Design">
-
-                <div class="layer">
-                    <h3>AI × Design</h3>
-
-                    <p>
-                        Edited Videos and thumbnails surrounding Slow AI,
-                     design and digital culture.
-                    </p>
-
-                   
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-
-          
-            
-        </div>
+<div class="work">
+  <a href="./pages/aixdesign.html">
+    <div class="work-image-container" style="position: relative;">
+      <img src="./images/aicat.png" alt="AI x Design">
+      <div class="layer">
+        <i class="fas fa-arrow-right"></i>
+      </div>
+    </div>
+    <div class="work-label">
+      <h3>AI × Design</h3>
+      <p>Edited videos and thumbnails surrounding Slow AI, design, and digital culture.</p>
+    </div>
+  </a>
+</div>
 
         <a href="./pages/archive.html" class="btn">View Archive</a>
 
