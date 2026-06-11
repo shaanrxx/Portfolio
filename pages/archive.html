@@ -1,170 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YX8YXWZP9G"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YX8YXWZP9G');
-</script>
-
-    <title>Shaan Rehsi: Portfolio</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@100;300&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/093248551b.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" href="../styles/portfolio.css">
-
-    <link rel="stylesheet" href="../styles/page.css">
- 
-
-
-
-    <style>
-
-
-      
-
-
-
-    </style>
-</head>
-<body>
-
-<!------------------------ nav bar ----------------------->
-<!DOCTYPE html>
-<html lang="en">
-<head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YX8YXWZP9G"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-YX8YXWZP9G');
   </script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Shaan Rehsi: Home</title>
+
+  <title>Shaan Rehsi: Archived Projects</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@100;300&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Open+Sans:wght@300;400;600;700;800&family=Space+Grotesk:wght@300;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@100;300&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Icons -->
   <script src="https://kit.fontawesome.com/093248551b.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="./styles/style.css">
-  <link rel="stylesheet" href="./styles/owl.theme.default.min.css">
-  <link rel="stylesheet" href="./styles/aos.css">
-  <link rel="stylesheet" href="./styles/owl.carousel.min.css">
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="../styles/portfolio.css">
+  <link rel="stylesheet" href="../styles/page.css">
 
-  <!-- p5.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
-  <script src="./pages/sketch.js"></script>
-
+  <!-- GRID FIX (3 columns default) -->
   <style>
-    .header-text {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      animation: zoomOut 3s ease;
-      margin-top: 20%;
-      padding: 20px;
+    
+#header {
+  position: relative !important;
+  height: auto !important; /* Forces the header to grow with the content */
+  min-height: 30px;      /* Adjust if needed */
+  padding-bottom: 50px;
+  overflow: visible !important;
+}
+
+.container-header {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  position: relative !important;
+  width: 100%;
+}
+
+.header-text {
+  position: relative !important;
+  margin-top: 21px !important; /* Space from the top */
+  margin-bottom: 10px !important; /* Space from the filter */
+  z-index: 1;
+}
+
+.post-filter {
+  position: relative !important;
+  display: flex !important;
+  justify-content: center !important;
+  flex-wrap: wrap !important;
+  gap: 15px !important;
+  margin: 0 auto 20px auto !important; /* Bottom margin creates space for posts */
+  z-index: 2;
+  padding-top: 0 !important; /* Remove the 100px padding, use margin instead */
+}
+    .post-img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 12px;
     }
 
-    .zoom {
-      transition: transform .2s;
-      margin: 0 auto;
-      font-size: 24px;
-
-    }
-
-    .horizontal-line {
+    .post-filter {
       display: flex;
       justify-content: center;
-      
-      gap: 10px;
+      flex-wrap: wrap;
+      gap: 15px;
+      width: 90%;
+      margin: 40px auto;
     }
 
-    #myPatternContainer,
-    #mySpinningPatternWebGLContainer {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      overflow: hidden;
+    /* TABLET */
+    @media (max-width: 1024px) {
+      .post.container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .post.container {
+        grid-template-columns: 1fr;
+      }
+   
     }
   </style>
 </head>
 
 <body>
 
-  <!------------------------ NAV BAR ----------------------->
-  <div id="header">
-    <div class="container-header">
-      <div class="container">
-        <nav id="navbar">
-          <ul id="sidemenu">
-            <li><a href="#header">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <!-- <li><a href="#portfolio">Archive</a></li> -->
-             <!-- <li><a href="./pages/livecoding.html">Live coding</a></li> -->
-            <li><a href="./pages/archive.html">Archive</a></li> 
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="./files/cv2026.pdf" target="_blank">rEsumé/CV</a></li>
-            <i class="fa-solid fa-x" onclick="closemenu()"></i>
-          </ul>
-          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+<!-- NAV BAR -->
+<div id="header">
+  <div class="container-header">
+    <nav id="navbar">
+      <ul id="sidemenu">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./index.html#projects">Projects</a></li>
+        <li><a href="./index.html./pages/archive.html">Archive</a></li>
+        <li><a href="./index.html#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="./files/cv2026.pdf" target="_blank">Resume/CV</a></li>
+        <i class="fa-solid fa-x" onclick="closemenu()"></i>
+      </ul>
 
-          <div id="social" class="social text-gray">
-            <a href="https://www.linkedin.com/in/shaan-rehsi-4b40561b3/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:shaanr@hotmail.co.uk"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-            <a href="https://www.instagram.com/shapesandjapes_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://github.com/shaanrxx" target="_blank"><i class="fa-brands fa-square-git"></i></a>
-          </div>
-        </nav>
+      <i class="fa-solid fa-bars" onclick="openmenu()"></i>
 
+      <div id="social" class="social">
+        <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:example@email.com"><i class="fa fa-envelope"></i></a>
+        <a href="https://instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://github.com/" target="_blank"><i class="fa-brands fa-github"></i></a>
+      </div>
+    </nav>
 
-<div class="header-text"    >
-    <h1>ARCHIVED PROJECTS</h1>
-
-
-</div>
-<!-------------------------------- PORTFOLIO --------------------------------->
-    <!--------------------Post Filter-------------->
-    <div class="post-filter container">
-        <span class="filter-item active-filter"  data-filter='all'>ALL</span>
-         <span class="filter-item" data-filter='livecoding'>Live Coding</span>
-        <span class="filter-item" data-filter='two'>Peckham Digital</span>
-        <span class="filter-item" data-filter='aixDesign'>AIxDesign</span>
-        <!-- <span class="filter-item" data-filter='hci'>H.C.I.</span> -->
-        <span class="filter-item" data-filter='coding'>Coding</span>
-        <span class="filter-item" data-filter='artificial'>Artificial Intelligence</span>
-        <span class="filter-item" data-filter='websites'>Websites</span>
-        <!-- <span class="filter-item" data-filter='art'>Art</span> -->
-        
-
-        
+    <div class="header-text">
+      <h1>ARCHIVED PROJECTS</h1>
     </div>
+  </div>
+</div>
+
+<!-- FILTER -->
+<div class="post-filter container">
+  <span class="filter-item active-filter" data-filter="all">ALL</span>
+  <!-- <span class="filter-item" data-filter="livecoding">Live Coding</span>
+  <span class="filter-item" data-filter="peckham">Peckham Digital</span>
+  <span class="filter-item" data-filter="aixdesign">AI x Design</span> -->
+  <span class="filter-item" data-filter="coding">Coding</span>
+  <span class="filter-item" data-filter="blender">Blender</span>
+  <span class="filter-item" data-filter="ai">Artificial Intelligence</span>
+  <span class="filter-item" data-filter="websites">Websites</span>
+</div>
 
     <!------------------------- Posts ---------------------->
     <section class="post container">
@@ -386,155 +361,27 @@
 
 <a href ="#header" class="btn">Back to Top</a>
 
-<!-------------------- about --------------------------->
-<!-- <div id="about">
-    <div class="container">
-        <div class="row">
-            <div class="about-col-1">
-                <img src="../images/aboutmepic.png" >   
-            </div>
-            <div class="about-col-2">
-                <h1 class="sub-title">About Me</h1>
-                <p>My name is Shaan Rehsi, and I am a Creative Technologist/Designer currently in my final year studying Creative Computing at the University of the Arts London. With a passion for merging the boundaries between technology and art, I've dedicated my academic and personal projects to exploring innovative ways to apply computing in creative contexts. 
-                </p>
-
-                <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                  
-                    <p class="tab-links" onclick="opentab('education')">Education</p>
-                    <p class="tab-links" onclick="opentab('languages')">Coding Languages</p>
-                </div>
-                <div class="tab-contents active-tab" id="skills">
-                    <ul>
-                        <li><span>Skills Gained During Unvierity</span><br>- Experience in web development, iOS app
-                            development, and game development.
-                            Utilised APIs and web scraped for data
-                            manipulation and visualisation
-                            <br>- 3D modeling and animation with Blender<br>- Virtual Reality prototype design and Human-Computer Interaction knowledge
-                            <br>- 
-                            Skilled in extracting insights from large
-                            datasets from big data sources through data
-                            mining and analysis techniques</li>
-                    </ul>
-                </div>
-
-                <div class="tab-contents" id="education">
-                    <ul>
-                        <li><span>University of the Arts London</span><br>BSc Creative Computing</li>
-                        <li><span>Aarhus University - Summer School</span><br>Learn Software Design withC++</li>
-                        <li><span>Hitchin Girls' School</span><br>A Levels<br>Spanish, Computing Science, Art & Design</li>
-                    </ul>
-                </div>
-
-                <div class="tab-contents" id="languages">
-                    <ul>
-                        <li><span>Languages</span><br>Python<br>JavaScript<br>Java<br>C++<br>HTML/CSS<br>Swift</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
-
-<!------------------------ SERVICES ------------------------------- -->
-
-
-<!------------------------- CONTACT ---------------------->
-<!-- 
-<div id="contact">
-    <div class="contact-container">
-        <div class="row">
-            <div class="contact-left">
-                <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fa-solid fa-paper-plane"></i> contact@example.com</p>
-                <p><i class="fa-solid fa-phone"></i> 0123456789</p>
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/shaan-rehsi-4b40561b3/"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://www.instagram.com/shapesandjapes_/"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.tiktok.com/@shapesandjapes"><i class="fab fa-tiktok"></i></a>
-                    <a href="mailto:shaanr@hotmail.co.uk"><i class="fa-solid fa-envelope"></i></a>
-                </div>
-                <a href="../files/cv-2024.pdf" target="blank" class="btn btn2">View CV</a>
-            </div>
-                <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="FirstName" placeholder="First Name: " required>
-                        <input type="text" name="LastName" placeholder="Surname: " required>
-                        <input type="email" name="email" placeholder="Email: " required>
-                        <textarea name="Message" rows="6" placeholder="Your Message: "></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
-                    </form>
-                    <span id="msg"></span>
-            </div>
-        </div>
-    </div> -->
-    <div class="copyright">
-        <p>
-            © 2025 Copyright: Created by: Shaan K Rehsi</p>
-    </div>
+<!-- FOOTER -->
+<div class="copyright">
+  <p>© 2026 Shaan K Rehsi</p>
 </div>
 
-
+<!-- SCRIPTS -->
 <script>
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-    function opentab(tabname){
-        for(tablink of tablinks){
-            tablink.classList.remove("active-link");
-        }
-        for(tabcontent of tabcontents){
-            tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-    }
+  const sidemenu = document.getElementById("sidemenu");
+
+  function openmenu() {
+    sidemenu.style.right = "0";
+  }
+
+  function closemenu() {
+    sidemenu.style.right = "-200px";
+  }
 </script>
 
-<script>
-    var sidemenu = document.getElementById("sidemenu");
-        
-    function openmenu(){
-        sidemenu.style.right = "0"
-    }
-    function closemenu(){
-        sidemenu.style.right = "-200px"
-    }
-</script>
-
-
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbw5k_VanyFZIfU0IT9e7FIOOxLgJ7_Cpw1TycQjwR4BaKXuepf-lAtmw4A9uuy3S2IKUw/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Message sent successfully"
-            setTimeout(function(){
-                msg.innerHTML = ""
-            }, 5000)
-            form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
-
-    <!------------ JQuery List------------->
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <!-------------- Link to JS---------------->
-    <script src="../js/blog.js"></script>
-
-        <!-- ------------ AOS js Library  ------------------------- -->
-        <script src="../js/aos.js"></script>
-
-        <!-- ------------ navbar changincolor ------------------------- -->
-        <script src="../js/nav.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="../js/blog.js"></script>
+<script src="../js/nav.js"></script>
 
 </body>
-
-
-
-
 </html>

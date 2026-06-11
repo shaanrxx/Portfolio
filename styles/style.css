@@ -412,7 +412,7 @@ ul li:hover ul li a {
 .work-list {
     display: grid;
     /* Forces exactly 3 columns, each taking 1/3 of the space */
-    grid-template-columns: repeat(3, 1fr); 
+   grid-template-columns: repeat(3, 1fr); 
     grid-gap: 40px;
     margin-top: 50px;
     width: 90%; /* Keeps the grid from touching the very edges of the screen */
