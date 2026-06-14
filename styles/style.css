@@ -25,15 +25,17 @@ html{
     scroll-behavior: smooth;
 }
 
- body{
-    /* background: #F29C94;  */
+body {
     background-color: var(--background-web-color);
- }
+    overflow-y: auto; /* Change from hidden to auto */
+    height: auto;      /* Change from 100vh to auto */
+}
+ 
 
 
  #header {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh; /* Changed from height to min-height */
     z-index: 2; 
  
     background-size: cover;
@@ -126,14 +128,13 @@ html{
 }
 
 nav {
-    position: absolute;
+    position: fixed;
     top: 15px;
     left: 30%;
     transform: translateX(-50%);
     display: inline-block;
     animation: slide-in 1s ease-out;
-    position: fixed;
-    
+    z-index: 1000;
 }
 
 
@@ -327,7 +328,7 @@ ul li:hover ul li a {
     padding: 80px 0;
     color: var(--text-color);
     font-weight: 100;
-    height: 100vh;
+    min-height: 100vh; /* Changed from height to min-height */
 }
 
 .row{
@@ -402,135 +403,123 @@ ul li:hover ul li a {
     display: block;
 }
 
-/* -------------------- Highlights ----------------*/
-
 #projects {
-    padding: 50px 0;
-    width: 100%; /* Ensure container takes full width */
+    padding: 80px 0 80px;
+    color: var(--text-color);
+    min-height: 100vh;
 }
 
-
-/* Force the image area to a fixed height */
-.work-image-container {
-  height: 350px; /* Adjust this value to your preferred height */
-  overflow: hidden;
-  border-radius: 12px;
-  position: relative;
-}
-
-/* Ensure the image fills that container perfectly */
-.work-image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* This prevents distortion and forces uniform aspect ratio */
-}
-
-/* Ensure the work cards are all the same width */
-.work {
-  display: flex;
-  flex-direction: column;
-  width: 100%; /* Ensures they take up their grid slot */
-}
-
-.work-label {
-  padding: 15px 0;
-  text-align: center;
-}
-
-.work-label h3 {
-  font-size: 20px;
-  margin: 10px 0 5px 0;
-  color: #fff; /* Match your theme */
-}
-
-.work-label p {
-  font-size: 14px;
-  color: #ababab; /* Subtle secondary text */
-}
-
+/* =========================
+   WORK LIST (MAIN GRID)
+   ========================= */
 
 .work-list {
     display: grid;
-    /* Forces exactly 3 columns, each taking 1/3 of the space */
-   grid-template-columns: repeat(3, 1fr); 
-    grid-gap: 40px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
     margin-top: 50px;
-    width: 90%; /* Keeps the grid from touching the very edges of the screen */
-    margin-left: auto;
-    margin-right: auto; /* Centers the whole grid */
 }
 
-
-.work img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* prevents stretching */
-    object-position: center;
-    display: block;
+/* CARD */
+.work {
+    position: relative;
     border-radius: 10px;
-    transition: transform 0.5s;
-}
-.layer{
-    width: 100%;
-    height: 0;
-    background: linear-gradient(var(--shadow-colour1), var(--shadow-colour4));
-    border-radius: 10px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
     overflow: hidden;
+    background: var(--background-web-color);
+    box-shadow: 0 4px 14px hsla(271, 100%, 70%, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px hsla(271, 100%, 70%, 0.6);
+}
+
+/* IMAGE */
+.work img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+/* OVERLAY */
+.layer {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
     display: flex;
-    align-items: center;
     justify-content: center;
-    flex-direction: column;
-    padding: 0 40px;
-    text-align: center;
-    font-size: 14px;
-    transition: height 0.5s;
-    
+    align-items: center;
+    opacity: 0;
+    transition: 0.3s ease;
 }
 
-.layer h3{
-    font-weight: 500;
-    margin-bottom: 20px;
+.work:hover .layer {
+    opacity: 1;
 }
 
-.layer a{
-    margin-top: 20px;
-    color: black;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 50%; 
-    text-align: center;
+/* LABEL (your title + description under image) */
+.work-label {
+    padding: 15px;
 }
 
-/* .work:hover img{
-    transform: scale(1.1);
-} */
-
-.work:hover .layer{
-    height: 100%;    
+.work-label h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--shadow-colour2);
 }
 
-.btn{
+/* DESCRIPTION */
+.work-label p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+}
+
+/* OPTIONAL: overlay icon (keeps white + clean) */
+.layer i {
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+/* BUTTON */
+.btn {
     display: block;
     margin: 50px auto;
     width: fit-content;
-    border: 1px solid;
+    border: 1px solid var(--shadow-colour1);
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
     color: #fff;
-    border:none;
     transition: background 0.5s;
-    box-shadow: 0 4px 14px hsla(277, 65%, 62%, 0.9); /* Keep shadow for depth */
+    box-shadow: 0 4px 14px hsla(277, 65%, 62%, 0.9);
 }
 
-.btn:hover{
+.btn:hover {
     background: var(--shadow-colour1);
-    color: var(--shadow-colour4)
+    color: var(--shadow-colour4);
 }
 
+/* =========================
+   RESPONSIVE (BOTTOM)
+   ========================= */
+
+@media (max-width: 1000px) {
+    .work-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .work-list {
+        grid-template-columns: 1fr;
+    }
+}
 
 /*---------------------------CONTACT------------------------*/
 .contact-container{
@@ -648,7 +637,7 @@ nav .fa-solid.fa-x{
         display: block;
         position: fixed; /* Keep nav fixed on top */
         top: 0;
-        left: 0;
+        left: 0%;
         right: 0;
         transform: none; /* Remove transformation */
         width: 100%; /* Full width */
@@ -773,9 +762,12 @@ nav .fa-solid.fa-x{
         font-size: 14px;
     }
 
-    .row, .work-list {
-        flex-direction: column;
-    }
+  .work-list {
+    grid-template-columns: 1fr;
+}
+.row {
+    flex-direction: column;
+}
     #about {
         padding: 60px 30px; /* Optimize padding for medium screens */
         height: auto; /* Flexible height to accommodate varying content lengths */
@@ -857,21 +849,14 @@ nav .fa-solid.fa-x{
         padding-top: 100px;
     }
 
-    nav {
-        display: block;
-        position: fixed; /* Keep nav fixed on top */
-        top: 0;
-        left: 0;
-        right: 0;
-        transform: none; /* Remove transformation */
-        width: 100%; /* Full width */
-        justify-content: space-between; /* Space out nav items */
-        align-items: center; /* Center items vertically */
-        padding: 0 20px; /* Padding on the sides */
-        background-color: var(--shadow-colour2); 
-        animation: none; /* Disable any slide-in animation */
-    }
-
+   nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: none;
+    width: 100%;
     .social {
         font-size: 40px;
         left: 0;

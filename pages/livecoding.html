@@ -5,79 +5,129 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Live Coding | Shaan Rehsi</title>
 
-    <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@100;300&family=Space+Grotesk:wght@300;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/093248551b.js" crossorigin="anonymous"></script>
 
-    <!-- Your existing styles -->
     <link rel="stylesheet" href="../styles/style.css">
-   <link rel="stylesheet" href="../styles/livecoding.css">
-   <link rel="stylesheet" href="../styles/page.css">
-
-<style>
- 
-</style>
+    <link rel="stylesheet" href="../styles/livecoding.css">
 </head>
 
-<body>
+<body class="livecoding-page">
 
-    <!-- Header / Nav -->
-    <div id="header">
-        <div class="container-header">
-            <div class="container">
-                <nav id="navbar">
-                    <ul id="sidemenu">
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="../index.html#projects">Projects</a></li>
-                        <li><a href="archive.html">Archive</a></li> 
-                        <li><a href="../index.html#about">About</a></li>
-                        <li><a href="../index.html#contact">Contact</a></li>
-                        <li><a href="../files/cv2026.pdf" target="_blank">resumé/CV</a></li>
-                    </ul>
-                    <div id="social" class="social text-gray">
-                        <a href="https://www.linkedin.com/in/shaan-rehsi-4b40561b3/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="mailto:shaanr@hotmail.co.uk"><i class="fa fa-envelope"></i></a>
-                        <a href="https://www.instagram.com/shapesandjapes_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://github.com/shaanrxx" target="_blank"><i class="fa-brands fa-square-git"></i></a>
+<!-- NAV BAR -->
+<div id="header">
+  <div class="container-header">
+    <nav id="navbar">
+      <ul id="sidemenu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="archive.html">Archive</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+        <li><a href="../files/cv2026.pdf" target="_blank">Resume/CV</a></li>
+        <i class="fa-solid fa-x" onclick="closemenu()"></i>
+      </ul>
+
+      <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+
+      <div id="social" class="social">
+        <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:example@email.com"><i class="fa fa-envelope"></i></a>
+        <a href="https://instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://github.com/" target="_blank"><i class="fa-brands fa-github"></i></a>
+      </div>
+    </nav>
+
+    <div class="scroll-module">
+        <main>
+            <section class="snap-section" id="hero">
+                
+                <div class="performance-nav">
+                    <div class="nav-item">
+                        <span class="nav-label">PERFORMANCE 1</span>
+                        <a href="#section1" class="circle-link"><img src="../images/pd_1.jpg" alt="Performance 1"></a>
+                        <span class="nav-meta">2012.2024</span>
                     </div>
-                </nav>
-            </div>
-        </div>
-    </div>
-
-    <!-- Scrollable Content -->
-    <main>
-        
-        <!-- Hero Section -->
-        <section class="snap-section">
-            <div class="container">
-                <h1>Live Coding</h1>
-                <p>Algorithmic music performance and creative coding using Strudel.</p>
-            </div>
-        </section>
-
-        <!-- Gallery Section -->
-        <section class="snap-section">
-            <div class="container">
-                <h2 class="sub-title">Performance Gallery</h2>
-              <div class="image-grid">
-                    <img src="../images/pd_1.jpg" alt="Live Code 1">
-                    <img src="../images/pd_2.jpg" alt="Live Code 2">
-                    <img src="../images/pd_3.jpg" alt="Live Code 3">
-                    <img src="../images/pd_4.jpg" alt="Live Code 4">
-                    
-                    <img src="../images/your-new-image-5.jpg" alt="Live Code 5">
-                    <img src="../images/your-new-image-6.jpg" alt="Live Code 6">
+                    <div class="nav-item">
+                        <span class="nav-label">PERFORMANCE 2</span>
+                        <a href="#section2" class="circle-link"><img src="../images/pd_2.jpg" alt="Performance 2"></a>
+                        <span class="nav-meta">2017.2025</span>
+                    </div>
+                    <div class="nav-item">
+                        <span class="nav-label">PERFORMANCE 3</span>
+                        <a href="#section3" class="circle-link"><img src="../images/pd_3.jpg" alt="Performance 3"></a>
+                        <span class="nav-meta">2017.2025</span>
+                    </div>
+                    <div class="nav-item">
+                        <span class="nav-label">PERFORMANCE 4</span>
+                        <a href="#section4" class="circle-link"><img src="../images/pd_2.jpg" alt="Performance 4"></a>
+                        <span class="nav-meta">2017.2025</span>
+                    </div>
+                    <div class="nav-item">
+                        <span class="nav-label">PERFORMANCE 5</span>
+                        <a href="#section5" class="circle-link"><img src="../images/pd_2.jpg" alt="Performance 5"></a>
+                        <span class="nav-meta">2017.2025</span>
+                    </div>
                 </div>
-            </div>
-        </section>
 
-    </main>
+                <div class="container">
+                    <h1>Live Coding</h1>
+                    <p>Algorithmic music performance and creative coding using Strudel.</p>
+                </div>
+            </section>
+
+            <section class="snap-section">
+                <div class="container">
+                    <h2 class="sub-title">Performance Gallery</h2>
+                    <div class="image-grid">
+                        <img src="../images/pd_1.jpg" alt="Live Code 1">
+                        <img src="../images/pd_2.jpg" alt="Live Code 2">
+                        <img src="../images/pd_3.jpg" alt="Live Code 3">
+                        <img src="../images/pd_4.jpg" alt="Live Code 4">
+                        <img src="../images/your-new-image-5.jpg" alt="Live Code 5">
+                        <img src="../images/your-new-image-6.jpg" alt="Live Code 6">
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div> 
 
     <script>
-        // Add your openmenu/closemenu functions here if needed
+        // Menu functions
         function openmenu() { document.getElementById("sidemenu").style.right = "0"; }
         function closemenu() { document.getElementById("sidemenu").style.right = "-200px"; }
+
+        // Scroll behavior
+        window.onload = function() {
+            if (document.querySelector('.scroll-module')) {
+                window.scrollTo(0, 0);
+            }
+        };
     </script>
+
+    
+
+<!-- FOOTER -->
+<div class="copyright">
+  <p>© 2026 Shaan K Rehsi</p>
+</div>
+
+<!-- SCRIPTS -->
+<script>
+  const sidemenu = document.getElementById("sidemenu");
+
+  function openmenu() {
+    sidemenu.style.right = "0";
+  }
+
+  function closemenu() {
+    sidemenu.style.right = "-200px";
+  }
+</script>
+
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="../js/blog.js"></script>
+<script src="../js/nav.js"></script>
+
 </body>
 </html>

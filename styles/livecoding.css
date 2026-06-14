@@ -1,41 +1,127 @@
+/* ==========================
+   LIVE CODING PAGE STYLES
+   ========================== */
 
-  /* Basic Page Spacing */
-  main {
-    padding-top: 100px;
-  }
+/* Lock the page container */
+body {
+    background-color: var(--background-web-color);
+    margin: 0;
+    height: 100vh;
+    overflow: hidden; /* Stops double scrollbar */
+}
 
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+/* This container handles the actual scrolling */
+.scroll-module {
+    height: 100vh;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+}
+/* Full-screen sections */
+.snap-section {
+    width: 100%;
+    min-height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 40px 20px;
+}
 
-  /* Gallery Grid */
-  .image-grid {
+/* Performance navigation */
+.performance-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.circle-link {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid white;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+
+.nav-item:hover .circle-link {
+    transform: scale(1.15);
+    box-shadow: 0 0 30px rgba(255,255,255,0.5);
+    border-color: #b375ff;
+}
+
+/* Desktop arc layout */
+@media (min-width: 769px) {
+    .nav-item:nth-child(1) { transform: translateY(0); }
+    .nav-item:nth-child(2) { transform: translateY(-30px); }
+    .nav-item:nth-child(3) { transform: translateY(-50px); }
+    .nav-item:nth-child(4) { transform: translateY(-30px); }
+    .nav-item:nth-child(5) { transform: translateY(0); }
+}
+
+/* Gallery */
+.image-grid {
     display: grid;
-    /* This creates 3 equal columns */
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    margin-top: 30px;
-  }
+    width: 90%;
+    max-width: 1000px;
+}
 
-  .image-grid img {
+.image-grid img {
     width: 100%;
-    /* This forces all images to be the same size regardless of original aspect */
-    aspect-ratio: 16 / 9; 
+    height: 200px;
     object-fit: cover;
     border-radius: 10px;
-    transition: transform 0.3s ease;
-  }
+}
 
-  .image-grid img:hover {
-    transform: scale(1.03);
-  }
+/* Mobile */
+@media (max-width: 768px) {
+    .performance-nav {
+        gap: 10px;
+    }
 
-  /* Responsive Fix for Mobile/Tablet */
-  @media (max-width: 900px) {
-    .image-grid { grid-template-columns: repeat(2, 1fr); }
-  }
-  @media (max-width: 600px) {
-    .image-grid { grid-template-columns: 1fr; }
-  }
+    .nav-item {
+        width: 45%;
+    }
+
+    .circle-link {
+        width: 90px;
+        height: 90px;
+    }
+
+    .image-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-text, .post-title, .post-date, .category, .post-description {
+        font-size: 0.75rem; /* Even smaller font sizes for very small screens */
+    }
+
+    .post {
+        grid-template-columns: 1fr; /* Single column layout for very small screens */
+    }
+
+    .profile-img {
+        width: 30px; /* Smaller profile images */
+        height: 30px;
+    }
+
+    .social .bx {
+        font-size: 1.2rem; /* Smaller social icons */
+    }
+}
+
