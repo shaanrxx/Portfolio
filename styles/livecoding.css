@@ -2,31 +2,93 @@
    LIVE CODING PAGE STYLES
    ========================== */
 
-/* Lock the page container */
 body {
     background-color: var(--background-web-color);
     margin: 0;
-    height: 100vh;
-    overflow: hidden; /* Stops double scrollbar */
+    overflow-y: hidden;  /* change this back to overflow-x soon*/
+    
 }
 
-/* This container handles the actual scrolling */
-.scroll-module {
-    height: 100vh;
-    overflow-y: auto;
+html {
+    scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
 }
-/* Full-screen sections */
+
+
+
+
 .snap-section {
-    width: 100%;
-    min-height: 100vh;
+     min-height: 100vh; */
+
     scroll-snap-align: start;
+    scroll-snap-stop: always;
+
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    position: relative;
-    padding: 40px 20px;
+
+     padding: 80px 20px 40px; /* reduce top padding from 120px */
+}
+
+
+#hero {
+     padding: 150px 0 60px;
+    color: var(--text-color);
+    font-weight: 100;
+    min-height: 100vh; /* Changed from height to min-height */
+}
+
+
+
+
+
+/* HERO TITLE */
+#hero h1 {
+    font-family: 'Orbitron', sans-serif;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+
+    width: 0;
+    max-width: 100%;
+
+    letter-spacing: 0.15em;
+    border-right: 3px solid #6e00e3;
+
+    animation:
+        typing 6s steps(12, end) infinite,
+        blink-caret 0.75s step-end infinite;
+}
+
+/* TYPE → HOLD → RESET */
+@keyframes typing {
+    0% { width: 0; }
+    35% { width: var(--type-width, 10ch); }
+    70% { width: var(--type-width, 10ch); }
+    100% { width: 0; }
+}
+
+/* cursor blink */
+@keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* HERO DESCRIPTION */
+#hero p {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+
+#hero .container {
+    text-align: center;
+     margin-top: -50px;
+    
 }
 
 /* Performance navigation */
@@ -61,6 +123,41 @@ body {
     border-color: #b375ff;
 }
 
+
+/*-----------------LIVE CODING INTRO TEXT -----------------------*/
+
+.live-coding-intro {
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.intro-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Optional: Ensure paragraphs don't get too cramped at 100vh */
+.intro-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.coming-soon {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    opacity: 0.5;
+    letter-spacing: 1px; /* Adds a bit of elegance */
+}
+
+
+
+
 /* Desktop arc layout */
 @media (min-width: 769px) {
     .nav-item:nth-child(1) { transform: translateY(0); }
@@ -68,7 +165,33 @@ body {
     .nav-item:nth-child(3) { transform: translateY(-50px); }
     .nav-item:nth-child(4) { transform: translateY(-30px); }
     .nav-item:nth-child(5) { transform: translateY(0); }
+
 }
+
+.live-coding-intro {
+    min-height: 20vh;
+}
+    #hero h1 {
+            font-family: 'Orbitron', sans-serif;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+
+    width: 0;
+    max-width: 100%;
+
+    letter-spacing: 0.15em;
+    border-right: 3px solid #6e00e3;
+
+    animation:
+        typing 6s steps(12, end) infinite,
+        blink-caret 0.75s step-end infinite;
+    }
+
+    #hero p {
+        font-size: 0.95rem;
+        padding: 0 10px;
+    }
 
 /* Gallery */
 .image-grid {
@@ -89,7 +212,7 @@ body {
 /* Mobile */
 @media (max-width: 768px) {
     .performance-nav {
-        gap: 10px;
+        gap: 15px;
     }
 
     .nav-item {
@@ -97,31 +220,48 @@ body {
     }
 
     .circle-link {
-        width: 90px;
-        height: 90px;
+        width: 85px;
+        height: 85px;
     }
 
-    .image-grid {
-        grid-template-columns: 1fr;
+    .nav-label {
+        font-size: 0.65rem;
+    }
+
+    .nav-meta {
+        font-size: 0.6rem;
+    }
+
+      .image-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        width: 95%;
     }
 }
 
 @media (max-width: 480px) {
-    .header-text, .post-title, .post-date, .category, .post-description {
-        font-size: 0.75rem; /* Even smaller font sizes for very small screens */
+    #hero {
+        padding: 120px 0 60px;
     }
 
-    .post {
-        grid-template-columns: 1fr; /* Single column layout for very small screens */
+    .performance-nav {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .profile-img {
-        width: 30px; /* Smaller profile images */
-        height: 30px;
+    .nav-item {
+        width: 100%;
     }
 
-    .social .bx {
-        font-size: 1.2rem; /* Smaller social icons */
+    .circle-link {
+        width: 75px;
+        height: 75px;
+    }
+
+    /* 🔥 FIXED GRID */
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        width: 95%;
     }
 }
-
