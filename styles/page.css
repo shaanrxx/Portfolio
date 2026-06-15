@@ -15,38 +15,34 @@
     /* --shadow-color: rgba(0, 0, 0, 0.5); Semi-transparent shadow; */
   }
 
-  #header{
-    height: 10vh;
-    z-index: 100;
+/* Compact header for sub-pages */
+#header.compact-header {
+    min-height: 150px !important;
+    height: 150px !important;
+    padding: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-web-color);
+}
+
+/* Ensure the header text doesn't have extra margins */
+.compact-header .header-text {
+    margin: 0 !important;
+    padding: 0 !important;
+    height: auto !important;
 }
 
 
-     .header-text {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        height: 20vh;
-      
-    
-    }
 
-    .header-title{
-        font-size: 1.5rem;
-        color: var(--shadow-colour2);
-        
-    }
-
-
-
-    p{
-        font-size: 1rem;
-        color: var(--shadow-colour1);
-    }
-
-
-    
-
+.header-text h1 {
+    align-items: center !important;
+    text-align: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    /* Optional: Ensure the text is a good size */
+    font-size: 2.5rem !important;
+}
 
 
 /******************** Post Content ************/
