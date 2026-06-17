@@ -1,101 +1,119 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YX8YXWZP9G"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-YX8YXWZP9G');
-  </script>
+  <head>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-YX8YXWZP9G"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-YX8YXWZP9G");
+    </script>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shaan Rehsi: Aarhus</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Shaan Rehsi: Archived Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@100;300&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@100;300&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/093248551b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/page.css" />
 
-  <!-- Icons -->
-  <script src="https://kit.fontawesome.com/093248551b.js" crossorigin="anonymous"></script>
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="../styles/style.css">
-  <link rel="stylesheet" href="../styles/portfolio.css">
-  <link rel="stylesheet" href="../styles/page.css">
-
-  <!-- GRID FIX (3 columns default) -->
-  <style>
-    
-</style>
-
-</head>
-
-<body>
-
-<!-- NAV BAR -->
-<div id="header">
-  <div class="container-header">
-    <nav id="navbar">
-      <ul id="sidemenu">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../index.html#projects">Projects</a></li>
-        <li><a href="archive.html">Archive</a></li>
-        <li><a href="../index.html#about">About</a></li>
-        <li><a href="../index.html#contact">Contact</a></li>
-        <li><a href="../files/cv2026.pdf" target="_blank">Resume/CV</a></li>
-        <i class="fa-solid fa-x" onclick="closemenu()"></i>
-      </ul>
-
-      <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-
-      <div id="social" class="social">
-        <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:example@email.com"><i class="fa fa-envelope"></i></a>
-        <a href="https://instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://github.com/" target="_blank"><i class="fa-brands fa-github"></i></a>
+    <style>
+      .header-title {
+        font-size: 1.5rem;
+        color: var(--shadow-colour2);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header" class="compact-header">
+      <div class="container">
+        <nav id="navbar">
+          <ul id="sidemenu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="archive.html">Archive</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+            <li>
+              <a
+                href="./files/Shaan Rehsi CV Creative Technologist.pdf"
+                target="_blank"
+                >rEsumé/CV</a
+              >
+            </li>
+            <i class="fa-solid fa-x" onclick="closemenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+          <div id="social" class="social text-gray">
+            <a
+              href="https://www.linkedin.com/in/shaan-rehsi-4b40561b3/"
+              target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="mailto:shaanr@hotmail.co.uk" target="_blank"
+              ><i class="fa fa-envelope" aria-hidden="true"></i
+            ></a>
+            <a href="https://www.instagram.com/shapesandjapes_/" target="_blank"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="https://github.com/shaanrxx" target="_blank"
+              ><i class="fa-brands fa-square-git"></i
+            ></a>
+          </div>
+        </nav>
       </div>
-    </nav>
-    
-    
+    </div>
+
     <div class="header-text">
-    <!--     
-    <a href="portfolio.html" class="back-portfolio">Back To Portfolio</a> -->
-        <h1>Summer Course: C++</h1>
+      <h1>LEARNING C++ IN AARHUS</h1>
     </div>
-    <!-------------------------------- work --------------------------------->
-    
-    
+
     <section class="post-header">
-            <div class="header-content post-container post-text">
-                <!-----------Back to Home---------->
-        
-            <!-----------Title---------->
-            <h1 class="header-title">About Project</h1>
-            <!----------------Post Image----------------->
-            <img src="../images/church.jpg" alt="" class="header-img">
-            <p>My unversity gave me a grant to study an intensive summer course at Aarhus University and in return, asked for a creative response showing my time abroad and what I learnt. I decided to create a website, consisting of my assignments as well as the cultural activities I spent my time doing outside of studying,</p>
+      <div class="header-content post-container">
+        <!-----------Back to Home---------->
 
-               
-    <!-- 
+        <!-----------Title---------->
+        <h1 class="header-title">About Project</h1>
+        <!----------------Post Image----------------->
+        <img src="../images/church.jpg" alt="" class="header-img" />
+        <p>
+          My university gave me a grant to study an intensive summer course at
+          Aarhus University and in return, asked for a creative response showing
+          my time abroad and what I learnt. I decided to create a website,
+          consisting of my assignments as well as the cultural activities I
+          spent my time doing outside of studying,
+        </p>
+
+        <!-- 
     <a href ="#header" class="btn">Back to Top</a> -->
-    
+      </div>
+    </section>
+
+    <a
+      style="align-items: center"
+      href="https://shaanrxx.github.io/ArtsAbroad/index.html"
+      target="_blank"
+      class="btn"
+      >Go to Website</a
+    >
+
+    <div class="copyright">
+      <p>© 2025 Copyright: Created by: Shaan K Rehsi</p>
     </div>
-
-</section>
-
-<a style= "align-items: center;"  href="https://shaanrxx.github.io/ArtsAbroad/index.html" target="_blank" class="btn">Go to Website</a>
-
-        <div class="copyright">
-            <p>
-                © 2025 Copyright: Created by: Shaan K Rehsi</p>
-        </div>
-
-    </body>
-    </html>
-    
-    
+  </body>
+</html>

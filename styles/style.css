@@ -598,16 +598,16 @@ form btn2{
     cursor: pointer;
 }
 
-.copyright{
+/* Ensure the copyright stays at the bottom */
+.copyright {
     width: 100%;
     text-align: center;
     padding: 25px 0;
     background: black;
     color: grey;
     font-weight: 300;
-    /* margin-top: 20px; */
+    margin-top: 50px; /* Adds clear separation from content above */
 }
-
 
 
 
