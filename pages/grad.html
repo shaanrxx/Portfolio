@@ -147,21 +147,6 @@
     
     
     <script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-        function opentab(tabname){
-            for(tablink of tablinks){
-                tablink.classList.remove("active-link");
-            }
-            for(tabcontent of tabcontents){
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-    </script>
-    
-    <script>
         var sidemenu = document.getElementById("sidemenu");
             
         function openmenu(){
@@ -172,25 +157,7 @@
         }
     </script>
     
-    
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbw5k_VanyFZIfU0IT9e7FIOOxLgJ7_Cpw1TycQjwR4BaKXuepf-lAtmw4A9uuy3S2IKUw/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById("msg")
-      
-        form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                msg.innerHTML = "Message sent successfully"
-                setTimeout(function(){
-                    msg.innerHTML = ""
-                }, 5000)
-                form.reset()
-            })
-            .catch(error => console.error('Error!', error.message))
-        })
-      </script>
+
     
     <script>
         function openPDF() {
@@ -198,24 +165,9 @@
     }
     
     </script>
-        <!------------ JQuery List------------->
-        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-        <!-------------- Link to JS---------------->
-        <script src="../js/blog.js"></script>
-    
-            <!-- ------------ AOS js Library  ------------------------- -->
-            <script src="../js/aos.js"></script>
-    
-            <!-- ------------ navbar changincolor ------------------------- -->
-            <script src="../js/nav.js"></script>
-    
-    
+
     
     </body>
-    
-    
-    
-    
     </html>
     
     

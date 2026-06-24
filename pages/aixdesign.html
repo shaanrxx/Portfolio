@@ -1,1 +1,319 @@
-<p> coming soon :)</p>
+<!doctype html>
+<html lang="en">
+  <head>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-YX8YXWZP9G"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-YX8YXWZP9G");
+    </script>
+
+    <title>Shaan Rehsi: DIGITAL DIALOGUE</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@100;300&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/093248551b.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<style>
+.aixd-wrapper {
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 0 20px;
+  color: white;
+}
+
+.aixd-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.aixd-header h2 {
+  font-size: 2rem;
+}
+
+.aixd-subtitle {
+  max-width: 680px;
+  margin-top: 12px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  font-weight: 300;
+  letter-spacing: 0.2px;
+  opacity: 0.7;
+  color: #eaeaea;
+}
+.aixd-tabs {
+  display: flex;
+  gap: 10px;
+}
+
+.tab-btn {
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: 1px solid #444;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.tab-btn.active {
+  background: white;
+  color: black;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.grid iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 12px;
+}
+
+.instagram-media {
+  margin: 0 auto !important;
+  max-width: 100% !important;
+  border-radius: 14px;
+}
+
+@media (max-width: 768px) {
+
+  .aixd-wrapper {
+    margin: 60px auto;
+    padding: 0 16px;
+  }
+
+  /* Stack header vertically */
+  .aixd-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .aixd-header h2 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+
+  .aixd-subtitle {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    max-width: 100%;
+  }
+
+  /* Tabs wrap instead of overflowing */
+  .aixd-tabs {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .tab-btn {
+    flex: 1;
+    text-align: center;
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+
+  /* Grid becomes tighter */
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* YouTube embeds stay readable */
+  .grid iframe {
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+  }
+
+  /* Instagram embeds spacing fix */
+  .instagram-media {
+    min-width: 0 !important;
+    width: 100% !important;
+  }
+}
+</style>
+
+<body class="livecoding-page">
+
+<!-- NAV BAR -->
+<div id="header">
+  <div class="container-header">
+    <nav id="navbar">
+      <ul id="sidemenu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="archive.html">Archive</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+        <li><a href="../files/cv2026.pdf" target="_blank">Resume/CV</a></li>
+        <i class="fa-solid fa-x" onclick="closemenu()"></i>
+      </ul>
+
+      <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+
+      <div id="social" class="social">
+        <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:example@email.com"><i class="fa fa-envelope"></i></a>
+        <a href="https://instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://github.com/" target="_blank"><i class="fa-brands fa-github"></i></a>
+      </div>
+    </nav>
+
+    
+   
+<section class="aixd-wrapper">
+
+  <div class="aixd-header">
+    <h2>AIxDesign Video Editing Work</h2>
+
+    <p class="aixd-subtitle">
+  Video editing and content production for AIxDesign, including editing long-form talks and live events into short-form digital content. I designed all thumbnails and created music/code-based audio elements used across selected videos.
+</p>
+
+    <div class="aixd-tabs">
+      <button class="tab-btn active" onclick="showTab('youtube')">YouTube</button>
+      <button class="tab-btn" onclick="showTab('reels')">Reels</button>
+    </div>
+  </div>
+
+  <!-- REELS -->
+  <div class="tab-content active" id="youtube">
+
+    <div class="grid">
+      <iframe src="https://www.youtube.com/embed/OwbFj65yPNc"
+        allowfullscreen></iframe>
+
+      <iframe src="https://www.youtube.com/embed/v4Oz0YmBiwc"
+        allowfullscreen></iframe>
+
+      <iframe src="https://www.youtube.com/embed/rq8u0qeLNWQ" allowfullscreen></iframe>
+
+    <iframe src="https://www.youtube.com/embed/lB_heWG73mY" allowfullscreen></iframe>
+
+    <iframe src="https://www.youtube.com/embed/eEmH-WeEyMg" allowfullscreen></iframe>
+
+    <iframe src="https://www.youtube.com/embed/FaTkfC-5XsU" allowfullscreen></iframe>
+    </div>
+
+
+
+  </div>
+
+  <!-- reels -->
+  <div class="tab-content" id="reels">
+
+    <div class="grid">
+        <blockquote class="instagram-media"
+  data-instgrm-permalink="https://www.instagram.com/p/DZDNfwoo2vY/"
+  data-instgrm-version="14">
+</blockquote>
+
+<blockquote class="instagram-media"
+  data-instgrm-permalink="https://www.instagram.com/p/DZsUMQiIOor/"
+  data-instgrm-version="14">
+</blockquote>
+
+      <blockquote class="instagram-media"
+  data-instgrm-permalink="https://www.instagram.com/p/DUGail8DO68/"
+  data-instgrm-version="14">
+</blockquote>
+<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DZ5XYwSoaoG/" data-instgrm-version="14"></blockquote>
+
+<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DXrjLq6jHas/" data-instgrm-version="14"></blockquote>
+
+<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DYFGAGosqCC/" data-instgrm-version="14"></blockquote>
+
+<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DWJ4O2ijHtQ/" data-instgrm-version="14"></blockquote>
+
+<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DZxZBSnoLeX/" data-instgrm-version="14"></blockquote>
+
+<blockquote class="instagram-media"
+  data-instgrm-permalink="https://www.instagram.com/p/DUYfRHRjBjQ/"
+  data-instgrm-version="14">
+</blockquote>
+
+<blockquote class="instagram-media"
+  data-instgrm-permalink="https://www.instagram.com/p/DVtHlzlDLD7/"
+  data-instgrm-version="14">
+</blockquote>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<div class="copyright">
+  <p>© 2026 Shaan K Rehsi</p>
+</div>
+
+<!-- TAB SWITCHING -->
+<script>
+function showTab(tab) {
+  document.querySelectorAll('.tab-content').forEach(el => {
+    el.classList.remove('active');
+  });
+
+  document.querySelectorAll('.tab-btn').forEach(el => {
+    el.classList.remove('active');
+  });
+
+  document.getElementById(tab).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
+
+    
+<!-- insta reel script -->
+
+<script async src="//www.instagram.com/embed.js"></script>
+
+<!-- SCRIPTS -->
+<script>
+  const sidemenu = document.getElementById("sidemenu");
+
+  function openmenu() {
+    sidemenu.style.right = "0";
+  }
+
+  function closemenu() {
+    sidemenu.style.right = "-200px";
+  }
+</script>
+
+</body>
+</html>
+

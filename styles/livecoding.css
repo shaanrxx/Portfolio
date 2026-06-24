@@ -193,13 +193,13 @@ html {
         padding: 0 10px;
     }
 
-/* Gallery */
 .image-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     width: 90%;
     max-width: 1000px;
+    margin: 0 auto; /* Ensures the grid itself is centered */
 }
 
 .image-grid img {
@@ -258,10 +258,9 @@ html {
         height: 75px;
     }
 
-    /* 🔥 FIXED GRID */
-    .image-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        width: 95%;
+.image-grid {
+        display: grid !important;
+       grid-template-columns: 1fr 1fr; /* Explicitly defining 2 equal columns */
+        width: 95% !important;
     }
 }
