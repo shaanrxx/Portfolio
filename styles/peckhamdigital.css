@@ -1,0 +1,352 @@
+/* =========================
+   WRAPPER / BASE
+========================= */
+
+.pd-wrapper {
+  max-width: 1200px;
+  margin: 80px auto 0;
+  padding: 0 20px;
+  color: white;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.pd-header {
+   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+/* left side grouping (title + subtitle together) */
+
+
+.pd-header h2 {
+  font-size: 2rem;
+  color: var(--shadow-colour2);
+}
+
+/* subtitle stays under title but still inside left block */
+.pd-subtitle {
+    max-width: 680px;
+  margin-top: 12px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  font-weight: 300;
+  letter-spacing: 0.2px;
+  opacity: 0.7;
+  padding: 30px;
+  color: #eaeaea;
+}
+
+
+
+
+/* =========================
+   TABS
+========================= */
+
+/* tabs stay on same row as header */
+.pd-tabs {
+    display: flex;
+  gap: 10px;
+  flex-wrap: wrap; /* allows wrapping when needed */
+}
+
+
+.tab-btn {
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: 1px solid var(--shadow-colour4);
+  background: transparent;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: 0.2s ease;
+  white-space: nowrap;
+}
+
+.tab-btn:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 10px var(--shadow-colour3);
+  transform: translateY(-1px);
+}
+
+.tab-btn.active {
+  background: #e7d8ff;
+  color: black;
+  box-shadow: 0 0 5px var(--shadow-colour3);
+  font-weight: 500;
+}
+
+/* =========================
+   SECTION LAYOUT
+========================= */
+
+.campaign-section {
+  margin-bottom: 100px;
+}
+
+.campaign-header {
+  max-width: 800px;
+  margin-bottom: 32px;
+}
+
+.campaign-header h3 {
+  font-size: 16px;
+  margin-bottom: 14px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.campaign-header .role {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 14px;
+}
+
+.campaign-header .goal {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.campaign-intro {
+  max-width: 1200px;
+  margin-bottom: 32px;
+}
+
+.campaign-intro h3 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.campaign-intro p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 14px;
+  color: #ccc;
+}
+
+/* =========================
+   GLOBAL TEXT SPACING
+========================= */
+
+p {
+  margin-bottom: 14px;
+  line-height: 1.7;
+}
+
+/* =========================
+   GRID SYSTEM (UNIFIED)
+========================= */
+
+.stats-grid,
+.community-grid,
+.newsletter-grid,
+.events-grid,
+.pd-gallery,
+.ig-grid,
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.stat-card,
+.community-card,
+.newsletter-card,
+.event-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: 0.2s ease;
+  line-height: 1.6;
+}
+
+.stat-card:hover,
+.community-card:hover,
+.newsletter-card:hover,
+.event-card:hover {
+  border-color: var(--shadow-colour3);
+  box-shadow: 0 0 20px rgba(179,117,255,.2);
+}
+
+/* =========================
+   IMAGES
+========================= */
+
+.pd-gallery img,
+.newsletter-card img,
+.event-card img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.pd-gallery img:hover {
+  transform: scale(1.02);
+}
+
+.newsletter-card img {
+  height: 180px;
+}
+
+/* =========================
+   CARD TEXT
+========================= */
+
+.newsletter-card {
+  color: white;
+  text-decoration: none;
+}
+
+.newsletter-card h3,
+.event-card h3 {
+  margin-top: 6px;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* =========================
+   TABS CONTENT
+========================= */
+
+.pd-tab-content {
+  display: none;
+}
+
+.pd-tab-content.active {
+  display: block;
+}
+
+/* =========================
+   IFRAMES
+========================= */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.grid iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 12px;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+/* Tablets */
+@media (max-width: 900px) {
+  .pd-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .campaign-intro h3 {
+    font-size: 22px;
+  }
+
+  .newsletter-grid,
+  .stats-grid,
+  .community-grid,
+  .events-grid,
+  .pd-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  .pd-wrapper {
+     margin: 60px auto;
+    padding: 0 16px;
+  }
+
+  .pd-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .pd-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .pd-subtitle {
+    font-size: 0.9rem;
+    padding: 10px 0;
+  }
+
+  .campaign-intro h3 {
+    font-size: 20px;
+  }
+
+  .campaign-header h3 {
+    font-size: 14px;
+  }
+
+  .campaign-header .goal {
+    font-size: 14px;
+  }
+
+  /* prevent squashed cards */
+  .stat-card,
+  .community-card,
+  .newsletter-card,
+  .event-card {
+    padding: 18px;
+  }
+
+   /* Grid becomes tighter */
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* YouTube embeds stay readable */
+  .grid iframe {
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+  }
+
+  /* Instagram embeds spacing fix */
+  .instagram-media {
+    min-width: 0 !important;
+    width: 100% !important;
+  }
+
+  /* tabs become scrollable instead of wrapping too much */
+   .pd-tabs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 10px;
+    width: 100%;
+  }
+
+  .tab-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
