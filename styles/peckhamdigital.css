@@ -89,7 +89,7 @@
 }
 
 .campaign-header {
-  max-width: 800px;
+  max-width: 1200px;
   margin-bottom: 32px;
 }
 
@@ -111,6 +111,7 @@
   font-size: 16px;
   line-height: 1.7;
   margin-bottom: 18px;
+  max-width: 1200px;
 }
 
 /* =========================

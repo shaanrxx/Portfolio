@@ -442,6 +442,10 @@ ul li:hover ul li a {
     object-fit: cover;
     display: block;
 }
+.work  a {
+    text-decoration: none;
+    color: inherit;
+}
 
 /* OVERLAY */
 .layer {
@@ -465,7 +469,6 @@ ul li:hover ul li a {
 }
 
 .work-label h3 {
-    font-family: 'Poppins', sans-serif;
     font-size: 1.3rem;
     font-weight: 600;
     color: var(--shadow-colour2);
@@ -473,7 +476,6 @@ ul li:hover ul li a {
 
 /* DESCRIPTION */
 .work-label p {
-    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     color: rgba(255, 255, 255, 0.75);
     font-size: 0.9rem;
