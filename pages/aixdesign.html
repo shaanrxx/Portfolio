@@ -36,7 +36,7 @@
 <style>
 .aixd-wrapper {
   max-width: 1200px;
-  margin: 100px auto;
+  margin: 80px auto 0;
   padding: 0 20px;
   color: white;
 }
@@ -50,6 +50,7 @@
 
 .aixd-header h2 {
   font-size: 2rem;
+   color: var(--shadow-colour2);
 }
 
 .aixd-subtitle {
@@ -60,6 +61,7 @@
   font-weight: 300;
   letter-spacing: 0.2px;
   opacity: 0.7;
+  padding: 30px;
   color: #eaeaea;
 }
 .aixd-tabs {
@@ -72,14 +74,24 @@
   border-radius: 20px;
   border: 1px solid #444;
   background: transparent;
-  color: white;
+ border: 1px solid var(--shadow-colour4);
+  color: var(--text-color);
+  transition: 0.2s ease;
   cursor: pointer;
   transition: 0.2s;
 }
 
+.tab-btn:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 10px var(--shadow-colour3);
+  transform: translateY(-1px);
+}
+
 .tab-btn.active {
-  background: white;
+  background: #e7d8ff;
   color: black;
+  box-shadow: 0 0 5px var(--shadow-colour3);
+  font-weight:500;
 }
 
 .tab-content {
@@ -132,6 +144,7 @@
     font-size: 0.9rem;
     line-height: 1.6;
     max-width: 100%;
+    padding: 5px;
   }
 
   /* Tabs wrap instead of overflowing */
@@ -167,7 +180,7 @@
 }
 </style>
 
-<body class="livecoding-page">
+<body class="aixd-page">
 
 <!-- NAV BAR -->
 <div id="header">
