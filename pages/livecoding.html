@@ -35,11 +35,15 @@
 
 <style>
 
-  .warning {
+.warning {
   color: var(--shadow-colour2);
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+
+/* =========================
+   Layout Wrapper
+========================= */
 
 .lc-wrapper {
   max-width: 1200px;
@@ -57,7 +61,7 @@
 
 .lc-header h2 {
   font-size: 2rem;
-    color: var(--shadow-colour2);
+  color: var(--shadow-colour2);
 }
 
 .lc-subtitle {
@@ -71,6 +75,11 @@
   opacity: 0.7;
   color: #eaeaea;
 }
+
+/* =========================
+   Tabs
+========================= */
+
 .lc-tabs {
   display: flex;
   gap: 10px;
@@ -79,13 +88,11 @@
 .tab-btn {
   padding: 10px 16px;
   border-radius: 20px;
-  border: 1px solid #444;
+  border: 1px solid var(--shadow-colour4);
   background: transparent;
- border: 1px solid var(--shadow-colour4);
   color: var(--text-color);
-  transition: 0.2s ease;
   cursor: pointer;
-  transition: 0.2s;
+  transition: 0.2s ease;
 }
 
 .tab-btn:hover {
@@ -98,8 +105,12 @@
   background: #e7d8ff;
   color: black;
   box-shadow: 0 0 5px var(--shadow-colour3);
-  font-weight:500;
+  font-weight: 500;
 }
+
+/* =========================
+   Tab Content
+========================= */
 
 .tab-content {
   display: none;
@@ -107,19 +118,6 @@
 
 .tab-content.active {
   display: block;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 20px;
-}
-
-.grid iframe {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border: 0;
-  border-radius: 12px;
 }
 
 .tab-header {
@@ -139,10 +137,21 @@
   opacity: 0.7;
 }
 
-.instagram-media {
-  margin: 0 auto !important;
-  max-width: 100% !important;
-  border-radius: 14px;
+/* =========================
+   Grids
+========================= */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.grid iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 12px;
 }
 
 .media-grid {
@@ -152,24 +161,21 @@
   margin-top: 20px;
 }
 
-/* ALL items same base style */
 .media-grid > * {
   width: 100%;
   height: 220px;
   border-radius: 12px;
   overflow: hidden;
   background: #111;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
 
-/* YouTube iframe fills card */
 .media-grid iframe {
   width: 100%;
   height: 100%;
   border: none;
 }
 
-/* audio cards layout */
 .media-grid .audio-card {
   display: flex;
   flex-direction: column;
@@ -183,6 +189,10 @@
   width: 100%;
 }
 
+/* =========================
+   Gallery
+========================= */
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -195,7 +205,7 @@
   aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
   transition: transform 0.3s ease;
 }
 
@@ -203,24 +213,127 @@
   transform: scale(1.03);
 }
 
+/* =========================
+   Instagram Embed
+========================= */
+
+.instagram-media {
+  margin: 0 auto !important;
+  max-width: 100% !important;
+  border-radius: 14px;
+}
+
+/* =========================
+   Performance Cards
+========================= */
+
+.performance-card {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.performance-card iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+}
+
+.performance-info {
+  padding: 0 4px;
+}
+
+.performance-info h3 {
+  margin-bottom: 16px;
+  font-size: 1.25rem;
+}
+
+.performance-number {
+  color: var(--shadow-colour2);
+  margin-right: 10px;
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.9rem;
+}
+
+.performance-meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 20px 0;
+}
+
+.meta-label {
+  display: block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--shadow-colour2);
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.performance-meta p {
+  margin: 0;
+  opacity: 0.85;
+  font-size: 0.9rem;
+}
+
+.performance-description {
+  line-height: 1.7;
+  opacity: 0.75;
+}
+
+.performance-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.performance-tags span {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--shadow-colour4);
+  color: var(--shadow-colour2);
+  font-size: 0.75rem;
+  transition: 0.2s;
+}
+
+.performance-tags span:hover {
+  background: var(--shadow-colour4);
+  color: white;
+}
+
+/* =========================
+   Footer
+========================= */
+
 .copyright {
-    width: 100%;
-    text-align: center;
-    padding: 25px 0;
-    background: black;
-    color: grey;
-    font-weight: 300;
-    margin-top: 50px; /* Adds clear separation from content above */
+  width: 100%;
+  text-align: center;
+  padding: 25px 0;
+  background: black;
+  color: grey;
+  font-weight: 300;
+  margin-top: 50px;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 900px) {
+  .performance-meta {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
-
   .lc-wrapper {
     margin: 60px auto;
     padding: 0 16px;
   }
 
-  /* Stack header vertically */
   .lc-header {
     flex-direction: column;
     align-items: flex-start;
@@ -239,7 +352,6 @@
     max-width: 100%;
   }
 
-  /* Tabs wrap instead of overflowing */
   .lc-tabs {
     flex-wrap: wrap;
     width: 100%;
@@ -252,7 +364,7 @@
     font-size: 0.9rem;
   }
 
-    .tab-header {
+  .tab-header {
     max-width: 100%;
   }
 
@@ -262,26 +374,13 @@
 
   .tab-header p {
     font-size: 0.85rem;
-    li
+    line-height: 1.6;
+  }
 
-  /* Grid becomes tighter */
   .grid {
     grid-template-columns: 1fr;
     gap: 16px;
   }
-
-  /* YouTube embeds stay readable */
-  .grid iframe {
-    aspect-ratio: 16 / 9;
-    border-radius: 10px;
-  }
-
-  /* Instagram embeds spacing fix */
-  .instagram-media {
-    min-width: 0 !important;
-    width: 100% !important;
-  }
-
 
   .media-grid > * {
     height: auto;
@@ -293,19 +392,15 @@
     height: auto;
   }
 
-
-  .audio-card {
-    padding: 12px;
-  }
-
-  .media-grid audio {
-    width: 100%;
-  }
-
-   .gallery-grid img {
+  .gallery-grid img {
     aspect-ratio: 4 / 3;
   }
+}
 
+@media (max-width: 600px) {
+  .performance-meta {
+      grid-template-columns: 1fr 1fr;
+  }
 }
 </style>
 
@@ -355,39 +450,221 @@
   </div>
 
   <!-- performances -->
-  <div class="tab-content active" id="performances">
-          <!-- HEADER -->
+  <!-- performances -->
+<div class="tab-content active" id="performances">
+
   <div class="tab-header">
     <h2>Performances</h2>
     <p>
-      Some of my recorded/streamed performances.
+      A selection of recorded performances showcasing live coded music,
+      algorithmic composition and audiovisual improvisation. Each set is
+      performed entirely through code using live coding languages and
+      creative coding tools.
     </p>
   </div>
-    <div class="grid">
-  <iframe 
-    src="https://www.youtube.com/embed/uMk-Bo5IDmI"
-    title="YouTube video"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-  </iframe>
 
-  <iframe 
-    src="https://www.youtube.com/embed/OzStTG8xTn0?si=p3JzgxDAHuZSVA5b&amp;start=2421"
-    title="YouTube video"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-  </iframe>
+  <div class="grid">
 
-  
+    <!-- PERFORMANCE 1 -->
+    <div class="performance-card">
 
-  <iframe 
-  src="https://www.youtube.com/embed/LbxbrSaidNI?start=3630"
-  title="Live Coding Performance"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen>
-</iframe>
+      <iframe
+        src="https://www.youtube.com/embed/uMk-Bo5IDmI"
+        allowfullscreen>
+      </iframe>
+
+      <div class="performance-info">
+
+        <h3>
+          <span class="performance-number">01</span>
+          Peckham Digital Creative Computing Festival
+        </h3>
+
+        <div class="performance-meta">
+
+          <div>
+            <span class="meta-label">Event</span>
+            <p>Creative Computing Festival Artist's Party</p>
+          </div>
+
+          <div>
+            <span class="meta-label">Venue</span>
+            <p>Copeland Gallery, Peckham</p>
+          </div>
+
+          <div>
+            <span class="meta-label">Role</span>
+            <p>Live Coder / Performer</p>
+          </div>
+
+          <div>
+            <span class="meta-label">Tools</span>
+            <p>Strudel • Hydra • p5.js</p>
+          </div>
+
+          <div>
+            <span class="meta-label">Format</span>
+            <p>Collabortive Live Set</p>
+          </div>
+
+          <div>
+            <span class="meta-label">Date</span>
+            <p>October 2025</p>
+          </div>
+
+        </div>
+
+        <p class="performance-description">
+          Performed an audio visual live coding set using Strudel and Hydra,
+          generating electronic music in real time through code as part
+          of Peckham Digital's Creative Computing Festival.
+        </p>
+
+        <!-- <div class="performance-tags">
+          <span>Live Coding</span>
+          <span>Hydrac</span>
+          <span>Creative Computing</span>
+          <span>Strudel</span>
+        </div> -->
+
+      </div>
+
+    </div>
+
+    <!-- PERFORMANCE 2 -->
+    <div class="performance-card">
+
+      <iframe
+        src="https://www.youtube.com/embed/OzStTG8xTn0?start=2421"
+        allowfullscreen>
+      </iframe>
+
+      <div class="performance-info">
+
+        <h3>
+          <span class="performance-number">02</span>
+          Corsica
+        </h3>
+
+        <div class="performance-meta">
+
+          <div>
+            <span class="meta-label">Event</span>
+            <p>Algorave Corsica</p>
+          </div>
+
+          <div>
+            <span class="meta-label">Venue</span>
+            <p>Corsica, London</p>
+          </div>
+
+          <div>
+            <span class="meta-label">Role</span>
+            <p>Live Coder</p>
+          </div>
+
+          <div>
+            <span class="meta-label">Tools</span>
+            <p>Strudel</p>
+          </div>
+
+          <div>
+            <span class="meta-label">Format</span>
+            <p>Audio Performance</p>
+          </div>
+
+          <div>
+            <span class="meta-label">Date</span>
+            <p>November 2025</p>
+          </div>
+
+        </div>
+
+        <p class="performance-description">
+          Live audio performance 
+          exploring improvisation through creative
+          coding.
+        </p>
+
+        <!-- <div class="performance-tags">
+          <span>Hydra</span>
+          <span>Strudel</span>
+          <span>Visuals</span>
+          <span>Improvisation</span>
+        </div> -->
+
+      </div>
+
+    </div>
+
+    <!-- PERFORMANCE 3 -->
+    <div class="performance-card">
+
+      <iframe
+        src="https://www.youtube.com/embed/LbxbrSaidNI?start=3630"
+        allowfullscreen>
+      </iframe>
+
+      <div class="performance-info">
+
+        <h3>
+          <span class="performance-number">03</span>
+          Algotrance w/ Switch Angel
+        </h3>
+
+        <div class="performance-meta">
+
+          <div>
+            <span class="meta-label">Event</span>
+            <p>Algotrance</p>
+          </div>
+
+          <div>
+            <span class="meta-label">Venue</span>
+            <p>Carpet Shop, Peckham</p>
+          </div>
+
+          <div>
+            <span class="meta-label">Role</span>
+            <p>Live Coder</p>
+          </div>
+
+          <div>
+            <span class="meta-label">Tools</span>
+            <p>Strudel</p>
+          </div>
+
+          <div>
+            <span class="meta-label">Format</span>
+            <p>Collabortive Performance</p>
+          </div>
+
+          <div>
+            <span class="meta-label">Date</span>
+            <p>May 2026</p>
+          </div>
+
+        </div>
+
+        <p class="performance-description">
+          A live-coded performance of trance-inspired music created for a themed event, serving as the opening act for Switch Angel. Collaborated with a spoken words artist, blending spoken word poetry with evolving electronic beats.
+        </p>
+
+        <!-- <div class="performance-tags">
+          <span>Live Stream</span>
+          <span>Generative Music</span>
+          <span>Strudel</span>
+          <span>Creative Coding</span>
+        </div> -->
+
+      </div>
+
+    </div>
+
   </div>
-  </div>
+
+</div>
+
 
 <div class="tab-content" id="music">
 
