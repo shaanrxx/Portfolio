@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-YX8YXWZP9G"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-YX8YXWZP9G");
+    </script>
+
+    <title>Shaan Rehsi: NANI'S ROOM</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@100;300&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/093248551b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/page.css" />
+
+    <style>
+      .header-title {
+        font-size: 1.5rem;
+        color: var(--shadow-colour2);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header" class="compact-header">
+      <div class="container">
+        <nav id="navbar">
+          <ul id="sidemenu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="archive.html">Archive</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+            <li>
+              <a
+                href="./files/cv2026.pdf"
+                target="_blank"
+                >rEsumé/CV</a
+              >
+            </li>
+            <i class="fa-solid fa-x" onclick="closemenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+          <div id="social" class="social text-gray">
+            <a
+              href="https://www.linkedin.com/in/shaan-rehsi-4b40561b3/"
+              target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="mailto:shaanr@hotmail.co.uk" target="_blank"
+              ><i class="fa fa-envelope" aria-hidden="true"></i
+            ></a>
+            <a href="https://www.instagram.com/shapesandjapes_/" target="_blank"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="https://github.com/shaanrxx" target="_blank"
+              ><i class="fa-brands fa-square-git"></i
+            ></a>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <div class="header-text">
+      <h1>Nani's Room x Somerset House</h1>
+    </div>
+
+    <!------------------------ About ----------------------->
+    <section class="post-header">
+      <div class="header-content post-container">
+        <h1 class="header-title">About the Project</h1>
+
+        <!-- PLACEHOLDER: swap in your own hero image -->
+        <img src="../images/nanisroom-hero.jpg" alt="Nani's Room hero image" class="header-img" />
+
+        <p>
+          "Nani's Room" is a game exploring the themes of home, personal
+          objects, memory, and identity. Taking its name and inspiration
+          from my grandmother's room, the project invites players to
+          rediscover a space through the objects that fill it — each one
+          holding a fragment of memory, history, and meaning. Through
+          interaction with these everyday belongings, the game asks what
+          it means to carry a sense of home and identity across time,
+          distance, and generations.
+        </p>
+
+        <!-- PLACEHOLDER: replace with your actual repo link, or remove if not public -->
+        <a
+          style="align-items: center"
+          href="https://github.com/shaanrxx/NanisRoom"
+          target="_blank"
+          class="btn"
+          >View Github Repository</a
+        >
+      </div>
+    </section>
+
+    <!------------------------- Demo ---------------------->
+    <section class="post-content post-container post-text">
+      <h1 class="sub-title">Demo Video</h1>
+      <div class="video-container">
+        <!-- PLACEHOLDER: replace VIDEO_ID with your YouTube embed link -->
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/VIDEO_ID"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <p>
+        Players explore the room at their own pace, piecing together
+        memories through the objects they find. The experience is designed
+        to be accessible and intuitive, so it can be picked up by audiences
+        of all ages and backgrounds.
+      </p>
+    </section>
+
+    <!------------------------- Somerset House ---------------------->
+    <section class="post-content post-container post-text">
+      <h1 class="sub-title">Somerset House: Future Artists Programme</h1>
+
+      <!-- PLACEHOLDER: swap in an image from the exhibition/programme -->
+      <img src="../images/nanisroom-somersethouse.jpg" alt="Nani's Room at Somerset House" class="header-img" />
+
+      <p>
+        <!-- PLACEHOLDER: adjust this paragraph to describe your actual role —
+             e.g. "developed during my time on..." or "selected to be exhibited as part of..." -->
+        Nani's Room was developed and exhibited in connection with Somerset
+        House's Future Artists Programme, a development opportunity for
+        young and emerging creatives run in collaboration with Somerset
+        House Studios' resident artists. The programme combines
+        artist-led workshops with immersion in Somerset House's wider
+        creative community, offering hands-on support in developing new
+        work, experimenting across disciplines, and preparing for a
+        career in the arts. Being part of this environment shaped how
+        Nani's Room evolved — from an early concept about memory and
+        objects into an interactive piece shared with a public audience.
+      </p>
+    </section>
+
+    <a style="align-items: center" href="#header" class="btn">Back to Top</a>
+
+    <div class="copyright">
+      <p>© 2026 Copyright: Created by: Shaan K Rehsi</p>
+    </div>
+
+    <script>
+      var sidemenu = document.getElementById("sidemenu");
+
+      function openmenu() {
+        sidemenu.style.right = "0";
+      }
+      function closemenu() {
+        sidemenu.style.right = "-200px";
+      }
+    </script>
+  </body>
+</html>

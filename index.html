@@ -11,401 +11,346 @@
   </script>
 
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Shaan Rehsi: Home</title>
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@100;300&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Open+Sans:wght@300;400;600;700;800&family=Space+Grotesk:wght@300;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Icons -->
-  <script src="https://kit.fontawesome.com/093248551b.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="./styles/style.css">
-  <link rel="stylesheet" href="./styles/owl.theme.default.min.css">
-  <link rel="stylesheet" href="./styles/aos.css">
-  <link rel="stylesheet" href="./styles/owl.carousel.min.css">
-
-  <!-- p5.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
-  <script src="./pages/sketch.js"></script>
-
-  <style>
- .header-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin-top: 15vh;
-  padding: 10px;
-}
-
-/* Responsive title */
-.header-text h1 {
-  font-family: 'Orbitron', sans-serif;
-  letter-spacing: 5px;
-  font-size: clamp(2rem, 6vw, 4rem);
-  line-height: 1.1;
-}
-
-/* FIX: make the line wrap properly */
-.horizontal-line {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-/* FIX paragraph scaling */
-.horizontal-line p {
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 300;
-  letter-spacing: 2px;
-  font-size: clamp(2rem, 1.5vw, .5rem);
-  margin: 0;
-  text-transform: uppercase;
-}
-
-/* prevent weird spacing on dots */
-.horizontal-line p:nth-child(even) {
-  opacity: 0.6;
-}
-
-/* your zoom effect stays fine but make sure it doesn’t break layout */
-.zoom {
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  cursor: pointer;
-  display: inline-block;
-}
-    #myPatternContainer,
-    #mySpinningPatternWebGLContainer {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      overflow: hidden;
-    }
-  </style>
+  <!-- Home page styles only. The other pages still use styles/style.css -->
+  <link rel="stylesheet" href="./styles/home.css">
 </head>
-
 <body>
 
-  <!------------------------ NAV BAR ----------------------->
-  <div id="header">
-    <div class="container-header">
-      <div class="container">
-        <nav id="navbar">
-          <ul id="sidemenu">
-            <li><a href="#header">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <!-- <li><a href="#portfolio">Archive</a></li> -->
-             <!-- <li><a href="./pages/livecoding.html">Live coding</a></li> -->
-            <li><a href="./pages/archive.html">Archive</a></li> 
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="./files/cv2026.pdf" target="_blank">rEsumé/CV</a></li>
-            <i class="fa-solid fa-x" onclick="closemenu()"></i>
-          </ul>
-          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6"/></symbol>
+  <symbol id="i-in" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V16M8 7.8v.01M12 16v-5.5M12 13c0-1.5 1-2.5 2.3-2.5S16.5 11.4 16.5 13V16"/></symbol>
+  <symbol id="i-gh" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 18v-3.2c-2 .4-2.5-1-2.5-1M9 14.8c-.8-.3-1.200-1.100-1.200-2.300 0-1 .4-1.800 1-2.300-.2-.5-.2-1.500.1-2 .8 0 1.500.4 2 .8a6 6 0 0 1 2.200 0c.5-.4 1.200-.8 2-.8.3.5.3 1.500.1 2 .6.5 1 1.300 1 2.300 0 1.200-.4 2-1.200 2.300V18"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></symbol>
+</svg>
 
-          <div id="social" class="social text-gray">
-            <a href="https://www.linkedin.com/in/shaan-rehsi-4b40561b3/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:shaanr@hotmail.co.uk"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-            <a href="https://www.instagram.com/shapesandjapes_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://github.com/shaanrxx" target="_blank"><i class="fa-brands fa-square-git"></i></a>
-          </div>
-        </nav>
+<nav id="navbar" aria-label="Main">
+  <ul id="sidemenu">
+    <li class="brandli"><a data-nav href="#header">Shaan Rehsi</a></li>
+    <li><a data-nav href="#work">Recent Projects</a></li>
+    <li><a data-nav href="#music">Live Coding</a></li>
+    <li><a data-nav href="#workshops">Workshops</a></li>
+    <li><a data-nav href="#archive">Archive</a></li>
+    <li class="sub first"><a data-nav href="#about">About</a></li>
+    <li class="sub"><a data-nav href="#contact">Contact</a></li>
+    <li class="sub"><a data-nav href="#resume">Resume</a></li>
+    <button class="menu-close" id="closeMenu" type="button" aria-label="Close menu">×</button>
+  </ul>
+  <button class="menu-btn" id="openMenu" type="button" aria-label="Open menu">☰</button>
+  <div class="social">
+    <a href="https://www.linkedin.com/in/shaan-rehsi-4b40561b3/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg><use href="#i-in"/></svg></a>
+    <a href="#contact" aria-label="Email"><svg><use href="#i-mail"/></svg></a>
+    <a href="https://www.instagram.com/shapesandjapes_/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a>
+    <a href="https://github.com/shaanrxx" target="_blank" rel="noopener" aria-label="GitHub"><svg><use href="#i-gh"/></svg></a>
+  </div>
+</nav>
 
-        <div class="header-text">
-        <div class="zoom" id="zoomElement">
-          <h1>SHAAN REHSI</h1>
-        </div>
-        
-        <div class="horizontal-line">
-          <div class="zoom"><p>CREATIVE TECHNOLOGIST</p></div>
-          <p>•</p>
-          <div class="zoom"><p>LIVE CODER</p></div>
-          <p>•</p>
-          <div class="zoom"><p>CONTENT CREATOR</p></div>
-        </div>
-      </div>
-      </div>
+<div class="page">
+
+<div id="header">
+  <div class="header-text">
+    <div class="zoom"><h1>SHAAN REHSI</h1></div>
+    <div class="horizontal-line">
+      <div class="zoom"><p>Creative Technologist</p></div><p class="sep">•</p>
+      <div class="zoom"><p>Live Coder</p></div><p class="sep">•</p>
+      <div class="zoom"><p>Content Creator</p></div>
+    </div>
+    <div class="code" role="img" aria-label="A short live-coded music pattern">
+      <div class="code-bar"><i></i><i></i><i></i><span>strudel.cc @shapesandjapes</span></div>
+      <pre><span class="cm">// hi im shaan aka @shapesandjapes and welcome to my portfolio!
+// copy this code into strudel.cc to make your first tune</span>
+
+<span class="ln"><em>$:</em>s("bd sd [bd bd] sd").bank("RolandTR808")</span>
+<span class="ln"><em>$:</em>s("hh*8").bank("RolandTR808")</span>
+<span class="ln"><em>$:</em>chord("Gm A F D").sound("sine").slow(4).voicing()<b class="cur"></b></span></pre>
     </div>
   </div>
-
-   <!-------------------- projects --------------------------->
-   <section id="projects">
-
-    <div class="container">
-
-        <h1 class="sub-title">Featured Projects</h1>
-
-        <div class="work-list">
-
-            <!-- Peckham Digital -->
-           <div class="work">
-  <a href="./pages/peckhamdigital.html">
-    <div class="work-image-container" style="position: relative;">
-      <img src="./images/wrapped1.png" alt="Peckham Digital">
-      <div class="layer">
-        <i class="fas fa-arrow-right"></i>
-      </div>
-    </div>
-
-    <div class="work-label">
-      <h3>Peckham Digital</h3>
-      <p>Graphic design, podcast production, and community engagement.</p>
-    </div>
-  </a>
 </div>
 
-            <!-- Live Coding -->
-            <div class="work">
-  <a href="./pages/livecoding.html">
-    <div class="work-image-container" style="position: relative;">
-      <img src="./images/pd_3.jpg" alt="Live Coding">
-      <div class="layer">
-        <i class="fas fa-arrow-right"></i>
+<!-- RECENT PROJECTS -->
+<section id="work">
+  <span id="projects"></span>
+  <div class="container">
+    <h1 class="sub-title">Recent Projects</h1>
+    <div class="work-list two" style="margin-top:32px">
+      <div class="work wide">
+        <a href="pages/nanisroom.html" class="wide-img"><div class="work-image-container"><span class="tag">Featured</span><img src="images/nanisroom.png" alt="Nani's Room"><div class="layer">→</div></div></a>
+        <div class="work-label">
+          <span class="kicker">Somerset House · Future Artists Programme</span>
+          <h3>Nani's Room</h3>
+          <p>A memory game about home, personal objects and identity, inspired by my grandmother's room. Curated for the Work in Process showcase.</p>
+          <div class="btn-row">
+            <a class="btn small btn2" href="pages/nanisroom.html">Project page</a>
+            <a class="btn small" href="https://github.com/shaanrxx/NanisRoom" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
       </div>
+      <div class="work"><a href="pages/peckhamdigital.html"><div class="work-image-container"><span class="tag">New content</span><img src="images/wrapped1.png" alt="Peckham Digital"><div class="layer">→</div></div><div class="work-label"><h3>Peckham Digital</h3><p>Communications, design and podcast production. At the festival: hosted on Resonance FM and shot sponsor photography for Codge.</p></div></a></div>
+      <div class="work"><a href="pages/aixdesign.html"><div class="work-image-container"><img src="images/aicat.png" alt="AI x Design"><div class="layer">→</div></div><div class="work-label"><h3>AI × Design</h3><p>Edited videos and thumbnails surrounding Slow AI, design, and digital culture.</p></div></a></div>
     </div>
-    <div class="work-label">
-      <h3>Live Coding</h3>
-      <p>Algorithmic music performance, sound design, and creative coding using Strudel.</p>
-    </div>
-  </a>
-</div>
-
-            <!-- Nani's Room x Somerset House -->
-            <div class="work">
-  <a href="./pages/nanisroom.html">
-    <div class="work-image-container" style="position: relative;">
-      <img src="./images/nanisroom.png" alt="Nani's Room x Somerset House">
-      <div class="layer">
-        <i class="fas fa-arrow-right"></i>
-      </div>
-    </div>
-    <div class="work-label">
-      <h3>Nani's Room x Somerset House</h3>
-      <p>An immersive memory game exhibited with Somerset House.</p>
-    </div>
-  </a>
-</div>
-
-
-<div class="work">
-  <a href="./pages/aixdesign.html">
-    <div class="work-image-container" style="position: relative;">
-      <img src="./images/aicat.png" alt="AI x Design">
-      <div class="layer">
-        <i class="fas fa-arrow-right"></i>
-      </div>
-    </div>
-    <div class="work-label">
-      <h3>AI × Design</h3>
-      <p>Edited videos and thumbnails surrounding Slow AI, design, and digital culture.</p>
-    </div>
-  </a>
-</div>
-
-    </div>
-
-
-<a style= "align-items: center;"  href="./pages/archive.html" target="_blank" class="btn">View Archive</a>
-
-
-
+  </div>
 </section>
 
-  <!-------------------- ABOUT SECTION --------------------------->
-  <div id="about">
+<!-- LIVE CODING -->
+<section id="music">
+  <div class="container">
+    <h1 class="sub-title">Live Coding</h1>
+    <div class="split mc">
+      <div>
+        <span class="kicker">Melanated Coalition · with Nkosi</span>
+        <h2 class="h2">Live coding duo</h2>
+        <p>Music and live coding centred on Global Majority and diasporic musical cultures. We perform live-coded sets and run workshops, including Strudel beat-making.</p>
+        <div class="btn-row">
+          <a class="btn small btn2" href="https://www.instagram.com/melanatedcoalition/" target="_blank" rel="noopener">@melanatedcoalition</a>
+          <a class="btn small" href="https://www.instagram.com/p/Deg6JKjFT83/" target="_blank" rel="noopener">Latest post</a>
+        </div>
+      </div>
+      <img src="images/lc_gallery/2.jpg" alt="Live set on stage">
+    </div>
+    <h2 class="h2">Live sets</h2>
+    <div class="rows">
+      <div class="mini"><span class="meta">May 2026</span><div><h3>Algotrance</h3><p>Carpet Shop, Peckham. Opening for Switch Angel, with a spoken word artist.</p></div></div>
+      <div class="mini"><span class="meta">Nov 2025</span><div><h3>Algorave Corsica</h3><p>Corsica, London. Strudel audio set.</p></div></div>
+      <div class="mini"><span class="meta">Oct 2025</span><div><h3>Creative Computing Festival</h3><p>Copeland Gallery, Peckham. Strudel, Hydra and p5.js.</p></div></div>
+    </div>
+    <a class="inline-link" href="pages/livecoding.html"><span>Music, Hydra and gallery</span><b>Full live coding page →</b></a>
+  </div>
+</section>
+
+<!-- WORKSHOPS -->
+<section id="workshops">
+  <div class="container">
+    <h1 class="sub-title">Workshops</h1>
+    <p class="lead">Leading and assisting creative coding and music sessions.</p>
+    <div class="rows">
+      <div class="mini"><span class="meta">Lead</span><div><h3>Building Beats with Strudel</h3><p>One-hour amapiano beat-making for Peckham Digital, with Melanated Coalition.</p></div></div>
+      <div class="mini empty"><span class="meta">Assisting</span><div><h3>Add a workshop</h3><p>Who it was for, what people made, your role.</p></div></div>
+      <div class="mini empty"><span class="meta">Assisting</span><div><h3>Add a workshop</h3><p>Same format, so the list grows without a redesign.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ARCHIVE -->
+<section id="archive">
+  <div class="container">
+    <h1 class="sub-title">Archive</h1>
+    <p class="lead">Coursework and experiments from 2022 to 2024. A few of the latest below.</p>
+    <div class="arch-list" id="archList" style="margin-top:22px">
+        <a class="arch" data-cat="blender" href="pages/grad.html"><span class="meta">Jun 2024</span><span class="t">Website Graduate Project</span><span class="tags">Blender · Y3</span><span class="go">→</span></a>
+        <a class="arch" data-cat="ai" href="pages/aifashion.html"><span class="meta">Feb 2024</span><span class="t">AI Fashion Magazine</span><span class="tags">AI · Y3</span><span class="go">→</span></a>
+        <a class="arch" data-cat="ai" href="pages/ethics.html"><span class="meta">Jan 2024</span><span class="t">Ethics of AI in Healthcare</span><span class="tags">AI · Y3</span><span class="go">→</span></a>
+        <a class="arch" data-cat="ai websites" href="pages/ai_blog.html"><span class="meta">Jan 2024</span><span class="t">DIGITAL DIALOGUE: The Danger of AI Chatbots</span><span class="tags">AI · Websites · Y3</span><span class="go">→</span></a>
+    </div>
+    <a class="inline-link" href="pages/archive.html"><span>14 projects across coding, Blender, AI and websites</span><b>View all projects →</b></a>
+  </div>
+</section>
+
+<div id="about">
   <div class="container">
     <div class="row">
-
-      <div class="about-col-1">
-        <img src="./images/lc_gallery\4.jpg" alt="Shaan Rehsi portrait">
-      </div>
-
+      <div class="about-col-1"><img src="images/lc_gallery/4.jpg" alt="Shaan live coding"></div>
       <div class="about-col-2">
         <h1 class="sub-title">About Me</h1>
-
-        <p>
-          I am a Creative Technologist, Designer and Live Coder based in London.
-          My work explores the intersection of technology, design, music and
-          digital culture through creative coding, AI research, community-led
-          projects and interactive experiences.
-          <br><br>
-          Recently I have worked with Peckham Digital producing podcasts,
-          social campaigns and digital content while continuing my practice
-          in live coding, creative technology and experimental media.
-        </p>
-
-        <div class="tab-titles">
-          <p class="tab-links active-link" onclick="opentab('creative-tech')">
-            Creative Technology
-          </p>
-
-          <p class="tab-links" onclick="opentab('design')">
-            Design
-          </p>
-
-          <p class="tab-links" onclick="opentab('development')">
-            Development
-          </p>
-
-          <p class="tab-links" onclick="opentab('research')">
-            Research
-          </p>
+        <p>I am a Creative Technologist, Designer and Live Coder based in London. My work explores the intersection of technology, design, music and digital culture through creative coding, AI research, community-led projects and interactive experiences.</p>
+        <p>Recently I have worked with Peckham Digital producing podcasts, social campaigns and digital content while continuing my practice in live coding, creative technology and experimental media.</p>
+        <div class="tab-titles" role="tablist">
+          <button class="tab-links active-link" type="button" data-tab="creative-tech">Creative Technology</button>
+          <button class="tab-links" type="button" data-tab="design">Design</button>
+          <button class="tab-links" type="button" data-tab="development">Development</button>
+          <button class="tab-links" type="button" data-tab="research">Research</button>
         </div>
-
-        <!-- Creative Technology -->
-        <div class="tab-contents active-tab" id="creative-tech">
-          <ul>
-            <li>
-              <span>Creative Technology</span><br>
-              Creative Coding<br>
-              Live Coding<br>
-              Generative AI<br>
-              Data Visualisation
-            </li>
-          </ul>
-        </div>
-
-        <!-- Design -->
-        <div class="tab-contents" id="design">
-          <ul>
-            <li>
-              <span>Design</span><br>
-              UX/UI Design<br>
-              Graphic Design<br>
-              Branding<br>
-              Video Editing
-            </li>
-          </ul>
-        </div>
-
-        <!-- Development -->
-        <div class="tab-contents" id="development">
-          <ul>
-            <li>
-              <span>Development</span><br>
-              HTML<br>
-              CSS<br>
-              JavaScript<br>
-              React<br>
-              React Native
-            </li>
-          </ul>
-        </div>
-
-        <!-- Research -->
-        <div class="tab-contents" id="research">
-          <ul>
-            <li>
-              <span>Research</span><br>
-              User Research<br>
-              Workshop Facilitation<br>
-              Digital Culture Research<br>
-              Quantitative Analysis
-            </li>
-          </ul>
-        </div>
-
+        <div class="tab-contents active-tab" id="creative-tech"><ul><li><span>Creative Technology</span><br>Creative Coding<br>Live Coding<br>Generative AI<br>Data Visualisation</li></ul></div>
+        <div class="tab-contents" id="design"><ul><li><span>Design</span><br>UX/UI Design<br>Graphic Design<br>Branding<br>Video Editing</li></ul></div>
+        <div class="tab-contents" id="development"><ul><li><span>Development</span><br>HTML<br>CSS<br>JavaScript<br>React<br>React Native</li></ul></div>
+        <div class="tab-contents" id="research"><ul><li><span>Research</span><br>User Research<br>Workshop Facilitation<br>Digital Culture Research<br>Quantitative Analysis</li></ul></div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- CONTACT -->
 <div id="contact">
   <div class="contact-container">
-    <div class="row">
-      <div class="contact-left">
+    <h1 class="sub-title">Contact Me</h1>
+    <p>shaanr@hotmail.co.uk</p>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/shaan-rehsi-4b40561b3/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg><use href="#i-in"/></svg><span>LinkedIn</span></a>
+      <a href="https://www.instagram.com/shapesandjapes_/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-ig"/></svg><span>@shapesandjapes_</span></a>
+      <a href="https://www.instagram.com/melanatedcoalition/" target="_blank" rel="noopener" aria-label="Melanated Coalition on Instagram"><svg><use href="#i-ig"/></svg><span>@melanatedcoalition</span></a>
+      <a href="https://github.com/shaanrxx" target="_blank" rel="noopener" aria-label="GitHub"><svg><use href="#i-gh"/></svg><span>GitHub</span></a>
+    </div>
+    <a href="files/cv2026.pdf" target="_blank" rel="noopener" class="btn btn2">View CV</a>
+  </div>
+</div>
+<section id="resume">
+  <div class="container">
+    <h1 class="sub-title">Resume</h1>
+    <p class="lead">Social Media Co-ordinator · London / Remote · <span class="sel">shaanr@hotmail.co.uk</span></p>
+    <div class="btn-row" style="margin-top:20px">
+      <a class="btn small btn2" href="files/cv2026.pdf" target="_blank" rel="noopener">Open PDF</a>
+      <button class="btn small" type="button" id="expandAll">Expand all</button>
+    </div>
+    <div class="chips" role="group" aria-label="Filter resume">
+      <button class="chip rchip on" type="button" data-rf="all">All</button>
+      <button class="chip rchip" type="button" data-rf="exp">Experience</button>
+      <button class="chip rchip" type="button" data-rf="prog">Programmes</button>
+      <button class="chip rchip" type="button" data-rf="edu">Education</button>
+      <button class="chip rchip" type="button" data-rf="skills">Skills</button>
+    </div>
 
-        <h1 class="sub-title">Contact Me</h1>
+    <div class="rgroup" data-g="all exp">
+      <p class="profile">Social Media and Communications Coordinator with a passion for storytelling, community engagement and digital arts. Experienced in combining strong writing and editing with visual design to deliver impactful communications, coordinate events and tailor content to widen audience reach and participation.</p>
+    </div>
 
-        <p>
-          <i class="fa-solid fa-paper-plane"></i>
-          shaanr@hotmail.co.uk
-        </p>
+    <div class="rgroup" data-g="all exp">
+      <h2 class="h2">Work experience</h2>
+      <details open>
+        <summary><span class="role-t">Communications Coordinator<small>Peckham Digital</small></span><span class="date">Nov 2025 – Present</span></summary>
+        <ul>
+          <li>Promoted from Communications Intern within three months.</li>
+          <li>Lead digital communications across Instagram, X, Facebook and newsletters.</li>
+          <li>Develop and run content strategy to support festival growth and year-round engagement.</li>
+          <li>Produce press releases, web copy, graphics and video.</li>
+          <li>Manage media relations, press databases and coverage tracking.</li>
+          <li>Coordinate with artists, partners and community teams to broaden reach.</li>
+          <li>Member of the Youth Advisory Board, contributing to strategic planning and community representation.</li>
+          <li><span class="pill">New</span> Hosted on Resonance FM radio during the festival.</li>
+          <li><span class="pill">New</span> Photographed the festival's sponsorship with drinks brand Codge.</li>
+        </ul>
+      </details>
+      <details>
+        <summary><span class="role-t">Content/Video Editing Intern<small>AIXDesign</small></span><span class="date">Oct 2025 – Present</span></summary>
+        <ul>
+          <li>Edit and repurpose festival talks and workshops for web and social platforms.</li>
+          <li>Produce short-form video (reels, clips) with copy and a distribution plan.</li>
+          <li>Liaise with artists to source assets and represent their work accurately and sensitively.</li>
+          <li>Design digital graphics in line with the studio's visual identity.</li>
+        </ul>
+      </details>
+      <details>
+        <summary><span class="role-t">Freelance Live Coder<small>Self-employed</small></span><span class="date">2025 – Present</span></summary>
+        <ul>
+          <li>Perform live coding sets that generate real-time audio-visual compositions.</li>
+          <li>Collaborate with musicians and digital artists in performance settings.</li>
+          <li>Explore improvisation, algorithmic composition and audience-responsive media.</li>
+        </ul>
+      </details>
+      <details>
+        <summary><span class="role-t">Communications Intern<small>Peckham Digital</small></span><span class="date">Aug – Oct 2025</span></summary>
+        <ul>
+          <li>Supported social media strategy and campaign delivery across platforms.</li>
+          <li>Assisted with post scheduling, brand consistency and audience engagement tracking.</li>
+        </ul>
+      </details>
+    </div>
 
-        <div class="social-icons">
-          <a href="https://www.linkedin.com/in/shaan-rehsi-4b40561b3/" target="_blank">
-            <i class="fab fa-linkedin"></i>
-          </a>
+    <div class="rgroup" data-g="all prog">
+      <h2 class="h2">Programmes</h2>
+      <details>
+        <summary><span class="role-t">Future Artists Programme<small>Somerset House</small></span><span class="date">2026</span></summary>
+        <ul><li>Selected for a competitive interdisciplinary artist development programme exploring digital culture and public-facing creative practice.</li></ul>
+      </details>
+      <details>
+        <summary><span class="role-t">Music x Code Summer Programme<small>Peckham Digital</small></span><span class="date">2025</span></summary>
+        <ul><li>Creative coding programme exploring live coding, music, data and collaborative audio-visual performance.</li></ul>
+      </details>
+      <details>
+        <summary><span class="role-t">Stemettes Programme<small>Stemettes</small></span><span class="date">2024 – 2025</span></summary>
+        <ul><li>National mentorship and professional development initiative supporting women in STEM.</li></ul>
+      </details>
+    </div>
 
-          <a href="https://www.instagram.com/shapesandjapes_/" target="_blank">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
+    <div class="rgroup" data-g="all edu">
+      <h2 class="h2">Education</h2>
+      <details>
+        <summary><span class="role-t">Creative Computing BSc, 1st Class Honours<small>University of the Arts London</small></span><span class="date">2021 – 2024</span></summary>
+        <ul><li>First Class Honours.</li></ul>
+      </details>
+      <details>
+        <summary><span class="role-t">Short Course in Software Design (C++)<small>Aarhus University</small></span><span class="date">Aug – Sep 2022</span></summary>
+        <ul><li>Grade B (5 ECTS).</li></ul>
+      </details>
+    </div>
 
-          <a href="mailto:shaanr@hotmail.co.uk">
-            <i class="fa-solid fa-envelope"></i>
-          </a>
-        </div>
-
-        <a href="./files/cv2026.pdf" target="_blank" class="btn btn2">
-          View CV
-        </a>
-
+    <div class="rgroup" data-g="all skills">
+      <h2 class="h2">Skills</h2>
+      <div class="skills3">
+        <div><h3>Communications &amp; Marketing</h3><ul><li>Multi-platform content strategy</li><li>Copywriting and editorial</li><li>Campaign planning and scheduling</li><li>Community engagement through workshops, events and teaching</li></ul></div>
+        <div><h3>Design &amp; Digital Media</h3><ul><li>Figma, Adobe XD, Sketch, Canva</li><li>HTML, CSS, JavaScript, React</li><li>Data visualisation and WebGL</li><li>Brand and design systems</li></ul></div>
+        <div><h3>Analytics &amp; Accessibility</h3><ul><li>Google Analytics and performance tracking</li><li>WCAG and inclusive design</li></ul></div>
       </div>
     </div>
   </div>
+</section>
 
-  <div class="copyright">
-    <p>© 2026 Created by Shaan K Rehsi</p>
-  </div>
+<div class="copyright"><p>© 2026 Created by Shaan K Rehsi</p></div>
+
 </div>
 
-  <!-------------------------- SCRIPTS ------------------------------>
-  <script>
-    function opentab(tabname) {
-      const tablinks = document.getElementsByClassName("tab-links");
-      const tabcontents = document.getElementsByClassName("tab-contents");
-      for (let link of tablinks) link.classList.remove("active-link");
-      for (let content of tabcontents) content.classList.remove("active-tab");
-      event.currentTarget.classList.add("active-link");
-      document.getElementById(tabname).classList.add("active-tab");
-    }
+<script>
+(function () {
+  var nav = document.getElementById("navbar");
+  function onScroll() { nav.classList.toggle("scrolled", (window.scrollY || document.documentElement.scrollTop) > 40); }
+  window.addEventListener("scroll", onScroll, { passive: true }); onScroll();
 
-    function openmenu() {
-      document.getElementById("sidemenu").style.right = "0";
-    }
 
-    function closemenu() {
-      document.getElementById("sidemenu").style.right = "-200px";
-    }
-
-    function addZoomClassWithInterval() {
-      const elements = document.querySelectorAll('.horizontal-line .zoom');
-      let index = 0;
-      const intervalId = setInterval(() => {
-        if (index < elements.length) {
-          elements[index].classList.add('zoom');
-          index++;
-        } else {
-          clearInterval(intervalId);
+  var links = document.querySelectorAll("nav a[data-nav]");
+  var map = {};
+  links.forEach(function (a) { map[a.getAttribute("href").slice(1)] = a.parentNode; });
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (e.isIntersecting && map[e.target.id]) {
+          Object.keys(map).forEach(function (k) { map[k].classList.remove("active"); });
+          map[e.target.id].classList.add("active");
         }
-      }, 1000);
-    }
-    window.onload = addZoomClassWithInterval;
-  </script>
+      });
+    }, { rootMargin: "-35% 0px -55% 0px" });
+    Object.keys(map).forEach(function (id) { var el = document.getElementById(id); if (el) io.observe(el); });
+  }
+  var chips = document.querySelectorAll(".chip"), items = document.querySelectorAll(".arch");
+  chips.forEach(function (c) {
+    c.addEventListener("click", function () {
+      var f = c.getAttribute("data-f");
+      chips.forEach(function (x) { x.classList.toggle("on", x === c); });
+      items.forEach(function (a) { a.hidden = !(f === "all" || a.getAttribute("data-cat").split(" ").indexOf(f) > -1); });
+    });
+  });
 
-  <!-- Libraries -->
-  <script src="./js/Jquery3.4.1.min.js"></script>
-  <script src="./js/owl.carousel.min.js"></script>
-  <script src="../js/aos.js"></script>
-  <script src="./js/main.js"></script>
-  <script src="../js/nav.js"></script>
+  var rch = document.querySelectorAll(".rchip"), rg = document.querySelectorAll(".rgroup");
+  rch.forEach(function (c) {
+    c.addEventListener("click", function () {
+      var f = c.getAttribute("data-rf");
+      rch.forEach(function (x) { x.classList.toggle("on", x === c); });
+      rg.forEach(function (g) { g.hidden = g.getAttribute("data-g").split(" ").indexOf(f) < 0; });
+    });
+  });
+  var ex = document.getElementById("expandAll"), openAll = false;
+  ex.addEventListener("click", function () {
+    openAll = !openAll;
+    document.querySelectorAll(".rgroup details").forEach(function (d) { d.open = openAll; });
+    ex.textContent = openAll ? "Collapse all" : "Expand all";
+  });
+  var menu = document.getElementById("sidemenu");
+  document.getElementById("openMenu").addEventListener("click", function () { menu.classList.add("open"); });
+  document.getElementById("closeMenu").addEventListener("click", function () { menu.classList.remove("open"); });
+  menu.addEventListener("click", function (e) { if (e.target.tagName === "A") menu.classList.remove("open"); });
 
-  <!-- p5.js Canvas -->
-  <div id="myPatternContainer"></div>
-  <div id="mySpinningPatternWebGLContainer"></div>
+  document.querySelectorAll(".tab-links").forEach(function (b) {
+    b.addEventListener("click", function () {
+      document.querySelectorAll(".tab-links").forEach(function (x) { x.classList.remove("active-link"); });
+      document.querySelectorAll(".tab-contents").forEach(function (x) { x.classList.remove("active-tab"); });
+      b.classList.add("active-link");
+      document.getElementById(b.getAttribute("data-tab")).classList.add("active-tab");
+    });
+  });
+
+})();
+</script>
 </body>
 </html>
