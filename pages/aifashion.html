@@ -38,44 +38,33 @@
         color: var(--shadow-colour2);
       }
     </style>
+    <link rel="stylesheet" href="../styles/sidebar.css">
   </head>
   <body>
+<div class="sbar" id="sbar" role="navigation" aria-label="Main">
+  <ul id="sbar-menu">
+    <li class="brandli"><a href="../index.html#header">Shaan Rehsi</a></li>
+    <li><a href="../index.html#work">Recent Projects</a></li>
+    <li><a href="livecoding.html">Live Coding</a></li>
+    <li><a href="../index.html#workshops">Workshops</a></li>
+    <li class="active"><a href="archive.html" aria-current="page">Archive</a></li>
+    <li class="sub first"><a href="../index.html#about">About</a></li>
+    <li class="sub"><a href="../index.html#resume">Resume</a></li>
+    <li class="sub"><a href="../index.html#contact">Contact</a></li>
+    <button class="sbar-close" id="sbar-close" type="button" aria-label="Close menu">×</button>
+  </ul>
+  <button class="sbar-btn" id="sbar-open" type="button" aria-label="Open menu">☰</button>
+  <div class="sbar-social">
+    <a href="https://www.linkedin.com/in/shaan-rehsi-4b40561b3/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V16M8 7.8v.01M12 16v-5.5M12 13c0-1.5 1-2.5 2.3-2.5S16.5 11.4 16.5 13V16"/></svg></a>
+    <a href="../index.html#contact" aria-label="Email"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></a>
+    <a href="https://www.instagram.com/shapesandjapes_/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6"/></svg></a>
+    <a href="https://github.com/shaanrxx" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 18v-3.2c-2 .4-2.5-1-2.5-1M9 14.8c-.8-.3-1.2-1.1-1.2-2.3 0-1 .4-1.8 1-2.3-.2-.5-.2-1.5.1-2 .8 0 1.5.4 2 .8a6 6 0 0 1 2.2 0c.5-.4 1.2-.8 2-.8.3.5.3 1.5.1 2 .6.5 1 1.3 1 2.3 0 1.2-.4 2-1.2 2.3V18"/></svg></a>
+  </div>
+</div>
+
     <div id="header" class="compact-header">
       <div class="container">
-        <nav id="navbar">
-          <ul id="sidemenu">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../index.html#projects">Projects</a></li>
-            <li><a href="archive.html">Archive</a></li>
-            <li><a href="../index.html#about">About</a></li>
-            <li><a href="../index.html#contact">Contact</a></li>
-            <li>
-              <a
-                href="./files/Shaan Rehsi CV Creative Technologist.pdf"
-                target="_blank"
-                >rEsumé/CV</a
-              >
-            </li>
-            <i class="fa-solid fa-x" onclick="closemenu()"></i>
-          </ul>
-          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-          <div id="social" class="social text-gray">
-            <a
-              href="https://www.linkedin.com/in/shaan-rehsi-4b40561b3/"
-              target="_blank"
-              ><i class="fab fa-linkedin"></i
-            ></a>
-            <a href="mailto:shaanr@hotmail.co.uk" target="_blank"
-              ><i class="fa fa-envelope" aria-hidden="true"></i
-            ></a>
-            <a href="https://www.instagram.com/shapesandjapes_/" target="_blank"
-              ><i class="fa-brands fa-instagram"></i
-            ></a>
-            <a href="https://github.com/shaanrxx" target="_blank"
-              ><i class="fa-brands fa-square-git"></i
-            ></a>
-          </div>
-        </nav>
+        
       </div>
     </div>
 
@@ -128,10 +117,7 @@
     </section>
 <a href ="#header" class="btn">Back to Top</a>
 
-    <div class="copyright">
-        <p>
-            © 2026 Copyright: Created by: Shaan K Rehsi</p>
-    </div>
+    
 </div>
 
 <script>
@@ -147,6 +133,11 @@
 
 
 
+<footer class="sbar-foot">
+  <a class="sbar-back" href="archive.html">← Back to Archive</a>
+  <p>© 2026 Created by Shaan K Rehsi</p>
+</footer>
+<script src="../js/sidebar.js" defer></script>
 </body>
 
 </html>

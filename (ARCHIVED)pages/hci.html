@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-YX8YXWZP9G"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-YX8YXWZP9G");
+    </script>
+
+    <title>Shaan Rehsi: HCI</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@100;300&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/093248551b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/page.css" />
+
+    <style>
+      .header-title {
+        font-size: 1.5rem;
+        color: var(--shadow-colour2);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header" class="compact-header">
+      <div class="container">
+        <nav id="navbar">
+          <ul id="sidemenu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="archive.html">Archive</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+            <li>
+              <a
+                href="./files/Shaan Rehsi CV Creative Technologist.pdf"
+                target="_blank"
+                >rEsumé/CV</a
+              >
+            </li>
+            <i class="fa-solid fa-x" onclick="closemenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+          <div id="social" class="social text-gray">
+            <a
+              href="https://www.linkedin.com/in/shaan-rehsi-4b40561b3/"
+              target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="mailto:shaanr@hotmail.co.uk" target="_blank"
+              ><i class="fa fa-envelope" aria-hidden="true"></i
+            ></a>
+            <a href="https://www.instagram.com/shapesandjapes_/" target="_blank"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="https://github.com/shaanrxx" target="_blank"
+              ><i class="fa-brands fa-square-git"></i
+            ></a>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+
+
+<div class="header-text">
+<!--     
+<a href="portfolio.html" class="back-portfolio">Back To Portfolio</a> -->
+    <h1>VR Art Controller</h1>
+</div>
+<!-------------------------------- work --------------------------------->
+
+
+<section class="post-header">
+        <div class="header-content post-container">
+            <!-----------Back to Home---------->
+    
+        <!-----------Title---------->
+        <h1 class="header-title">About the Project</h1>
+        <!----------------Post Image----------------->
+        <img src="../images/xpression.png" alt="" class="header-img">
+        <p>In my second year of university, I completed a module in Human-Computer Interaction. I was required to research 
+            and design a product that would benefit a community of people.
+            I created a prototype of a VR Paintbrush which provided an immersive environment for users to explore their
+            feelings via art therapy.   </p>
+       
+            <a style= "align-items: center;" href="../files/XpressionBrush.pdf" target="_blank"  class="btn ">View Development Portfolio</a>
+            
+    </div>
+    
+    </section>
+
+    <!------------------------- Posts ---------------------->
+    <section class="post-content post-container post-text">
+        <h1 class="sub-title">Design</h1>
+        <div class="video-container">
+            <video src="../videos/model.mp4" controls></video>
+          </div>
+        
+        <!-- <video >
+            <source src="../videos/model.mp4" type="video/mp4">
+        </video> -->
+        <p > Here is my final design for this prototype created in Blender.
+             This product involved two side buttons and a touch pad for navigation and a trigger button for grabbing.
+             Alongside this tool would be a navigation menu inside the 3D environment for users to have extra tools to work with.
+             I drew inspiration from Goodgle Tilt Brush and Oculus Rift designs and tried ti make the design as accessible as possible.</p>
+        
+             <h1 class="sub-title">Demo</h1>
+             <div class="video-container">
+                 <video src="../videos/demo.mp4" controls></video>
+               </div>
+             
+             <p > Here is a demonstration of how to tool would be used in a therapy environment also created in Blender.
+                I enjoyed modelling this scene and learning how to use keyframes to create basic animations in this software.</p>
+             
+     
+    
+    </section>
+
+</section>
+
+<a href ="#header" class="btn">Back to Top</a>
+
+    <div class="copyright">
+        <p>
+            © 2026 Copyright: Created by: Shaan K Rehsi</p>
+    </div>
+</div>
+
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+        
+    function openmenu(){
+        sidemenu.style.right = "0"
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px"
+    }
+</script>
+
+
+</body>
+</html>
+

@@ -1,0 +1,62 @@
+/* Shared left sidebar for every sub-page. Uses its own class names (.sbar*) so the
+   old nav rules in style.css do not touch it. Link this AFTER the page's other stylesheets. */
+.sbar, .sbar * { box-sizing: border-box; }
+.sbar {
+  --sb-1: #e7d8ff; --sb-2: #b375ff; --sb-3: #6e00e3; --sb-4: #500bb1; --sb-faint: #a99cc0;
+  font-family: "Space Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  position: fixed; z-index: 1000; line-height: 1.3;
+}
+.sbar ul { list-style: none; margin: 0; padding: 0; }
+.sbar li { list-style: none; }
+.sbar a { text-decoration: none; text-transform: uppercase; color: #fff; }
+.sbar button { font-family: inherit; }
+.sbar-btn, .sbar-close { display: none; background: none; border: 0; color: #fff; cursor: pointer; }
+.sbar-social { display: flex; gap: 14px; }
+.sbar-social a { display: inline-flex; color: #fff; transition: transform .2s, color .2s; }
+.sbar-social a:hover { transform: translateY(-5px); color: var(--sb-1); }
+.sbar-social svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+/* Desktop: fixed left sidebar */
+@media (min-width: 769px) {
+  body { padding-left: 230px !important; }
+  .sbar { top: 0; bottom: 0; left: 0; width: 230px; display: flex; flex-direction: column; background: #000; border-right: 1px solid var(--sb-4); padding: 28px 14px 24px; overflow-y: auto; }
+  .sbar ul { display: flex; flex-direction: column; }
+  .sbar li { margin: 0 0 8px; border: 2px solid transparent; border-radius: 5px; padding: 10px 10px; transition: background .2s; }
+  .sbar li a { display: block; font-size: 15px; letter-spacing: .8px; text-shadow: 0 0 30px #e0d8d8; }
+  .sbar li.sub a { font-size: 13px; color: var(--sb-faint); text-shadow: none; }
+  .sbar li.sub.first { margin-top: 18px; border-top: 1px solid var(--sb-4); border-radius: 0 0 5px 5px; }
+  .sbar li.brandli { margin-bottom: 22px; }
+  .sbar li.brandli a { font-family: "Orbitron", sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 3px; color: var(--sb-1); text-shadow: -1px -1px 0 var(--sb-2); }
+  .sbar li.active { border-color: var(--sb-4); border-left: 3px solid var(--sb-2); }
+  .sbar li:hover { background: var(--sb-1); border-color: var(--sb-2); border-right-color: var(--sb-3); border-bottom-color: var(--sb-4); }
+  .sbar li:hover a, .sbar li.sub:hover a { color: #000; text-shadow: none; }
+  .sbar-social { margin-top: auto; flex-wrap: wrap; padding-top: 24px; }
+  /* the old empty header strip does not need to be tall any more */
+  #header.compact-header { min-height: 40px !important; height: 40px !important; }
+}
+
+/* Phone: purple top bar + slide-out menu */
+@media (max-width: 768px) {
+  body { padding-top: 56px !important; }
+  .sbar { top: 0; left: 0; right: 0; min-height: 56px; background: var(--sb-2); padding: 0 16px; }
+  .sbar ul { position: fixed; top: 0; right: -240px; width: 220px; height: 100vh; height: 100dvh; display: flex; flex-direction: column; background: var(--sb-2); padding: 80px 0 0; transition: right .4s; z-index: 1001; visibility: hidden; }
+  .sbar ul.open { right: 0; visibility: visible; }
+  .sbar li { margin: 0 0 6px; padding: 8px 16px; }
+  .sbar li a { display: block; font-size: 15px; letter-spacing: 1px; }
+  .sbar li.brandli a { font-family: "Orbitron", sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 3px; }
+  .sbar li.sub a { font-size: 13px; }
+  .sbar li.active { background: rgba(0,0,0,.25); }
+  .sbar li:hover { background: rgba(0,0,0,.25); }
+  .sbar-btn { display: block; position: absolute; right: 12px; top: 8px; font-size: 30px; line-height: 1; padding: 4px 8px; z-index: 1002; }
+  .sbar-close { display: block; position: absolute; top: 14px; right: 16px; font-size: 28px; z-index: 1002; }
+  .sbar ul.open ~ .sbar-btn { visibility: hidden; }
+  .sbar-social { position: absolute; top: 17px; left: 16px; gap: 12px; }
+  .sbar-social svg { width: 20px; height: 20px; }
+  #header.compact-header { min-height: 20px !important; height: 20px !important; }
+}
+
+/* Footer: back button + copyright, same on every page */
+.sbar-foot { display: flex; flex-direction: column; align-items: center; gap: 22px; padding: 48px 16px 28px; text-align: center; font-family: "Space Grotesk", system-ui, sans-serif; }
+.sbar-back { display: inline-block; color: #fff; text-decoration: none; background: #000; border: 1px solid #fff; border-radius: 6px; padding: 12px 28px; font-size: 16px; box-shadow: 0 0 18px rgba(179,117,255,.6); transition: background .2s, color .2s, transform .2s; }
+.sbar-back:hover { background: #e7d8ff; color: #000; transform: translateY(-2px); }
+.sbar-foot p { margin: 0; color: #8d8d8d; font-size: 15px; font-weight: 300; }
