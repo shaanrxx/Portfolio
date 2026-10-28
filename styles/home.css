@@ -287,6 +287,25 @@ nav ul li.brandli:hover a { color: #000; text-shadow: none; }
 #header .header-text { min-width: 0; max-width: 100%; }
 .code pre { white-space: pre-wrap; overflow-wrap: anywhere; }
 .code .gap { display: block; height: .9em; }
+
+.mini .tl { color: var(--shadow-colour2); white-space: nowrap; }
+.mini .tl:hover { color: var(--shadow-colour1); }
+.mini h3 .pill { margin-left: 8px; vertical-align: middle; }
+
+/* About: cleaner reading layout */
+#about .row { align-items: center; gap: 48px; flex-wrap: nowrap; }
+#about .about-col-1 { flex: 0 0 34%; position: sticky; top: 40px; }
+#about .about-col-2 { flex: 1 1 0; max-width: 640px; }
+#about .about-col-2 .sub-title { margin-bottom: 18px; }
+#about .lead-p { font-size: 1.3rem; line-height: 1.5; color: #fff; font-weight: 400; margin-top: 0; }
+#about .about-col-2 p { color: var(--muted); font-size: 1rem; line-height: 1.7; }
+#about .about-col-2 p.lead-p { color: #fff; }
+.about-block { margin-top: 26px; padding: 4px 0 4px 18px; border-left: 2px solid var(--shadow-colour3); }
+.about-block h3 { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--shadow-colour2); font-weight: 500; margin-bottom: 4px; }
+.about-block p { margin-top: 0; }
+.pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.pills span { font-size: 13px; letter-spacing: .5px; color: var(--shadow-colour1); border: 1px solid var(--shadow-colour4); border-radius: 20px; padding: 3px 12px; }
+@media (max-width: 900px) { #about .row { flex-wrap: wrap; gap: 28px; } #about .about-col-1 { flex: 0 0 100%; position: static; } #about .about-col-2 { flex-basis: 100%; } #about .lead-p { font-size: 1.15rem; } }
 @media (max-width: 1000px) {
   .cols2 { gap: 28px; }
   .work-list, .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
