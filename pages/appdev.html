@@ -61,6 +61,11 @@
     <div class="sec-media"><figure class="m"><video src="../videos/phone-recording.mov" controls preload="metadata" playsinline></video></figure></div>
     <div class="sec-text"></div>
   </section>
+  <section class="sec">
+    <div class="sec-head"><span class="num">03</span><h2>Development portfolio</h2></div>
+    <div class="pdfbox wide"><div class="pdfload"><button class="abtn primary" type="button" data-pdf="../files/appdev-portfolio.pdf" data-label="Development portfolio">Show the development portfolio here (18 MB)</button></div></div>
+    <div class="pdfnote"><a class="abtn" href="../files/appdev-portfolio.pdf" target="_blank" rel="noopener">Open full screen ↗</a><a class="abtn" href="../files/appdev-portfolio.pdf" download>Download PDF</a></div>
+  </section>
   </article>
   <nav class="proj-pager" aria-label="More projects"><a class="pg newer" href="datavis.html"><small>Newer</small><span>← Data Visualisation: Spotify API</span></a><a class="pg older" href="hci.html"><small>Older</small><span>VR Art Controller →</span></a></nav>
 </main>
@@ -69,6 +74,17 @@
   <p>© 2026 Created by Shaan K Rehsi</p>
 </footer>
 <script src="../js/sidebar.js" defer></script>
-
+<script>
+(function () {
+  var b = document.querySelector("[data-pdf]");
+  if (!b) return;
+  b.addEventListener("click", function () {
+    var box = b.closest(".pdfbox"), o = document.createElement("object");
+    o.data = b.getAttribute("data-pdf") + "#view=FitH"; o.type = "application/pdf"; o.setAttribute("aria-label", b.getAttribute("data-label"));
+    o.innerHTML = '<p>Your browser can\'t show the PDF here. <a href="' + b.getAttribute("data-pdf") + '" target="_blank" rel="noopener">Open the PDF</a>.</p>';
+    box.innerHTML = ""; box.appendChild(o);
+  });
+})();
+</script>
 </body>
 </html>

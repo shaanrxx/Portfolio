@@ -96,7 +96,7 @@
 <!-- LIVE CODING -->
 <section id="music">
   <div class="container">
-    <h1 class="sub-title">Live Coding</h1>
+    <div class="head-row"><h1 class="sub-title">Live Coding</h1><a class="btn btn2 small" href="pages/livecoding.html">View the whole page →</a></div>
     <div class="split mc">
       <div>
         <span class="kicker">Melanated Coalition · with Nkosi</span>
@@ -109,13 +109,38 @@
       </div>
       <img src="images/lc_gallery/2.jpg" alt="Live set on stage">
     </div>
+    <div class="feature">
+      <div class="split">
+        <div>
+          <span class="kicker">Exhibited at Somerset House</span>
+          <h2 class="h2">Sunday Scaries</h2>
+          <p>This piece was performed during my sharing session at the Somerset House Future Artists Programme Work in Process exhibition. It combines live-coded music, visuals and spoken-word poetry to explore the feeling of time passing and the transition between seasons.</p>
+          <div class="btn-row">
+            <a class="btn small btn2" href="pages/sundayscaries.html">Read more</a>
+            <a class="btn small" href="https://www.youtube.com/watch?v=luGiw5VaEtM" target="_blank" rel="noopener">Watch on YouTube</a>
+          </div>
+        </div>
+        <div class="yt" id="ytSS" data-yt="luGiw5VaEtM" style="background-image:url('https://i.ytimg.com/vi/luGiw5VaEtM/hqdefault.jpg')"><button type="button" aria-label="Play the Sunday Scaries video"><span>&#9654;</span></button></div>
+      </div>
+    </div>
+    <script>
+    (function () {
+      var y = document.getElementById("ytSS");
+      if (!y) return;
+      y.querySelector("button").addEventListener("click", function () {
+        var f = document.createElement("iframe");
+        f.src = "https://www.youtube.com/embed/" + y.getAttribute("data-yt") + "?autoplay=1&rel=0";
+        f.title = "Sunday Scaries"; f.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen"; f.setAttribute("allowfullscreen", "");
+        y.innerHTML = ""; y.style.backgroundImage = "none"; y.appendChild(f);
+      });
+    })();
+    </script>
     <h2 class="h2">Live sets</h2>
     <div class="rows">
       <div class="mini"><span class="meta">May 2026</span><div><h3>Algotrance</h3><p>Carpet Shop, Peckham. Opening for Switch Angel, with a spoken word artist.</p></div></div>
       <div class="mini"><span class="meta">Nov 2025</span><div><h3>Algorave Corsica</h3><p>Corsica, London. Strudel audio set.</p></div></div>
       <div class="mini"><span class="meta">Oct 2025</span><div><h3>Creative Computing Festival</h3><p>Copeland Gallery, Peckham. Strudel, Hydra and p5.js.</p></div></div>
     </div>
-    <a class="inline-link" href="pages/livecoding.html"><span>Music, Hydra and gallery</span><b>Full live coding page →</b></a>
   </div>
 </section>
 
