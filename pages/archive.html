@@ -1,39 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YX8YXWZP9G"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-YX8YXWZP9G');
   </script>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Shaan Rehsi: Archived Projects</title>
-
-  <!-- Fonts -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Shaan Rehsi: Archive</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@100;300&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- Icons -->
-  <script src="https://kit.fontawesome.com/093248551b.js" crossorigin="anonymous"></script>
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="../styles/style.css">
-  <link rel="stylesheet" href="../styles/portfolio.css">
-  <style>
-    
-</style>
-
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/archive.css">
   <link rel="stylesheet" href="../styles/sidebar.css">
-  </head>
-
-<body>
+</head>
+<body class="arch-page">
 <div class="sbar" id="sbar" role="navigation" aria-label="Main">
   <ul id="sbar-menu">
     <li class="brandli"><a href="../index.html#header">Shaan Rehsi</a></li>
@@ -54,276 +39,99 @@
     <a href="https://github.com/shaanrxx" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 18v-3.2c-2 .4-2.5-1-2.5-1M9 14.8c-.8-.3-1.2-1.1-1.2-2.3 0-1 .4-1.8 1-2.3-.2-.5-.2-1.5.1-2 .8 0 1.5.4 2 .8a6 6 0 0 1 2.2 0c.5-.4 1.2-.8 2-.8.3.5.3 1.5.1 2 .6.5 1 1.3 1 2.3 0 1.2-.4 2-1.2 2.3V18"/></svg></a>
   </div>
 </div>
-
-
-<!-- NAV BAR -->
-<div id="header" class="archive-header">
-  <div class="container-header">
-    
-
-
-    <div class="header-text">
-      <h1>ARCHIVED PROJECTS</h1>
+<main class="proj list">
+  <a class="crumb" href="../index.html#archive">← Home</a>
+  <h1 class="list-title">Archive</h1>
+  <p class="lede">Coursework and experiments from my degree and short courses, 2022 to 2024. Newest first.</p>
+  <div class="toolbar">
+    <div class="chips" role="group" aria-label="Filter archive">
+      <button class="chip on" type="button" data-f="all">All</button>
+      <button class="chip" type="button" data-f="coding">Coding</button>
+      <button class="chip" type="button" data-f="blender">Blender</button>
+      <button class="chip" type="button" data-f="ai">Artificial Intelligence</button>
+      <button class="chip" type="button" data-f="websites">Websites</button>
     </div>
-
+    <span class="count" id="count">14 projects</span>
   </div>
-</div>
-<!-- FILTER -->
-<div class="post-filter container">
-  <span class="filter-item active-filter" data-filter="all">ALL</span>
-  <!-- <span class="filter-item" data-filter="livecoding">Live Coding</span>
-  <span class="filter-item" data-filter="peckham">Peckham Digital</span>
-  <span class="filter-item" data-filter="aixdesign">AI x Design</span> -->
-  <span class="filter-item" data-filter="coding">Coding</span>
-  <span class="filter-item" data-filter="blender">Blender</span>
-  <span class="filter-item" data-filter="ai">Artificial Intelligence</span>
-  <span class="filter-item" data-filter="websites">Websites</span>
-</div>
-
-    <!------------------------- Posts ---------------------->
-    <section class="post container">
-
-  <!--------------------Post Box 1------------------->
-  <div class="post-box blender websites three">
-    <!-- Wrap the entire content in an <a> tag to make it clickable -->
-    <a href="grad.html" style="text-decoration: none; color: inherit;">
-        <img src="../images/pictureforshowcase.jpg" alt="" class="post-img">
-        <h2 class="category">Blender/ Year Three / Website</h2>
-        <div class="post-title">
-            Graduate Project
-        </div>
-        <p class="post-description">Blender video and accompanying website aimed to raise awareness about language endangerment.</p>
-        <span class="post-date">JUN •  2024</span>
+  <div class="grid" id="grid">
+    <a class="card" href="grad.html" data-cat="blender websites">
+      <img src="../images/archive/0.jpg" alt="" loading="lazy">
+      <div class="card-b"><span class="cat">Blender · Website · Year 3</span><h3>Graduate Project</h3><p>Blender video and accompanying website raising awareness about language endangerment.</p><span class="when">Jun 2024</span></div>
     </a>
-</div>
-
-  <!--------------------Post Box 2------------------->
-        <div class="post-box ai three">
-            <!-- Wrap the entire content in an <a> tag to make it clickable -->
-            <a href="aifashion.html" style="text-decoration: none; color: inherit;">
-                <img src="../images/front_cover_ai.png" alt="" class="post-img">
-                <h2 class="category">Artificial Intelligence / Year Three</h2>
-                <div class="post-title">
-                    AI Fashion Magazine / Trend Analysis
-                </div>
-                <p class="post-description">High fashion / editorial AI generated photos created by a trained machine learning model from RunwayML.</p>
-                <span class="post-date">Feb •  2024</span>
-            </a>
-        </div>
-
-                <!--------------------Post Box 3------------------->
-                
-        <!-- Post Box 3 -->
-        <div class="post-box ai three">
-            <a href="ethics.html" style="text-decoration: none; color: inherit;">
-                <img src="../images/ethics.png" alt="" class="post-img">
-            <h2 class="category">Artificial Intelligence / Year Three</h2>
-            <div class="post-title">
-                Ethics of AI in Healthcare
-           </div>
-            <p class="post-description">An essay discussing the advancements and problems of AI integrated in healthcare.</p>
-            <span class="post-date">Jan • 2024</span>
-        </a>
-        </div>
-
-        <!-- Repeated structure for additional post boxes -->
-        <!-- Adjust the href, src, and text content as necessary for each box -->
-
-        
-        <!--------------------Post Box 4------------------->
-        <div class="post-box ai websites three">
-            <a href="ai_blog.html" style="text-decoration: none; color: inherit;">
-            <img src="../images/loveandai.jpg" alt="" class="post-img">
-        
-            <h2 class="category">Artificial Intelligence / Websites / Year Three</h2>
-       
-            <div class="post-title">
-                DIGITAL DIALOGUE: The Danger of AI Chatbots
-            </div>
-            <p class="post-description">A blog website featuring several articles surrounding the benefits and drawbacks of AI chatbots.
-            </p>
-            <span class="post-date">Jan •  2 0 2 4</span>
-        </a>
-    </div>
-         
-        <!--------------------Post Box 5------------------->
-        <div class="post-box coding websites">
-            <a href="aarhus.html" style="text-decoration: none; color: inherit;">
-            <img src="../images/church.jpg" alt="" class="post-img">
-            <h2 class="category">Coding / Websites</h2>
-            <div class="post-title">
-                Aarhus University: C++
-            </div>
-
-            <p class="post-description">A website depicting my experience taking a C++ course at Aarhus University.</p>
-            <span class="post-date">Aug •  2 0 2 3</span>
-        </a>
-        </div>
-
-
-        <!--------------------Post Box 6------------------->
-        <div class="post-box coding year two">
-            <a href="bigdata.html" style="text-decoration: none; color: inherit;">
-            <img src="../images/0190.png" alt="" class="post-img">
-            <h2 class="category">Coding / Year Two</h2>
-          
-            <div class="post-title">
-                Big Data: Cruelty Free Makeup Pallete
-            </div>
-            <p class="post-description">Cosmetic websites and datasets scraped to find cruelty free products - data presented in a makeup pallete.</p>
-            <span class="post-date">Jun •  2 0 2 3</span>
-        </a>
-        </div>
-
-        <!--------------------Post Box 7------------------->
-    <div class="post-box websites two coding" >
-        <a href="datavis.html" style="text-decoration: none; color: inherit;">
-        <img src="../images/equalise.png" alt="" class="post-img">
-        <h2 class="category">Websites / Coding / Year Two</h2>
-        <div class="post-title">
-           Data Visualisation: Song Popularity
-        </div> 
-        
-        <p class="post-description">A websites depicting the correlation between popular songs and audio features scraped from Spotify API.</p>
-        <span class="post-date">Jun •  2 0 2 3</span>
+    <a class="card" href="aifashion.html" data-cat="ai">
+      <img src="../images/archive/1.jpg" alt="" loading="lazy">
+      <div class="card-b"><span class="cat">AI · Year 3</span><h3>AI Fashion Magazine / Trend Analysis</h3><p>High fashion editorial photos generated by a trained RunwayML machine learning model.</p><span class="when">Feb 2024</span></div>
     </a>
-    </div>
-
-            <!--------------------Post Box 8------------------->
-            <div class="post-box coding two">
-                <a href="appdev.html" style="text-decoration: none; color: inherit;">
-                <img src="../images/appdev.png" alt="" class="post-img">
-                <h2 class="category">Coding / Year Two</h2>
-                <div class="post-title">
-                    App Development / Swift
-                </div>
-                <p class="post-description">First iOS app created usiing SwiftUI - SongSearch aims to helps users find new music and live events.
-                </p>
-                <span class="post-date">jun •  2 0 2 3</span>
-              </a>
-            </div>
-    
-
-
-        <!--------------------Post Box 9------------------->
-        <div class="post-box blender hci two">
-            <a href="hci.html" style="text-decoration: none; color: inherit;">
-            <img src="../images/game_controller_final.png" alt="" class="post-img">
-            <h2 class="category">Blender / Year Two</h2>
-            <div class="post-title">
-                Virtual Reality Art Therapy Controller
-            </div>
-    
-            <p class="post-description">A virtual reality controller and headset prototype designed for art therapy sessions, created in blender.</p>
-            <span class="post-date">jan •  2 0 2 3</span>
-        </a>
-    
-        </div>
-
-
-
-
-
-            <!--------------------Post Box 10------------------->
-            <div class="post-box websites two">
-                <a href="webdev.html" style="text-decoration: none; color: inherit;">
-                <img src="../images/webdesign.png" alt="" class="post-img">
-                <h2 class="category">Coding / Year Two</h2>
-                <div class="post-title">
-                    Web Development
-                </div>
-                <p class="post-description">Experimental website - first introduction into HTML/CSS - a list of different techniques used.
-                </p>
-                <span class="post-date">Jan •  2 0 2 3</span>
-            </a>
-            </div>
-
-            <!--------------------Post Box 11------------------->
-            <div class="post-box coding one">
-                <a href="processing.html" style="text-decoration: none; color: inherit;">
-                <img src="../images/tree.png" alt="" class="post-img">
-                <h2 class="category">Coding / Year One</h2>
-                <div class="post-title">
-                    Processing
-                </div>
-                <p class="post-description">Looking to the future, it is important to predict and envision how the use of AI chatbots may look, whether that be negative or potentially positive. Apart from romantic relationships, companions or even mental health therapists, AI chatbots have the potential to be used in many different fields. In mental health care, AI chatbots are projected to remotely diagnose patients, potentially yielding results comparable to face-to-face therapy. For online shopping, AI chatbots are expected to remember user preferences, autonomously recommend products, and provide real-time analytics. In online banking, they could offer personalised services like money transfers and financial advice
-                </p>
-                <span class="post-date">jun •  2 0 2 2</span>
-            </a>
-            </div>
-
-                <!--------------------Post Box 12------------------->
-    <div class="post-box coding one">
-        <a href="arduino.html" style="text-decoration: none; color: inherit;">
-        <img src="../images/arduino.png" alt="" class="post-img">
-        <h2 class="category">Coding / Year One</h2>
-        <div class="post-title">
-            Arduino: Art Installation
-        </div>
-        <p class="post-description">Interactive art piece using conductive paint - reacts to touch outputting  different sounds and lights.
-        </p>
-        <span class="post-date">jun •  2 0 2 2</span>
+    <a class="card" href="ethics.html" data-cat="ai">
+      <img src="../images/archive/2.jpg" alt="" loading="lazy">
+      <div class="card-b"><span class="cat">AI · Year 3</span><h3>Ethics of AI in Healthcare</h3><p>An essay on the advances and problems of AI in healthcare.</p><span class="when">Jan 2024</span></div>
     </a>
-    </div>
-        
-        
-
-        <!--------------------Post Box 13------------------->
-        <div class="post-box coding one">
-            <a href="p5.js.html" style="text-decoration: none; color: inherit;">
-            <img src="../images/1.png" alt="" class="post-img">
-            <h2 class="category">Coding / Year One</h2>
-            <div class="post-title">
-                p5.js
-            </div>
-       
-            <p class="post-description"> A collection of games, animation and drawings I have designed and developed.
-            </p>
-            <span class="post-date">jan •  2 0 2 2</span>
-        </a>
-        </div>
-
-
-        <!--------------------Post Box 14------------------->
-        <div class="post-box coding one">
-            <a href="python.html" style="text-decoration: none; color: inherit;">
-            <img src="../images/maze.png" alt="" class="post-img">
-            <h2 class="category">Coding / Year One</h2>
-            <div class="post-title">
-                Python: Maze Game
-            </div>
-            <p class="post-description">First two player maze game create using python, includes a times and music.</p>
-            <span class="post-date">jan •  2 0 2 2</span>
-        </a>
-        </div>
-</section>
-
-<a href ="#header" class="btn">Back to Top</a>
-
-<!-- FOOTER -->
-
-
-<!-- SCRIPTS -->
-<script>
-  const sidemenu = document.getElementById("sidemenu");
-
-  function openmenu() {
-    sidemenu.style.right = "0";
-  }
-
-  function closemenu() {
-    sidemenu.style.right = "-200px";
-  }
-</script>
-
-<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-<script src="../js/blog.js"></script>
-<script src="../js/nav.js"></script>
-
+    <a class="card" href="ai_blog.html" data-cat="ai websites">
+      <img src="../images/archive/3.jpg" alt="" loading="lazy">
+      <div class="card-b"><span class="cat">AI · Website · Year 3</span><h3>Digital Dialogue: The Danger of AI Chatbots</h3><p>A blog site with articles on the benefits and drawbacks of AI chatbots.</p><span class="when">Jan 2024</span></div>
+    </a>
+    <a class="card" href="aarhus.html" data-cat="coding websites">
+      <img src="../images/archive/4.jpg" alt="" loading="lazy">
+      <div class="card-b"><span class="cat">Coding · Website</span><h3>Aarhus University: C++</h3><p>A website about taking a C++ course at Aarhus University.</p><span class="when">Aug 2023</span></div>
+    </a>
+    <a class="card" href="bigdata.html" data-cat="coding">
+      <img src="../images/archive/5.jpg" alt="" loading="lazy">
+      <div class="card-b"><span class="cat">Coding · Year 2</span><h3>Big Data: Cruelty Free Makeup Palette</h3><p>Cosmetic sites and datasets scraped to find cruelty-free products, shown as a makeup palette.</p><span class="when">Jun 2023</span></div>
+    </a>
+    <a class="card" href="datavis.html" data-cat="websites coding">
+      <img src="../images/archive/6.jpg" alt="" loading="lazy">
+      <div class="card-b"><span class="cat">Website · Coding · Year 2</span><h3>Data Visualisation: Song Popularity</h3><p>A website showing how popular songs relate to audio features from the Spotify API.</p><span class="when">Jun 2023</span></div>
+    </a>
+    <a class="card" href="appdev.html" data-cat="coding">
+      <img src="../images/archive/7.jpg" alt="" loading="lazy">
+      <div class="card-b"><span class="cat">Coding · Swift · Year 2</span><h3>App Development: SongSearch</h3><p>A first iOS app in SwiftUI that helps users find new music and live events.</p><span class="when">Jun 2023</span></div>
+    </a>
+    <a class="card" href="hci.html" data-cat="blender">
+      <img src="../images/archive/8.jpg" alt="" loading="lazy">
+      <div class="card-b"><span class="cat">Blender · Year 2</span><h3>Virtual Reality Art Therapy Controller</h3><p>A VR controller and headset prototype for art therapy sessions, made in Blender.</p><span class="when">Jan 2023</span></div>
+    </a>
+    <a class="card" href="webdev.html" data-cat="coding websites">
+      <img src="../images/archive/9.jpg" alt="" loading="lazy">
+      <div class="card-b"><span class="cat">Coding · Website · Year 2</span><h3>Web Development</h3><p>An experimental website: a first introduction to HTML and CSS, listing the techniques used.</p><span class="when">Jan 2023</span></div>
+    </a>
+    <a class="card" href="processing.html" data-cat="coding">
+      <img src="../images/archive/10.jpg" alt="" loading="lazy">
+      <div class="card-b"><span class="cat">Coding · Year 1</span><h3>Processing</h3><p>Sketches in code: abstract art, a music-reactive animation and a physics-driven forest scene.</p><span class="when">Jun 2022</span></div>
+    </a>
+    <a class="card" href="arduino.html" data-cat="coding">
+      <img src="../images/archive/11.jpg" alt="" loading="lazy">
+      <div class="card-b"><span class="cat">Coding · Year 1</span><h3>Arduino: Art Installation</h3><p>Interactive art with conductive paint that reacts to touch with sounds and lights.</p><span class="when">Jun 2022</span></div>
+    </a>
+    <a class="card" href="p5.js.html" data-cat="coding">
+      <img src="../images/archive/12.jpg" alt="" loading="lazy">
+      <div class="card-b"><span class="cat">Coding · Year 1</span><h3>p5.js</h3><p>A collection of games, animations and drawings I designed and built.</p><span class="when">Jan 2022</span></div>
+    </a>
+    <a class="card" href="python.html" data-cat="coding">
+      <img src="../images/archive/13.jpg" alt="" loading="lazy">
+      <div class="card-b"><span class="cat">Coding · Year 1</span><h3>Python: Maze Game</h3><p>A first two-player maze game in Python, with a timer and music.</p><span class="when">Jan 2022</span></div>
+    </a>
+  </div>
+</main>
 <footer class="sbar-foot">
   <a class="sbar-back" href="../index.html#archive">← Back to home</a>
   <p>© 2026 Created by Shaan K Rehsi</p>
 </footer>
 <script src="../js/sidebar.js" defer></script>
+<script>
+(function () {
+  var chips = document.querySelectorAll(".chip"), items = document.querySelectorAll("#grid .card"), count = document.getElementById("count");
+  chips.forEach(function (c) {
+    c.addEventListener("click", function () {
+      var f = c.getAttribute("data-f"), n = 0;
+      chips.forEach(function (x) { x.classList.toggle("on", x === c); });
+      items.forEach(function (a) {
+        var show = f === "all" || a.getAttribute("data-cat").split(" ").indexOf(f) > -1;
+        a.hidden = !show; if (show) n++;
+      });
+      count.textContent = n + (n === 1 ? " project" : " projects");
+    });
+  });
+})();
+</script>
 </body>
 </html>

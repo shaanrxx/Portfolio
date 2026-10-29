@@ -1,46 +1,24 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-YX8YXWZP9G"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-YX8YXWZP9G");
-    </script>
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YX8YXWZP9G"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-YX8YXWZP9G');
+  </script>
 
-    <title>Shaan Rehsi: PYTHON</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@100;300&family=Space+Grotesk:wght@300..700&display=swap"
-      rel="stylesheet"
-    />
-
-    <script
-      src="https://kit.fontawesome.com/093248551b.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="../styles/style.css" />
-    <link rel="stylesheet" href="../styles/page.css" />
-
-    <style>
-      .header-title {
-        font-size: 1.5rem;
-        color: var(--shadow-colour2);
-      }
-    </style>
-    <link rel="stylesheet" href="../styles/sidebar.css">
-  </head>
-  <body>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Shaan Rehsi: Python: Maze Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/archive.css">
+  <link rel="stylesheet" href="../styles/sidebar.css">
+</head>
+<body class="arch-page">
 <div class="sbar" id="sbar" role="navigation" aria-label="Main">
   <ul id="sbar-menu">
     <li class="brandli"><a href="../index.html#header">Shaan Rehsi</a></li>
@@ -61,86 +39,36 @@
     <a href="https://github.com/shaanrxx" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 18v-3.2c-2 .4-2.5-1-2.5-1M9 14.8c-.8-.3-1.2-1.1-1.2-2.3 0-1 .4-1.8 1-2.3-.2-.5-.2-1.5.1-2 .8 0 1.5.4 2 .8a6 6 0 0 1 2.2 0c.5-.4 1.2-.8 2-.8.3.5.3 1.5.1 2 .6.5 1 1.3 1 2.3 0 1.2-.4 2-1.2 2.3V18"/></svg></a>
   </div>
 </div>
-
-    <div id="header" class="compact-header">
-      <div class="container">
-        
-      </div>
+<main class="proj">
+  <header class="proj-hero">
+    <div class="proj-hero-text">
+      <a class="crumb" href="archive.html">← Archive</a>
+      <p class="proj-meta"><span>Coding</span><span>Year 1</span><span class="when">Jan 2022</span></p>
+      <h1>Python: Maze Game</h1>
+      <p class="proj-lede">A first two-player maze game in Python, with a timer and music.</p>
+      <div class="proj-actions"></div>
     </div>
-
-
-
-
-<div class="header-text">
-<!--     
-<a href="portfolio.html" class="back-portfolio">Back To Portfolio</a> -->
-    <h1>Maze Game: Python</h1>
-</div>
-<!-------------------------------- work --------------------------------->
-
-
-<section class="post-header">
-        <div class="header-content post-container">
-            <!-----------Back to Home---------->
+    <figure class="proj-cover"><img src="../images/maze.png" alt="Python: Maze Game"></figure>
+  </header>
+  <article class="proj-body">
+  <section class="sec">
+    <div class="sec-head"><span class="num">01</span><h2>About the project</h2></div>
     
-        <!-----------Title---------->
-        <h1 class="header-title">About the Project</h1>
-        <!----------------Post Image----------------->
-        <img src="../images/maze.png" alt="" class="header-img">
-        <p>
-           
-        For my project, I was assigned to develop a running program that implements a straightforward two-player game. The coding had to be done in Python without the aid of a pre-made game engine, although Pygame is an exception which I chose to use. 
-         I aimed to develop a Maze Game that generates a new maze with each playthrough, incorporating a timer and a scoring system based on the outcome. Crafting the maze generator proved to be a complex task, demanding significant problem-solving skills. To ensure fairness, I designed the game so that players begin at opposite ends of the maze, aiming to reach each other's starting point. This setup proved most effective and visually appealing compared to a central starting point. I encountered challenges with the countdown display, where numbers overlapped, and resolved this by overlaying the countdown on a distinct shape for clarity. 
-
-
-          </p>
-       
-          <!-- <a style= "align-items: center;" href="../files/p5-portfolio" target="_blank"  class="btn ">View Development Portfolio</a> -->
-
-
-        </div>
-
-        </section>
-             <!------------------------- Posts ---------------------->
-    <section class="post-content post-container post-text">
-
-
-            <!-----------Title---------->
-            <h1 class="sub-title">Game Demo</h1>
-                        <div class="video-container">
-                            <video src="../videos/maze_game.mp4" controls></video>
-                            </div>
-                        <p>To prepare players before diving in, I introduced a splash page, setting the game commencement at 40 seconds. A completion by any player triggers an announcement of the winner and auto-restarts the game, with a new maze and the option to manually restart by pressing 'r', adding a dynamic play-as-you-wish element. Points accrue with each win. Should time expire, a game over alert appears with a restart prompt, but no points are awarded.</p>
-            
-                        </section>
-
-
-
-
-           <a style= "align-items: center;" href="#header" class="btn ">Back to Top</a>
-
-
-    
-</div>
-
-
-<script>
-    var sidemenu = document.getElementById("sidemenu");
-        
-    function openmenu(){
-        sidemenu.style.right = "0"
-    }
-    function closemenu(){
-        sidemenu.style.right = "-200px"
-    }
-</script>
-
-
+    <div class="sec-text"><p>For my project, I was assigned to develop a running program that implements a straightforward two-player game. The coding had to be done in Python without the aid of a pre-made game engine, although Pygame is an exception which I chose to use. I aimed to develop a Maze Game that generates a new maze with each playthrough, incorporating a timer and a scoring system based on the outcome.</p><p>Crafting the maze generator proved to be a complex task, demanding significant problem-solving skills. To ensure fairness, I designed the game so that players begin at opposite ends of the maze, aiming to reach each other's starting point. This setup proved most effective and visually appealing compared to a central starting point.</p><p>I encountered challenges with the countdown display, where numbers overlapped, and resolved this by overlaying the countdown on a distinct shape for clarity.</p></div>
+  </section>
+  <section class="sec two">
+    <div class="sec-head"><span class="num">02</span><h2>Game Demo</h2></div>
+    <div class="sec-media"><figure class="m"><video src="../videos/maze_game.mp4" controls preload="metadata" playsinline></video></figure></div>
+    <div class="sec-text"><p>To prepare players before diving in, I introduced a splash page, setting the game commencement at 40 seconds. A completion by any player triggers an announcement of the winner and auto-restarts the game, with a new maze and the option to manually restart by pressing 'r', adding a dynamic play-as-you-wish element. Points accrue with each win. Should time expire, a game over alert appears with a restart prompt, but no points are awarded.</p></div>
+  </section>
+  </article>
+  <nav class="proj-pager" aria-label="More projects"><a class="pg newer" href="p5.js.html"><small>Newer</small><span>← p5.js</span></a><span></span></nav>
+</main>
 <footer class="sbar-foot">
   <a class="sbar-back" href="archive.html">← Back to Archive</a>
   <p>© 2026 Created by Shaan K Rehsi</p>
 </footer>
 <script src="../js/sidebar.js" defer></script>
+
 </body>
 </html>
-
